@@ -1,0 +1,275 @@
+# NORTHWATCH source registry
+#
+# verified: true  = URL confirmed live during build (Jul 2026)
+# verified: false = best-known-good, NOT confirmed. `nw doctor` validates.
+#
+# gate: true      = general-interest firehose. Items must clear the cyber-relevance
+#                   score in pipeline.py before they're admitted. Without this, The
+#                   Verge alone buries the feed in phone reviews.
+# gate: false     = already security-scoped. Everything gets in.
+#
+# canada: true    = tags the item for the Canada filter. It is only a filter now,
+#                   not a tier and not a scoring bonus.
+
+defaults:
+  timeout: 20
+  max_items_per_feed: 40
+  user_agent: "northwatch/2.0 (+https://github.com/YOURUSER/northwatch)"
+  relevance_threshold: 3      # tune this after you see a real day of output
+
+# ---------------------------------------------------------------------------
+# SECURITY — the security press. The spine of the feed.
+# ---------------------------------------------------------------------------
+security:
+  - id: thn
+    name: The Hacker News
+    url: https://feeds.feedburner.com/TheHackersNews
+    site: thehackernews.com
+    weight: 1.5
+    verified: true
+
+  - id: bleepingcomputer
+    name: BleepingComputer
+    url: https://www.bleepingcomputer.com/feed/
+    site: bleepingcomputer.com
+    weight: 1.5
+    verified: false
+
+  - id: krebs
+    name: Krebs on Security
+    url: https://krebsonsecurity.com/feed/
+    site: krebsonsecurity.com
+    weight: 1.7
+    verified: false
+
+  - id: therecord
+    name: The Record
+    url: https://therecord.media/feed
+    site: therecord.media
+    weight: 1.4
+    verified: false
+
+  - id: 404media
+    name: 404 Media
+    url: https://www.404media.co/rss/
+    site: 404media.co
+    weight: 1.5
+    verified: false
+
+  - id: wired-sec
+    name: WIRED Security
+    url: https://www.wired.com/feed/category/security/latest/rss
+    site: wired.com
+    weight: 1.4
+    verified: false
+
+  - id: ars-sec
+    name: Ars Technica Security
+    url: https://arstechnica.com/security/feed/
+    site: arstechnica.com
+    weight: 1.3
+    verified: true
+
+  - id: register-sec
+    name: The Register Security
+    url: https://www.theregister.com/security/headlines.atom
+    site: theregister.com
+    weight: 1.2
+    verified: false
+
+  - id: techcrunch-sec
+    name: TechCrunch Security
+    url: https://techcrunch.com/category/security/feed/
+    site: techcrunch.com
+    weight: 1.3
+    verified: false
+
+  - id: darkreading
+    name: Dark Reading
+    url: https://www.darkreading.com/rss.xml
+    site: darkreading.com
+    weight: 1.1
+    verified: false
+
+  - id: securityweek
+    name: SecurityWeek
+    url: https://www.securityweek.com/feed/
+    site: securityweek.com
+    weight: 1.1
+    verified: false
+
+  - id: infosecurity
+    name: Infosecurity Magazine
+    url: https://www.infosecurity-magazine.com/rss/news/
+    site: infosecurity-magazine.com
+    weight: 1.0
+    verified: false
+
+# ---------------------------------------------------------------------------
+# TECH — general tech press. GATED. These are firehoses.
+#
+# Every item here must clear the cyber-relevance score or it is dropped on the
+# floor. Phone reviews, Prime Day deals, and "best headphones of 2026" never
+# reach you. Stories about a Chrome zero-day, an encryption law, or a platform
+# breach do.
+# ---------------------------------------------------------------------------
+tech:
+  - id: verge
+    name: The Verge
+    url: https://www.theverge.com/rss/index.xml
+    site: theverge.com
+    gate: true
+    weight: 1.2
+    verified: false
+
+  - id: techcrunch
+    name: TechCrunch
+    url: https://techcrunch.com/feed/
+    site: techcrunch.com
+    gate: true
+    weight: 1.1
+    verified: false
+
+  - id: ars
+    name: Ars Technica
+    url: https://feeds.arstechnica.com/arstechnica/index
+    site: arstechnica.com
+    gate: true
+    weight: 1.2
+    verified: false
+
+  - id: engadget
+    name: Engadget
+    url: https://www.engadget.com/rss.xml
+    site: engadget.com
+    gate: true
+    weight: 0.9
+    verified: false
+
+  - id: register
+    name: The Register
+    url: https://www.theregister.com/headlines.atom
+    site: theregister.com
+    gate: true
+    weight: 1.1
+    verified: false
+
+  - id: wired
+    name: WIRED
+    url: https://www.wired.com/feed/rss
+    site: wired.com
+    gate: true
+    weight: 1.1
+    verified: false
+
+  - id: techreview
+    name: MIT Technology Review
+    url: https://www.technologyreview.com/feed/
+    site: technologyreview.com
+    gate: true
+    weight: 1.1
+    verified: false
+
+  # Hacker News front page. Highest-signal tech aggregator on the internet, and
+  # the gate handles the noise. hnrss.org is a long-running community project.
+  - id: hn
+    name: Hacker News
+    url: https://hnrss.org/frontpage?points=150
+    site: news.ycombinator.com
+    gate: true
+    weight: 1.0
+    verified: false
+
+# ---------------------------------------------------------------------------
+# ADVISORY — feeds the CVE / KEV / EPSS layer. Not the point of the site
+# anymore, but it's what makes the security cards actually useful.
+# ---------------------------------------------------------------------------
+advisory:
+  - id: cisa
+    name: CISA
+    url: https://www.cisa.gov/uscert/ncas/all.xml
+    site: cisa.gov
+    weight: 2.2
+    verified: true
+
+  - id: cccs-alerts
+    name: Cyber Centre
+    url: https://cyber.gc.ca/webservice/en/rss/alerts
+    site: cyber.gc.ca
+    canada: true
+    weight: 2.0
+    verified: true
+
+  - id: ncsc-uk
+    name: NCSC UK
+    url: https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml
+    site: ncsc.gov.uk
+    weight: 1.8
+    verified: true
+
+  - id: cert-eu
+    name: CERT-EU
+    url: https://cert.europa.eu/publications/security-advisories-rss
+    site: cert.europa.eu
+    weight: 1.6
+    verified: true
+
+  - id: sans-isc
+    name: SANS ISC
+    url: https://isc.sans.edu/rssfeed.xml
+    site: isc.sans.edu
+    weight: 1.8
+    verified: false
+
+# ---------------------------------------------------------------------------
+# RESEARCH — threat intel writeups. Lowest priority, highest depth.
+# ---------------------------------------------------------------------------
+research:
+  - id: talos
+    name: Cisco Talos
+    url: https://blog.talosintelligence.com/rss/
+    site: blog.talosintelligence.com
+    weight: 1.4
+    verified: false
+
+  - id: unit42
+    name: Unit 42
+    url: https://unit42.paloaltonetworks.com/feed/
+    site: unit42.paloaltonetworks.com
+    weight: 1.4
+    verified: false
+
+  - id: projectzero
+    name: Project Zero
+    url: https://googleprojectzero.blogspot.com/feeds/posts/default
+    site: googleprojectzero.blogspot.com
+    weight: 1.4
+    verified: false
+
+  - id: schneier
+    name: Schneier on Security
+    url: https://www.schneier.com/feed/atom/
+    site: schneier.com
+    weight: 1.1
+    verified: false
+
+# ---------------------------------------------------------------------------
+# VIDEO — channel IDs are resolved, never guessed. Run `nw resolve`.
+# ---------------------------------------------------------------------------
+video:
+  - id: yt-johnhammond
+    name: John Hammond
+    handle: "@_JohnHammond"
+    weight: 1.0
+  - id: yt-liveoverflow
+    name: LiveOverflow
+    handle: "@LiveOverflow"
+    weight: 1.0
+  - id: yt-lowlevel
+    name: Low Level
+    handle: "@LowLevelTV"
+    weight: 1.0
+  - id: yt-blackhat
+    name: Black Hat
+    handle: "@BlackHatOfficialYT"
+    weight: 0.9

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NORTHWATCH — cybersecurity &amp; tech, compressed</title>
+<meta name="description" content="The day's security and tech news, clustered and summarized. Read the brief, skip the forty articles.">
+<meta name="theme-color" content="#0E1116">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ─────────────────────────────────────────────────────────────
+   NORTHWATCH — two kinds of story, two kinds of card.
+
+   A tech story is news: it gets a picture and a headline.
+   A security story is a warning: it gets a severity rule and a data strip.
+   The feed is bimodal because the reading is bimodal.
+
+   Colour is never decoration. If something is coloured, something is wrong.
+   ───────────────────────────────────────────────────────────── */
+:root{
+  --ink:#0E1116; --surface:#161A21; --raise:#1C222B;
+  --rule:#252B34; --rule-soft:#1F242C;
+  --fg:#E6E9ED; --fg-mid:#A7AEB9; --fg-dim:#6E7783;
+
+  --critical:#D7263D;   /* KEV — confirmed exploitation. Nothing else gets red. */
+  --high:#E0A458;
+  --medium:#5B8DEF;
+  --info:#4A5361;
+  --leaf:#C8102E;
+
+  --f-disp:"IBM Plex Sans Condensed",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ink);color:var(--fg);font-family:var(--f-body);font-size:15px;
+     line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--medium);outline-offset:2px;border-radius:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+header{position:sticky;top:0;z-index:20;background:rgba(14,17,22,.93);
+       backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.bar{max-width:1440px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:16px}
+.mark{font-family:var(--f-disp);font-weight:700;font-size:19px;letter-spacing:.14em}
+.mark b{color:var(--critical)}
+.tag{font-family:var(--f-mono);font-size:10.5px;color:var(--fg-dim);letter-spacing:.06em;
+     padding-left:14px;border-left:1px solid var(--rule);display:none}
+@media(min-width:940px){.tag{display:block}}
+.stamp{margin-left:auto;font-family:var(--f-mono);font-size:11px;color:var(--fg-dim);
+       display:flex;align-items:center;gap:8px}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--critical);
+     animation:beat 2.4s ease-in-out infinite}
+@keyframes beat{0%,100%{opacity:.35}50%{opacity:1}}
+
+.shell{max-width:1440px;margin:0 auto;padding:20px;display:grid;gap:24px;grid-template-columns:1fr}
+@media(min-width:940px){.shell{grid-template-columns:206px 1fr}}
+@media(min-width:1280px){.shell{grid-template-columns:206px 1fr 272px}}
+aside{align-self:start}
+@media(min-width:940px){aside{position:sticky;top:74px;max-height:calc(100vh - 94px);
+  overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--rule) transparent}}
+.rail{display:none}
+@media(min-width:1280px){.rail{display:block}}
+
+.eyebrow{font-family:var(--f-mono);font-size:10px;letter-spacing:.16em;color:var(--fg-dim);
+         margin:0 0 10px;text-transform:uppercase}
+.grp+.eyebrow{margin-top:24px}
+
+.filt{display:flex;align-items:center;gap:9px;width:100%;padding:7px 10px;border:0;
+      border-radius:5px;background:transparent;color:var(--fg-mid);font:500 13.5px var(--f-body);
+      cursor:pointer;text-align:left;transition:background .12s,color .12s}
+.filt:hover{background:var(--surface);color:var(--fg)}
+.filt[aria-pressed="true"]{background:var(--raise);color:var(--fg)}
+.filt .n{margin-left:auto;font-family:var(--f-mono);font-size:11px;color:var(--fg-dim)}
+.filt .ic{width:13px;text-align:center;font-size:11px;opacity:.75}
+.tog[aria-pressed="true"]{background:rgba(215,38,61,.13);color:#F0868F;
+  box-shadow:inset 2px 0 0 var(--critical)}
+.tog.ca[aria-pressed="true"]{background:rgba(200,16,46,.1);color:#EE9AA5;
+  box-shadow:inset 2px 0 0 var(--leaf)}
+
+.find{width:100%;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+      border-radius:5px;color:var(--fg);font:400 12px var(--f-mono)}
+.find::placeholder{color:var(--fg-dim)}
+.src{display:flex;align-items:center;gap:9px;padding:4px 10px;color:var(--fg-dim);font-size:12.5px}
+.src img{width:15px;height:15px;border-radius:3px;background:var(--raise);flex:0 0 15px}
+.src span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* ── card base ──────────────────────────────────────────────── */
+.card{background:var(--surface);border:1px solid var(--rule-soft);border-radius:7px;
+      margin-bottom:11px;overflow:hidden;transition:border-color .14s}
+.card:hover{border-color:var(--rule)}
+.pad{padding:14px 16px 13px}
+
+/* ── SECURITY card — severity rule + data strip. No image; the data IS the image. */
+.card.sec{border-left:3px solid var(--sev);border-radius:0 7px 7px 0}
+.card.sec[data-sev="critical"]{--sev:var(--critical);
+  background:linear-gradient(90deg,rgba(215,38,61,.055),var(--surface) 260px)}
+.card.sec[data-sev="high"]{--sev:var(--high)}
+.card.sec[data-sev="medium"]{--sev:var(--medium)}
+.card.sec[data-sev="info"]{--sev:var(--info)}
+
+.strip{display:flex;flex-wrap:wrap;align-items:center;gap:7px;font-family:var(--f-mono);
+       font-size:10.5px;color:var(--fg-dim);margin-bottom:9px}
+.strip .sep{color:var(--rule)}
+.kev{color:#fff;background:var(--critical);padding:1.5px 6px;border-radius:3px;
+     font-weight:600;letter-spacing:.06em}
+.cve{color:var(--fg-mid);background:var(--raise);border:1px solid var(--rule);
+     padding:1.5px 6px;border-radius:3px}
+.epss{color:var(--high)}
+.leaf{color:#F0929E}
+.corr{color:var(--fg-mid)}
+
+/* ── TECH card — it's news. Give it a picture. */
+.card.tech .hero{display:block;width:100%;aspect-ratio:16/7;object-fit:cover;
+                 background:var(--raise);border-bottom:1px solid var(--rule-soft)}
+.card.tech .meta{display:flex;align-items:center;gap:7px;font-family:var(--f-mono);
+                 font-size:10.5px;color:var(--fg-dim);margin-bottom:8px}
+.card.tech .meta img{width:13px;height:13px;border-radius:3px}
+
+h2{font-family:var(--f-disp);font-weight:600;font-size:19px;line-height:1.24;margin-bottom:7px}
+.card.tech h2{font-size:20px}
+.card:hover h2{color:#fff}
+.abs{color:var(--fg-mid);font-size:13.5px;line-height:1.52}
+.why{color:var(--fg-dim);font-size:12.5px;margin-top:5px;font-style:italic}
+
+.act{margin-top:11px;padding-top:10px;border-top:1px dashed var(--rule);
+     display:flex;gap:8px;font-size:12.5px;line-height:1.45}
+.act .k{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;color:var(--fg-dim);
+        flex:0 0 42px;padding-top:3px}
+.act .v{color:var(--fg);font-weight:500}
+
+.by{margin-top:11px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.by img{width:14px;height:14px;border-radius:3px;background:var(--raise)}
+.by a{font-size:11.5px;color:var(--fg-dim)}
+.by a:hover{color:var(--fg-mid)}
+.by .more{font-family:var(--f-mono);font-size:10px;color:var(--fg-dim);margin-left:auto}
+
+.now{background:var(--surface);border:1px solid var(--rule-soft);border-radius:0 0 6px 6px;
+     border-top:2px solid var(--critical);padding:12px}
+.now.cov{border-top-color:var(--medium)}
+.row{display:block;padding:8px 0;border-bottom:1px solid var(--rule-soft)}
+.row:last-child{border-bottom:0}
+.row .t{font-size:12.5px;line-height:1.38;color:var(--fg-mid)}
+.row:hover .t{color:var(--fg)}
+.row .m{font-family:var(--f-mono);font-size:9.5px;color:var(--fg-dim);margin-top:3px}
+.void{font-size:12.5px;color:var(--fg-dim);padding:6px 0}
+
+.legend{margin-top:24px;font-family:var(--f-mono);font-size:10px;color:var(--fg-dim);line-height:1.9}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:7px}
+
+.update-btn{font-family:var(--f-mono);font-size:11px;letter-spacing:.04em;color:var(--fg-mid);
+  background:var(--surface);border:1px solid var(--rule);border-radius:5px;padding:5px 11px;
+  cursor:pointer;transition:background .12s,color .12s;white-space:nowrap}
+.update-btn:hover:not(:disabled){background:var(--raise);color:var(--fg)}
+.update-btn:disabled{opacity:.55;cursor:default}
+
+.pager{display:flex;align-items:center;justify-content:center;gap:14px;padding:16px 0 4px}
+.pg-btn{font-family:var(--f-mono);font-size:12px;color:var(--fg-mid);background:var(--surface);
+  border:1px solid var(--rule);border-radius:5px;padding:6px 14px;cursor:pointer}
+.pg-btn:hover:not(:disabled){background:var(--raise);color:var(--fg)}
+.pg-btn:disabled{opacity:.35;cursor:default}
+.pg-info{font-family:var(--f-mono);font-size:11px;color:var(--fg-dim)}
+footer{border-top:1px solid var(--rule);margin-top:40px;padding:22px 20px 44px;text-align:center;
+       font-size:11.5px;color:var(--fg-dim);line-height:1.7}
+.skel{height:96px;background:var(--surface);border-radius:7px;margin-bottom:11px;
+      animation:fade 1.4s ease-in-out infinite}
+@keyframes fade{0%,100%{opacity:.4}50%{opacity:.75}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <div class="mark">NORTH<b>WATCH</b></div>
+    <div class="tag">CYBERSECURITY &amp; TECH, COMPRESSED</div>
+    <div class="stamp"><span class="dot"></span><span id="stamp">SYNCING</span></div>
+    <button id="btn-update" class="update-btn">Update</button>
+  </div>
+</header>
+
+<div class="shell">
+  <aside>
+    <p class="eyebrow">Filter</p>
+    <div class="grp">
+      <button class="filt tog" id="f-kev" aria-pressed="false">
+        <span class="ic">▲</span>Exploited now<span class="n" id="n-kev">0</span></button>
+      <button class="filt tog ca" id="f-ca" aria-pressed="false">
+        <span class="ic">🍁</span>Canada<span class="n" id="n-ca">0</span></button>
+    </div>
+
+    <p class="eyebrow">Feed</p>
+    <div class="grp" id="tiers"></div>
+
+    <p class="eyebrow">Find</p>
+    <input class="find" id="q" placeholder="CVE / vendor / keyword" aria-label="Search">
+
+    <p class="eyebrow">Sources</p>
+    <div class="grp" id="feeds"></div>
+
+    <div class="legend">
+      <div><i style="background:var(--critical)"></i>Exploited — patch today</div>
+      <div><i style="background:var(--high)"></i>Exploitation likely</div>
+      <div><i style="background:var(--medium)"></i>Patch available</div>
+      <div><i style="background:var(--info)"></i>Context only</div>
+    </div>
+  </aside>
+
+  <main>
+    <div id="feed"><div class="skel"></div><div class="skel"></div><div class="skel"></div></div>
+    <div id="pager" class="pager"></div>
+  </main>
+
+  <aside class="rail">
+    <p class="eyebrow">Exploited now</p>
+    <div class="now" id="hot"></div>
+    <p class="eyebrow">Most covered</p>
+    <div class="now cov" id="cov"></div>
+  </aside>
+</div>
+
+<footer>
+  Aggregated with attribution. Summaries are original analysis generated from publisher
+  feeds; copyright in the underlying reporting stays with each outlet.<br>
+  Every headline links to its source. Read it there.
+</footer>
+
+<script>
+const SAMPLE={generated:new Date().toISOString(),
+ counts:{total:5,critical:1,high:1,medium:1,info:2,canada:0,kev:1,security:3,tech:2},
+ sources:[{name:"The Hacker News",site:"thehackernews.com",tier:"security"},
+  {name:"BleepingComputer",site:"bleepingcomputer.com",tier:"security"},
+  {name:"Krebs on Security",site:"krebsonsecurity.com",tier:"security"},
+  {name:"404 Media",site:"404media.co",tier:"security"},
+  {name:"WIRED Security",site:"wired.com",tier:"security"},
+  {name:"The Verge",site:"theverge.com",tier:"tech"},
+  {name:"Ars Technica",site:"arstechnica.com",tier:"tech"},
+  {name:"TechCrunch",site:"techcrunch.com",tier:"tech"},
+  {name:"Hacker News",site:"news.ycombinator.com",tier:"tech"},
+  {name:"CISA",site:"cisa.gov",tier:"advisory"},
+  {name:"Cisco Talos",site:"blog.talosintelligence.com",tier:"research"}],
+ stories:[
+ {id:"1",title:"Placeholder — run `nw build` to fill this",kind:"security",tier:"security",
+  severity:"critical",heat:96,canada:false,cves:["CVE-2026-00000"],kev:["CVE-2026-00000"],
+  epss:.94,published:new Date(Date.now()-72e5).toISOString(),link:"#",
+  abstract:"Security cards look like this: severity rule down the left, a data strip of everything you'd pivot on, and an action line only when there is genuinely something to do.",
+  why:"Red is reserved for CISA KEV. Confirmed exploitation, nothing else.",
+  action:"Run: nw doctor, then nw build.",confidence:"low",
+  sources:[{name:"CISA",site:"cisa.gov",link:"#"},{name:"The Hacker News",site:"thehackernews.com",link:"#"},{name:"BleepingComputer",site:"bleepingcomputer.com",link:"#"}]},
+ {id:"2",title:"Tech cards get a picture, because they are news",kind:"tech",tier:"tech",
+  severity:"info",heat:58,canada:false,cves:[],kev:[],epss:0,
+  published:new Date(Date.now()-2e7).toISOString(),link:"#",image:null,
+  abstract:"General tech feeds are firehoses. Every item from The Verge, Ars, TechCrunch and Hacker News has to clear a cyber-relevance score before it reaches you. Phone reviews never do.",
+  why:"",action:"",confidence:"high",
+  sources:[{name:"The Verge",site:"theverge.com",link:"#"},{name:"Ars Technica",site:"arstechnica.com",link:"#"}]},
+ {id:"3",title:"Exploitation claimed but not yet confirmed — amber",kind:"security",tier:"security",
+  severity:"high",heat:44,canada:false,cves:["CVE-2026-11111"],kev:[],epss:.61,
+  published:new Date(Date.now()-3e7).toISOString(),link:"#",
+  abstract:"EPSS above 0.50, or exploitation language in the reporting, but CISA hasn't listed it yet.",
+  why:"The gap between 'researchers published a PoC' and 'it's in KEV' is usually days.",
+  action:"Patch this cycle.",confidence:"medium",
+  sources:[{name:"BleepingComputer",site:"bleepingcomputer.com",link:"#"}]},
+ {id:"4",title:"Privacy and platform policy count as security news",kind:"tech",tier:"tech",
+  severity:"info",heat:31,canada:false,cves:[],kev:[],epss:0,
+  published:new Date(Date.now()-4e7).toISOString(),link:"#",
+  abstract:"Encryption laws, surveillance rulings, AI prompt-injection research and breach lawsuits all clear the gate. They affect the field even when there is no CVE.",
+  why:"",action:"",confidence:"high",
+  sources:[{name:"404 Media",site:"404media.co",link:"#"},{name:"WIRED Security",site:"wired.com",link:"#"}]},
+ {id:"5",title:"Low-heat stories render bare — no model call spent",kind:"security",tier:"research",
+  severity:"info",heat:12,canada:false,cves:[],kev:[],epss:0,
+  published:new Date(Date.now()-6e7).toISOString(),link:"#",
+  abstract:"",why:"",action:"",confidence:"low",
+  sources:[{name:"Cisco Talos",site:"blog.talosintelligence.com",link:"#"}]}]};
+
+const TIERS=[["all","Everything","◎"],["security","Security","▲"],["tech","Tech","◇"],
+             ["advisory","Advisories","!"],["research","Research","◆"],["video","Video","▶"]];
+const fav=s=>`https://www.google.com/s2/favicons?domain=${s}&sz=64`;
+const esc=s=>(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const ago=i=>{const m=Math.floor((Date.now()-new Date(i))/6e4);
+  return m<60?m+"m":m<1440?Math.floor(m/60)+"h":Math.floor(m/1440)+"d";};
+
+let DATA=null;
+const S={tier:"all",kev:false,ca:false,q:"",page:1};
+const PAGE_SIZE=10;
+
+function computeCounts(stories){
+  const c={total:stories.length,critical:0,high:0,medium:0,info:0,canada:0,kev:0,security:0,tech:0};
+  stories.forEach(s=>{c[s.severity]++;c[s.kind]++;if(s.canada)c.canada++;if(s.kev.length)c.kev++;});
+  return c;
+}
+
+function match(s){
+  if(S.tier==="security"&&s.kind!=="security")return false;
+  if(S.tier==="tech"&&s.kind!=="tech")return false;
+  if(["advisory","research","video"].includes(S.tier)&&s.tier!==S.tier)return false;
+  if(S.kev&&!s.kev.length)return false;
+  if(S.ca&&!s.canada)return false;
+  if(S.q){const h=(s.title+" "+s.cves.join(" ")+" "+(s.abstract||"")).toLowerCase();
+    if(!h.includes(S.q.toLowerCase()))return false;}
+  return true;
+}
+
+function byline(s){
+  return s.sources.slice(0,4).map(o=>
+    `<img src="${fav(o.site)}" alt="" loading="lazy"><a href="${esc(o.link)}" target="_blank" rel="noopener">${esc(o.name)}</a>`
+  ).join("")+(s.sources.length>4?`<span class="more">+${s.sources.length-4}</span>`:"");
+}
+
+function secCard(s){
+  const st=[];
+  if(s.kev.length)st.push(`<span class="kev">EXPLOITED</span>`);
+  s.cves.slice(0,2).forEach(c=>st.push(`<span class="cve">${esc(c)}</span>`));
+  if(s.epss>=.1)st.push(`<span class="epss">EPSS ${s.epss.toFixed(2)}</span>`);
+  if(s.canada)st.push(`<span class="leaf">🍁</span>`);
+  if(s.sources.length>1)st.push(`<span class="corr">${s.sources.length} OUTLETS</span>`);
+  st.push(`<span>${ago(s.published)}</span>`);
+  return `<article class="card sec" data-sev="${s.severity}"><div class="pad">
+    <div class="strip">${st.join('<span class="sep">│</span>')}</div>
+    <a href="${esc(s.link)}" target="_blank" rel="noopener"><h2>${esc(s.title)}</h2></a>
+    ${s.abstract?`<p class="abs">${esc(s.abstract)}</p>`:""}
+    ${s.why?`<p class="why">${esc(s.why)}</p>`:""}
+    ${s.action?`<div class="act"><span class="k">ACTION</span><span class="v">${esc(s.action)}</span></div>`:""}
+    <div class="by">${byline(s)}</div></div></article>`;
+}
+
+function techCard(s){
+  const lead=s.sources[0];
+  return `<article class="card tech">
+    ${s.image?`<a href="${esc(s.link)}" target="_blank" rel="noopener"><img class="hero" src="${esc(s.image)}" alt="" loading="lazy"></a>`:""}
+    <div class="pad">
+      <div class="meta"><img src="${fav(lead.site)}" alt="">${esc(lead.name)}
+        <span class="sep">│</span>${ago(s.published)}
+        ${s.sources.length>1?`<span class="sep">│</span>${s.sources.length} outlets`:""}
+        ${s.canada?`<span class="sep">│</span><span class="leaf">🍁</span>`:""}</div>
+      <a href="${esc(s.link)}" target="_blank" rel="noopener"><h2>${esc(s.title)}</h2></a>
+      ${s.abstract?`<p class="abs">${esc(s.abstract)}</p>`:""}
+      ${s.why?`<p class="why">${esc(s.why)}</p>`:""}
+      <div class="by">${byline(s)}</div>
+    </div></article>`;
+}
+
+const rows=(l,empty)=>l.length?l.slice(0,6).map(s=>
+  `<a class="row" href="${esc(s.link)}" target="_blank" rel="noopener">
+     <div class="t">${esc(s.title)}</div>
+     <div class="m">${esc(s.sources[0].name)} · ${ago(s.published)} ago</div></a>`).join("")
+  :`<p class="void">${empty}</p>`;
+
+function renderPager(total,totalPages){
+  const el=document.getElementById("pager");
+  if(total<=PAGE_SIZE){el.innerHTML="";return;}
+  el.innerHTML=`<button class="pg-btn" id="pg-prev" ${S.page<=1?"disabled":""}>‹ Prev</button>
+    <span class="pg-info">Page ${S.page} of ${totalPages}</span>
+    <button class="pg-btn" id="pg-next" ${S.page>=totalPages?"disabled":""}>Next ›</button>`;
+  document.getElementById("pg-prev").onclick=()=>{S.page--;render();scrollTo({top:0,behavior:"smooth"});};
+  document.getElementById("pg-next").onclick=()=>{S.page++;render();scrollTo({top:0,behavior:"smooth"});};
+}
+
+function render(){
+  const hits=DATA.stories.filter(match);
+  const totalPages=Math.max(1,Math.ceil(hits.length/PAGE_SIZE));
+  S.page=Math.min(Math.max(S.page,1),totalPages);
+  const page=hits.slice((S.page-1)*PAGE_SIZE,S.page*PAGE_SIZE);
+  document.getElementById("feed").innerHTML = page.length
+    ? page.map(s=>s.kind==="tech"?techCard(s):secCard(s)).join("")
+    : `<p class="void">Nothing matches. Clear a filter.</p>`;
+  renderPager(hits.length,totalPages);
+  document.getElementById("hot").innerHTML =
+    rows(DATA.stories.filter(s=>s.kev.length),"Nothing actively exploited. Quiet day.");
+  document.getElementById("cov").innerHTML =
+    rows([...DATA.stories].filter(s=>s.sources.length>1)
+      .sort((a,b)=>b.sources.length-a.sources.length),"No story carried by more than one outlet yet.");
+}
+
+function chrome(){
+  const c=DATA.counts;
+  document.getElementById("stamp").textContent =
+    `${c.total} STORIES · ${c.security} SEC · ${c.tech} TECH · ${ago(DATA.generated)} OLD`;
+  document.getElementById("n-kev").textContent=c.kev;
+  document.getElementById("n-ca").textContent=c.canada;
+
+  document.getElementById("tiers").innerHTML=TIERS.map(([k,l,ic])=>{
+    const n = k==="all" ? c.total
+            : k==="security"||k==="tech" ? DATA.stories.filter(s=>s.kind===k).length
+            : DATA.stories.filter(s=>s.tier===k).length;
+    return (n||k==="all")?`<button class="filt" data-tier="${k}" aria-pressed="${k===S.tier}">
+      <span class="ic">${ic}</span>${l}<span class="n">${n}</span></button>`:"";
+  }).join("");
+
+  document.getElementById("feeds").innerHTML=DATA.sources.slice(0,12).map(s=>
+    `<div class="src"><img src="${fav(s.site)}" alt="" loading="lazy"><span>${esc(s.name)}</span></div>`
+  ).join("")+(DATA.sources.length>12
+    ?`<div class="src"><span style="opacity:.6">…and ${DATA.sources.length-12} more</span></div>`:"");
+
+  document.querySelectorAll("[data-tier]").forEach(b=>b.onclick=()=>{
+    S.tier=b.dataset.tier;S.page=1;
+    document.querySelectorAll("[data-tier]").forEach(x=>
+      x.setAttribute("aria-pressed",x.dataset.tier===S.tier));
+    render();
+  });
+}
+
+const tog=(el,k)=>el.onclick=()=>{S[k]=!S[k];S.page=1;el.setAttribute("aria-pressed",S[k]);render();};
+tog(document.getElementById("f-kev"),"kev");
+tog(document.getElementById("f-ca"),"ca");
+document.getElementById("q").oninput=e=>{S.q=e.target.value.trim();S.page=1;render();};
+
+function updateFeed(){
+  const btn=document.getElementById("btn-update");
+  const label=btn.textContent;
+  const known=new Set(DATA.stories.map(s=>s.id));
+  btn.disabled=true;btn.textContent="Checking…";
+  fetch("./data/feed.json",{cache:"no-store"})
+    .then(r=>r.ok?r.json():Promise.reject())
+    .then(fresh=>{
+      const unseen=fresh.stories.filter(s=>!known.has(s.id));
+      const toAdd=unseen.slice(0,3);
+      if(toAdd.length){
+        DATA.stories=[...toAdd,...DATA.stories].sort((a,b)=>b.heat-a.heat);
+        DATA.counts=computeCounts(DATA.stories);
+        DATA.generated=fresh.generated;
+        S.page=1;
+        chrome();render();
+        btn.textContent=`+${toAdd.length} added`;
+      }else{
+        btn.textContent="Up to date";
+      }
+      setTimeout(()=>{btn.textContent=label;btn.disabled=false;},2200);
+    })
+    .catch(()=>{
+      btn.textContent="Retry";
+      setTimeout(()=>{btn.textContent=label;btn.disabled=false;},2200);
+    });
+}
+document.getElementById("btn-update").onclick=updateFeed;
+
+fetch("./data/feed.json",{cache:"no-store"})
+  .then(r=>r.ok?r.json():Promise.reject()).catch(()=>SAMPLE)
+  .then(d=>{DATA=d;chrome();render();});
+</script>
+</body>
+</html>

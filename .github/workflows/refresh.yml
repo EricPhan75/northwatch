@@ -1,0 +1,39 @@
+name: refresh
+
+# Once a day, 13:00 UTC (~9am ET). Keeps free-tier usage low; a day's worth
+# of new stories is plenty for a reader that isn't a SOC watch floor.
+on:
+  schedule: [{ cron: "0 13 * * *" }]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+
+      - run: pip install -r requirements.txt
+
+      - name: Build feed
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m northwatch.cli build --window 120 --limit 60 --backend auto
+
+      - name: Push critical to phone
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        continue-on-error: true
+        run: python -m northwatch.cli notify
+
+      - name: Commit feed
+        run: |
+          git config user.name  "northwatch"
+          git config user.email "bot@users.noreply.github.com"
+          git add web/data/feed.json
+          git diff --staged --quiet || git commit -m "feed: $(date -u +%FT%TZ)"
+          git push
