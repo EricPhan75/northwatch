@@ -20,7 +20,9 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Build feed
-        run: python -m northwatch.cli build --window 120 --limit 60 --backend none
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m northwatch.cli build --window 120 --limit 60 --backend auto
 
       - name: Push critical to phone
         env:

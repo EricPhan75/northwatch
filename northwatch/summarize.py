@@ -49,7 +49,7 @@ from typing import Any, Callable
 
 import requests
 
-GEMINI_MODEL = os.environ.get("NW_GEMINI_MODEL", "gemini-2.0-flash")
+GEMINI_MODEL = os.environ.get("NW_GEMINI_MODEL", "gemini-3.1-flash-lite")
 GROQ_MODEL = os.environ.get("NW_GROQ_MODEL", "llama-3.1-8b-instant")
 CF_MODEL = os.environ.get("NW_CF_MODEL", "@cf/meta/llama-3.1-8b-instruct")
 OLLAMA_HOST = os.environ.get("NW_OLLAMA_HOST", "http://localhost:11434")
@@ -124,6 +124,7 @@ def _gemini(prompt: str) -> dict[str, Any]:
                 "temperature": 0.2,
                 "maxOutputTokens": 400,
                 "responseMimeType": "application/json",
+                "thinkingConfig": {"thinkingBudget": 0},
             },
         },
         timeout=60,
