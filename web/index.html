@@ -80,9 +80,9 @@ aside{align-self:start}
 .tog.ca[aria-pressed="true"]{background:rgba(200,16,46,.1);color:#EE9AA5;
   box-shadow:inset 2px 0 0 var(--leaf)}
 
-.find{width:100%;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
-      border-radius:5px;color:var(--fg);font:400 12px var(--f-mono)}
-.find::placeholder{color:var(--fg-dim)}
+.find-top{flex:1 1 140px;max-width:320px;padding:7px 10px;background:var(--surface);
+      border:1px solid var(--rule);border-radius:5px;color:var(--fg);font:400 12px var(--f-mono)}
+.find-top::placeholder{color:var(--fg-dim)}
 .src{display:flex;align-items:center;gap:9px;padding:4px 10px;color:var(--fg-dim);font-size:12.5px}
 .src img{width:15px;height:15px;border-radius:3px;background:var(--raise);flex:0 0 15px}
 .src span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -185,6 +185,7 @@ footer{border-top:1px solid var(--rule);margin-top:40px;padding:22px 20px 44px;t
     <button id="btn-sidebar" class="sb-btn" aria-pressed="false" aria-label="Toggle filters sidebar">☰</button>
     <div class="mark">NORTH<b>WATCH</b></div>
     <div class="tag">CYBERSECURITY &amp; TECH, COMPRESSED</div>
+    <input class="find-top" id="q" placeholder="CVE / vendor / keyword" aria-label="Search">
     <div class="stamp"><span class="dot"></span><span id="stamp">SYNCING</span></div>
     <button id="btn-update" class="update-btn">Update</button>
   </div>
@@ -202,9 +203,6 @@ footer{border-top:1px solid var(--rule);margin-top:40px;padding:22px 20px 44px;t
 
     <p class="eyebrow">Feed</p>
     <div class="grp" id="tiers"></div>
-
-    <p class="eyebrow">Find</p>
-    <input class="find" id="q" placeholder="CVE / vendor / keyword" aria-label="Search">
 
     <p class="eyebrow">Sources</p>
     <div class="grp" id="feeds"></div>
