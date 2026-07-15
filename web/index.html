@@ -162,6 +162,15 @@ h2{font-family:var(--f-disp);font-weight:600;font-size:19px;line-height:1.24;mar
 .pg-btn:hover:not(:disabled){background:var(--raise);color:var(--fg)}
 .pg-btn:disabled{opacity:.35;cursor:default}
 .pg-info{font-family:var(--f-mono);font-size:11px;color:var(--fg-dim)}
+
+.sb-btn{font-family:var(--f-mono);font-size:11px;letter-spacing:.04em;color:var(--fg-mid);
+  background:var(--surface);border:1px solid var(--rule);border-radius:5px;padding:5px 11px;
+  cursor:pointer;transition:background .12s,color .12s;white-space:nowrap}
+.sb-btn:hover{background:var(--raise);color:var(--fg)}
+.shell.hide-left>aside:first-of-type{display:none}
+@media(min-width:940px){.shell.hide-left{grid-template-columns:1fr}}
+@media(min-width:1280px){.shell.hide-left{grid-template-columns:1fr 272px}}
+
 footer{border-top:1px solid var(--rule);margin-top:40px;padding:22px 20px 44px;text-align:center;
        font-size:11.5px;color:var(--fg-dim);line-height:1.7}
 .skel{height:96px;background:var(--surface);border-radius:7px;margin-bottom:11px;
@@ -173,6 +182,7 @@ footer{border-top:1px solid var(--rule);margin-top:40px;padding:22px 20px 44px;t
 
 <header>
   <div class="bar">
+    <button id="btn-sidebar" class="sb-btn" aria-pressed="false" aria-label="Toggle filters sidebar">☰</button>
     <div class="mark">NORTH<b>WATCH</b></div>
     <div class="tag">CYBERSECURITY &amp; TECH, COMPRESSED</div>
     <div class="stamp"><span class="dot"></span><span id="stamp">SYNCING</span></div>
@@ -433,6 +443,17 @@ function updateFeed(){
     });
 }
 document.getElementById("btn-update").onclick=updateFeed;
+
+const SIDEBAR_KEY="nw-sidebar-hidden";
+const shellEl=document.querySelector(".shell");
+const sbBtn=document.getElementById("btn-sidebar");
+function applySidebar(hidden){
+  shellEl.classList.toggle("hide-left",hidden);
+  sbBtn.setAttribute("aria-pressed",hidden);
+  localStorage.setItem(SIDEBAR_KEY,hidden?"1":"0");
+}
+sbBtn.onclick=()=>applySidebar(!shellEl.classList.contains("hide-left"));
+applySidebar(localStorage.getItem(SIDEBAR_KEY)==="1");
 
 fetch("./data/feed.json",{cache:"no-store"})
   .then(r=>r.ok?r.json():Promise.reject()).catch(()=>SAMPLE)
