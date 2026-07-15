@@ -58,7 +58,9 @@ OLLAMA_MODEL = os.environ.get("NW_OLLAMA_MODEL", "qwen2.5:7b")
 CHAIN = ["gemini", "groq", "cloudflare", "ollama"]
 
 # Groq's tokens-per-minute cap bites long before its daily cap. Pace it.
-PACE = {"groq": 8.0, "gemini": 0.6, "cloudflare": 0.5, "ollama": 0.0}
+# gemini-3.1-flash-lite free tier is 15 RPM (confirmed via aistudio.google.com/rate-limit,
+# not the 100 RPM that 0.6s implied) — 4.5s keeps us under that with margin.
+PACE = {"groq": 8.0, "gemini": 4.5, "cloudflare": 0.5, "ollama": 0.0}
 
 
 SYSTEM = """You write the daily brief for a security-minded reader who does not
@@ -249,13 +251,16 @@ def summarize_cluster(cluster: list[dict], chain: list[str]) -> dict[str, Any]:
     prompt = _payload(cluster)
     for name in chain:
         try:
-            out = enforce(BACKENDS[name](prompt))
-            if PACE.get(name):
-                time.sleep(PACE[name])
-            return out
+            return enforce(BACKENDS[name](prompt))
         except Exception as exc:                                # noqa: BLE001
             code = getattr(getattr(exc, "response", None), "status_code", "")
             print(f"    {name} failed{f' [{code}]' if code else ''} — next")
+        finally:
+            # Pace every call, success or failure — a 429 means the window is
+            # already exhausted, and firing the next 50 stories with zero delay
+            # just guarantees 50 more 429s instead of letting the window clear.
+            if PACE.get(name):
+                time.sleep(PACE[name])
     return dict(FALLBACK)
 
 
