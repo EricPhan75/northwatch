@@ -176,6 +176,20 @@ footer{border-top:1px solid var(--rule);margin-top:40px;padding:22px 20px 44px;t
 .skel{height:96px;background:var(--surface);border-radius:7px;margin-bottom:11px;
       animation:fade 1.4s ease-in-out infinite}
 @keyframes fade{0%,100%{opacity:.4}50%{opacity:.75}}
+
+/* ── mobile ──────────────────────────────────────────────────
+   Header doesn't wrap by default, which overflows the viewport
+   once toggle+logo+search+stamp+update all compete for one row
+   below ~700px. Wrap it into two rows and give search the full
+   width row instead of squeezing it. Bigger touch targets too. */
+@media(max-width:700px){
+  .bar{flex-wrap:wrap;row-gap:10px;padding:12px 14px}
+  .find-top{flex:1 1 100%;max-width:none}
+  .stamp{margin-left:0;font-size:10px}
+  .shell{padding:14px;gap:16px}
+  .sb-btn,.update-btn,.pg-btn{padding:8px 13px}
+  .pad{padding:13px 14px 12px}
+}
 </style>
 </head>
 <body>
@@ -451,7 +465,8 @@ function applySidebar(hidden){
   localStorage.setItem(SIDEBAR_KEY,hidden?"1":"0");
 }
 sbBtn.onclick=()=>applySidebar(!shellEl.classList.contains("hide-left"));
-applySidebar(localStorage.getItem(SIDEBAR_KEY)==="1");
+const savedSidebar=localStorage.getItem(SIDEBAR_KEY);
+applySidebar(savedSidebar===null ? window.innerWidth<940 : savedSidebar==="1");
 
 fetch("./data/feed.json",{cache:"no-store"})
   .then(r=>r.ok?r.json():Promise.reject()).catch(()=>SAMPLE)
