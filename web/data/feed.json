@@ -1,13 +1,13 @@
 {
- "generated": "2026-07-15T23:11:11.841538+00:00",
+ "generated": "2026-07-16T14:58:07.455224+00:00",
  "counts": {
   "total": 60,
-  "critical": 5,
-  "high": 8,
-  "medium": 32,
-  "info": 15,
-  "canada": 15,
-  "kev": 5,
+  "critical": 4,
+  "high": 6,
+  "medium": 34,
+  "info": 16,
+  "canada": 14,
+  "kev": 4,
   "security": 57,
   "tech": 3
  },
@@ -221,7 +221,7 @@
    "image": null,
    "published": "2026-07-15T19:12:30+00:00",
    "severity": "critical",
-   "heat": 94.84,
+   "heat": 81.48,
    "canada": true,
    "cves": [
     "CVE-2008-4128",
@@ -281,9 +281,45 @@
      "link": "https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526"
     }
    ],
-   "abstract": "CISA has updated its Known Exploited Vulnerabilities catalog to include several critical flaws across Oracle, SonicWall, Microsoft, and KNX products. These vulnerabilities are currently being leveraged in active cyberattacks, necessitating immediate attention from security teams to prevent unauthorized access or system compromise.",
-   "why": "These vulnerabilities are confirmed to be under active exploitation, significantly increasing the risk of compromise for organizations running the affected software.",
-   "action": "Review the CISA KEV catalog and apply all relevant vendor security patches immediately.",
+   "abstract": "CISA has updated its Known Exploited Vulnerabilities catalog to include several critical flaws across Oracle, SonicWall, Microsoft, and KNX products. These vulnerabilities are currently being actively exploited in the wild, necessitating immediate attention from security teams to prevent unauthorized access or system compromise.",
+   "why": "Active exploitation of these vulnerabilities poses a high risk of system compromise, privilege escalation, and unauthorized access to critical enterprise infrastructure.",
+   "action": "Review CISA KEV catalog and apply all relevant vendor security patches immediately.",
+   "confidence": "high"
+  },
+  {
+   "id": "671ff575269a8933",
+   "title": "AL26-017 - Critical vulnerabilities impacting Microsoft SharePoint Server – CVE-2026-56164, CVE-2026-55040 and CVE-2026-58644",
+   "link": "https://cyber.gc.ca/en/alerts-advisories/al26-017-critical-vulnerabilities-impacting-microsoft-sharepoint-server-cve-2026-56164-cve-2026-55040-cve-2026-58644",
+   "kind": "security",
+   "tier": "advisory",
+   "image": null,
+   "published": "2026-07-15T18:09:31+00:00",
+   "severity": "critical",
+   "heat": 69.51,
+   "canada": true,
+   "cves": [
+    "CVE-2026-55040",
+    "CVE-2026-55164",
+    "CVE-2026-56164",
+    "CVE-2026-58644"
+   ],
+   "kev": [
+    "CVE-2026-56164"
+   ],
+   "epss": 0.056,
+   "vendors": [
+    "Microsoft"
+   ],
+   "sources": [
+    {
+     "name": "Cyber Centre",
+     "site": "cyber.gc.ca",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/al26-017-critical-vulnerabilities-impacting-microsoft-sharepoint-server-cve-2026-56164-cve-2026-55040-cve-2026-58644"
+    }
+   ],
+   "abstract": "Microsoft has disclosed several critical vulnerabilities affecting SharePoint Server, including a flaw involving missing authentication for critical functions. These security gaps could allow unauthorized access or exploitation of affected server environments.",
+   "why": "SharePoint is a high-value target for lateral movement and data exfiltration, and at least one of these vulnerabilities is already being actively exploited.",
+   "action": "Apply the latest security updates for Microsoft SharePoint Server immediately.",
    "confidence": "high"
   },
   {
@@ -295,7 +331,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0n94FUIdljCnLvlh0SNz5l8xDWbdDqmk7OesE7HAKxrRAMUMIfXpppuMBoI-7F0Q1PB7eXPRjrfg9fgZTTVj3JY5jKsr1Ebheb2mU65p4MUVYbs59lCPPWCBQ4LVYZnoZ0o6nRkoBQitrwwnyLVQc2oYJ41zVjPS6_HchwIR-U8EuWrOdPpl1-Y9Rw1Lm/s1600/sonicwall-patches.jpg",
    "published": "2026-07-15T05:30:21+00:00",
    "severity": "critical",
-   "heat": 83.91,
+   "heat": 67.47,
    "canada": true,
    "cves": [
     "CVE-2026-15409",
@@ -305,7 +341,7 @@
     "CVE-2026-15409",
     "CVE-2026-15410"
    ],
-   "epss": 0.016,
+   "epss": 0.015,
    "vendors": [
     "Sonicwall"
    ],
@@ -319,64 +355,23 @@
      "name": "The Hacker News",
      "site": "thehackernews.com",
      "link": "https://thehackernews.com/2026/07/two-sonicwall-sma-1000-zero-days.html"
-    },
-    {
-     "name": "BleepingComputer",
-     "site": "bleepingcomputer.com",
-     "link": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/"
     }
    ],
-   "abstract": "SonicWall has confirmed active exploitation of two critical zero-day vulnerabilities in its SMA 1000 series appliances. These flaws, including a high-severity SSRF issue, allow unauthenticated remote attackers to execute arbitrary commands on affected systems.",
-   "why": "These vulnerabilities provide a direct path for remote code execution on edge infrastructure, making them prime targets for initial access and persistence.",
-   "action": "Apply the latest platform hotfixes for SMA 1000 series appliances immediately.",
+   "abstract": "SonicWall has confirmed active exploitation of two critical vulnerabilities in its SMA 1000 series appliances. These flaws, including a server-side request forgery issue and a remote command execution vulnerability, allow unauthenticated attackers to compromise affected systems.",
+   "why": "These vulnerabilities are being actively exploited in the wild and carry a maximum severity rating, posing an immediate risk to perimeter security.",
+   "action": "Apply the latest platform hotfixes provided by SonicWall for your specific SMA 1000 model immediately.",
    "confidence": "high"
   },
   {
-   "id": "671ff575269a8933",
-   "title": "AL26-017 - Critical vulnerabilities impacting Microsoft SharePoint Server – CVE-2026-56164, CVE-2026-55040 and CVE-2026-58644",
-   "link": "https://cyber.gc.ca/en/alerts-advisories/al26-017-critical-vulnerabilities-impacting-microsoft-sharepoint-server-cve-2026-56164-cve-2026-55040-cve-2026-58644",
-   "kind": "security",
-   "tier": "advisory",
-   "image": null,
-   "published": "2026-07-15T18:09:31+00:00",
-   "severity": "critical",
-   "heat": 81.16,
-   "canada": true,
-   "cves": [
-    "CVE-2026-55040",
-    "CVE-2026-55164",
-    "CVE-2026-56164",
-    "CVE-2026-58644"
-   ],
-   "kev": [
-    "CVE-2026-56164"
-   ],
-   "epss": 0.07,
-   "vendors": [
-    "Microsoft"
-   ],
-   "sources": [
-    {
-     "name": "Cyber Centre",
-     "site": "cyber.gc.ca",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/al26-017-critical-vulnerabilities-impacting-microsoft-sharepoint-server-cve-2026-56164-cve-2026-55040-cve-2026-58644"
-    }
-   ],
-   "abstract": "Microsoft has disclosed several critical vulnerabilities affecting SharePoint Server, including a flaw involving missing authentication for critical functions. These security gaps could allow unauthorized access or exploitation, with at least one vulnerability already identified as being actively targeted in the wild.",
-   "why": "Unauthenticated access to SharePoint servers poses a severe risk of data exfiltration, remote code execution, and full system compromise.",
-   "action": "Apply the latest Microsoft security updates for SharePoint Server immediately.",
-   "confidence": "high"
-  },
-  {
-   "id": "2c2b2700dd7b44b3",
-   "title": "Microsoft Patches a Record 570 Security Flaws",
-   "link": "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/",
+   "id": "55e1fe9fda9a5fb9",
+   "title": "Researcher Drops New Windows Zero-Day PoC Hours After Microsoft Patch Tuesday",
+   "link": "https://thehackernews.com/2026/07/researcher-drops-new-windows-zero-day.html",
    "kind": "security",
    "tier": "security",
-   "image": null,
-   "published": "2026-07-15T16:20:18+00:00",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvtiVnhkF-YVsPEXyedqj9REY5pN1-KiSsf-rCeXK5yClGbAcsL1Tg7-9UDDA8VQg5RbM0uWkV23rDxqiFFIJ2RkpkY6cn90-5LPbZOC2oktF7_3FjD5La_FGkYdVBEKeXMJGiGRZfPvxmMBXd99tncWdEZ4HxX62hbxmWEnA02eu-LSVwZtmecjuykqDb/s1600/windows-0day.jpg",
+   "published": "2026-07-16T06:48:40+00:00",
    "severity": "high",
-   "heat": 75.81,
+   "heat": 63.16,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -387,30 +382,20 @@
    ],
    "sources": [
     {
-     "name": "Krebs on Security",
-     "site": "krebsonsecurity.com",
-     "link": "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/"
+     "name": "The Hacker News",
+     "site": "thehackernews.com",
+     "link": "https://thehackernews.com/2026/07/researcher-drops-new-windows-zero-day.html"
     },
     {
-     "name": "BleepingComputer",
-     "site": "bleepingcomputer.com",
-     "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/"
-    },
-    {
-     "name": "TechCrunch Security",
-     "site": "techcrunch.com",
-     "link": "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/"
-    },
-    {
-     "name": "Infosecurity Magazine",
-     "site": "infosecurity-magazine.com",
-     "link": "https://www.infosecurity-magazine.com/news/microsoft-570-cves-patch-tuesday/"
+     "name": "SecurityWeek",
+     "site": "securityweek.com",
+     "link": "https://www.securityweek.com/nightmare-eclipse-drops-legacyhive-windows-zero-day/"
     }
    ],
-   "abstract": "Microsoft addressed 570 security vulnerabilities in its latest update cycle, a significant increase attributed to the integration of artificial intelligence in vulnerability research. This record-breaking volume highlights how automated tools are accelerating the discovery of flaws across the company's software ecosystem.",
-   "why": "The surge in patch volume indicates that AI-driven discovery is rapidly expanding the attack surface, requiring organizations to accelerate their own remediation workflows.",
-   "action": "Prioritize and deploy the July security updates across all Microsoft environments immediately.",
-   "confidence": "high"
+   "abstract": "A security researcher released a proof-of-concept exploit dubbed LegacyHive, targeting an elevation of privilege vulnerability within the Windows User Profile Service. The flaw involves the improper handling of registry hive loading, potentially allowing unauthorized system-level access.",
+   "why": "Privilege escalation vulnerabilities in core Windows services are high-value targets for attackers seeking to bypass standard user restrictions and gain persistent system control.",
+   "action": "",
+   "confidence": "medium"
   },
   {
    "id": "9bd05bea89e23506",
@@ -421,7 +406,7 @@
    "image": null,
    "published": "2026-07-14T12:00:00+00:00",
    "severity": "critical",
-   "heat": 73.16,
+   "heat": 62.85,
    "canada": false,
    "cves": [
     "CVE-2025-14771",
@@ -449,21 +434,21 @@
      "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-03"
     }
    ],
-   "abstract": "ABB has released security updates for Ability Edgenius and T-MAC Plus to address multiple vulnerabilities. These include a critical Linux kernel flaw, CVE-2026-31431, which allows local privilege escalation to root, alongside several authorization and input validation issues in T-MAC Plus.",
-   "why": "The kernel vulnerability is actively exploited and grants full system control, posing a severe risk to critical infrastructure environments.",
-   "action": "Update ABB Ability Edgenius to version 3.2.4.1 or later and T-MAC Plus to the latest patched version.",
+   "abstract": "ABB has released patches for multiple vulnerabilities affecting Ability Edgenius and T-MAC Plus systems. These flaws include a critical Linux kernel privilege escalation bug, as well as authorization bypasses and cross-site scripting issues within industrial management software.",
+   "why": "The kernel vulnerability allows local attackers to gain root access, while the T-MAC flaws could lead to full system compromise in critical manufacturing environments.",
+   "action": "Update ABB Ability Edgenius to version 3.2.4.1 or later and T-MAC Plus to the latest available release.",
    "confidence": "high"
   },
   {
-   "id": "baf8f23c99d9ade8",
-   "title": "Progress orders emergency ShareFile server shutdown over mystery security threat",
-   "link": "https://www.theregister.com/security/2026/07/13/progress-orders-emergency-sharefile-server-shutdown-over-mystery-security-threat/5270281",
+   "id": "f2bdf8ad89547631",
+   "title": "Scattered Spider hackers sentenced to 5.5 years over £29 million Transport for London hack",
+   "link": "https://therecord.media/scattered-spider-hackers-tfl-sentenced",
    "kind": "security",
    "tier": "security",
-   "image": "https://image.theregister.com/?imageId=5270351&width=800",
-   "published": "2026-07-15T12:00:00+00:00",
-   "severity": "high",
-   "heat": 67.13,
+   "image": "http://cms.therecord.media/uploads/Scattered_Spider_63f683de67.jpg",
+   "published": "2026-07-16T13:21:12+00:00",
+   "severity": "medium",
+   "heat": 53.01,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -473,64 +458,132 @@
     {
      "name": "BleepingComputer",
      "site": "bleepingcomputer.com",
-     "link": "https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/"
+     "link": "https://www.bleepingcomputer.com/news/security/scattered-spider-members-behind-transport-for-london-hack-get-five-years-in-prison/"
     },
     {
-     "name": "The Register Security",
-     "site": "theregister.com",
-     "link": "https://www.theregister.com/security/2026/07/13/progress-orders-emergency-sharefile-server-shutdown-over-mystery-security-threat/5270281"
+     "name": "The Record",
+     "site": "therecord.media",
+     "link": "https://therecord.media/scattered-spider-hackers-tfl-sentenced"
     },
     {
      "name": "SecurityWeek",
      "site": "securityweek.com",
-     "link": "https://www.securityweek.com/progress-confirms-zero-day-vulnerability-behind-sharefile-disruption/"
-    },
-    {
-     "name": "Infosecurity Magazine",
-     "site": "infosecurity-magazine.com",
-     "link": "https://www.infosecurity-magazine.com/news/progress-restores-sharefile/"
-    },
-    {
-     "name": "Infosecurity Magazine",
-     "site": "infosecurity-magazine.com",
-     "link": "https://www.infosecurity-magazine.com/news/progress-warns-security-threat/"
+     "link": "https://www.securityweek.com/two-scattered-spider-hackers-sentenced-to-jail-in-uk/"
     }
    ],
-   "abstract": "Progress Software disabled ShareFile Storage Zones Controllers for several days following the discovery of a high-severity zero-day vulnerability. The company has now released a security update to address the flaw and is restoring access for customers who apply the patch.",
-   "why": "The vulnerability allowed unauthorized access to sensitive data, necessitating an emergency shutdown of infrastructure to prevent exploitation.",
-   "action": "Apply the latest security update for ShareFile Storage Zones Controller immediately.",
+   "abstract": "Two prominent members of the Scattered Spider threat group received prison sentences of five and a half years each. The convictions stem from their roles in the 2024 cyberattack against Transport for London, which caused significant operational disruption.",
+   "why": "This represents a rare successful prosecution of high-profile members from a prolific social engineering and ransomware syndicate.",
+   "action": "",
    "confidence": "high"
   },
   {
-   "id": "51db287e860725a5",
-   "title": "CISA warns admins to patch actively exploited SharePoint flaws",
-   "link": "https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-patch-actively-exploited-sharepoint-flaws/",
+   "id": "3437590192e7f2f3",
+   "title": "CISA orders feds to patch actively exploited Oracle flaw by Saturday",
+   "link": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-oracle-flaw-by-saturday/",
    "kind": "security",
    "tier": "security",
    "image": null,
-   "published": "2026-07-15T14:07:44+00:00",
+   "published": "2026-07-16T10:56:03+00:00",
    "severity": "high",
-   "heat": 60.41,
+   "heat": 52.51,
    "canada": false,
    "cves": [],
    "kev": [],
    "epss": 0.0,
-   "vendors": [],
+   "vendors": [
+    "Oracle"
+   ],
    "sources": [
     {
      "name": "BleepingComputer",
      "site": "bleepingcomputer.com",
-     "link": "https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-patch-actively-exploited-sharepoint-flaws/"
+     "link": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-oracle-flaw-by-saturday/"
+    }
+   ],
+   "abstract": "CISA has issued a binding directive requiring federal agencies to remediate a critical security flaw within the Oracle E-Business Suite. The vulnerability is currently being leveraged in active exploitation campaigns, necessitating immediate defensive measures to protect sensitive financial infrastructure.",
+   "why": "Active exploitation of enterprise financial software poses a significant risk of data exfiltration and unauthorized system access for organizations using these platforms.",
+   "action": "Apply the latest security patches for Oracle E-Business Suite immediately.",
+   "confidence": "high"
+  },
+  {
+   "id": "4ba31d9533ddf18f",
+   "title": "11 Old Microsoft-Signed Linux UEFI Shims Could Let Attackers Bypass Secure Boot",
+   "link": "https://thehackernews.com/2026/07/11-old-microsoft-signed-linux-uefi.html",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzgVI5ZeWhnWkl-lXmJYMLjAOXmxw21Y3sgxeF9rrOS_JqjQ7k_yyV_2KU_ELhmsm3nA3qNV0farc_31WCAhPPZRq7iIrYm90R_24lvc1f68Gv-yZPsM3bwDiUuCaCBAzq-S8ymLrrD7dx349vEjlR0eID2LXm5SO3Ocq1sG8sWkhAEG9RWX07avTOu3dW/s1600/shim.gif",
+   "published": "2026-07-16T07:59:22+00:00",
+   "severity": "info",
+   "heat": 48.95,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [
+    "Linux",
+    "Microsoft"
+   ],
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "site": "thehackernews.com",
+     "link": "https://thehackernews.com/2026/07/11-old-microsoft-signed-linux-uefi.html"
     },
     {
      "name": "SecurityWeek",
      "site": "securityweek.com",
-     "link": "https://www.securityweek.com/cisa-urges-immediate-patching-of-exploited-sharepoint-vulnerabilities/"
+     "link": "https://www.securityweek.com/old-uefi-shims-expose-systems-to-secure-boot-bypass/"
+    },
+    {
+     "name": "Dark Reading",
+     "site": "darkreading.com",
+     "link": "https://www.darkreading.com/cyber-risk/forgotten-bootloaders-expose-secure-boot-blind-spot"
+    },
+    {
+     "name": "Infosecurity Magazine",
+     "site": "infosecurity-magazine.com",
+     "link": "https://www.infosecurity-magazine.com/news/uefi-shims-secure-boot-bypass/"
     }
    ],
-   "abstract": "CISA has issued an urgent warning regarding three vulnerabilities currently being exploited in the wild against internet-facing on-premises SharePoint Server deployments. Two of these security flaws were previously utilized as zero-day exploits to compromise vulnerable infrastructure.",
-   "why": "Active exploitation of on-premises enterprise software poses a critical risk of unauthorized access, data exfiltration, and potential lateral movement within internal networks.",
-   "action": "Identify and patch all internet-exposed on-premises SharePoint Server instances immediately.",
+   "abstract": "Researchers identified eleven legacy UEFI shim bootloaders, all bearing Microsoft digital signatures, that remain trusted by systems despite known vulnerabilities. These outdated components allow attackers to circumvent Secure Boot protections, potentially enabling the execution of unauthorized code during the early stages of system startup.",
+   "why": "This flaw undermines the fundamental integrity of the boot process, allowing persistent, high-privilege malware to bypass platform security controls.",
+   "action": "Ensure your UEFI revocation lists are updated to block these compromised bootloaders.",
+   "confidence": "high"
+  },
+  {
+   "id": "291a71049912d9b8",
+   "title": "Zoom Patches Critical Windows Flaw That Could Enable Account Takeover",
+   "link": "https://thehackernews.com/2026/07/zoom-patches-critical-windows-flaw-that.html",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPR-qLKvfH8KZydz4_DnqiB9bJDjgFi6KdfrbbCHNkywiDcR_1SILe12UqjuyM_1yQXEDBok-ZeYRX0hEjIZpx-Dz2hnIW2xXnwAqrmA3voWWfG_vnGMavgE4-E_DFzICLfizByiwAis02VEJqSoxQrEECCMibS0X27D5k0o08IPp1JR0tVCnXwpj2u3e2/s1600/zoom.jpg",
+   "published": "2026-07-16T07:22:44+00:00",
+   "severity": "medium",
+   "heat": 48.62,
+   "canada": false,
+   "cves": [
+    "CVE-2026-53412"
+   ],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [
+    "Windows"
+   ],
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "site": "thehackernews.com",
+     "link": "https://thehackernews.com/2026/07/zoom-patches-critical-windows-flaw-that.html"
+    },
+    {
+     "name": "BleepingComputer",
+     "site": "bleepingcomputer.com",
+     "link": "https://www.bleepingcomputer.com/news/security/zoom-warns-of-critical-account-takeover-vulnerability/"
+    }
+   ],
+   "abstract": "Zoom has addressed a critical input validation vulnerability in its Windows desktop client, VDI client, and Meeting SDK. The flaw, CVE-2026-53412, carries a CVSS score of 9.8 and could allow unauthenticated attackers to compromise user accounts.",
+   "why": "Remote code execution or account takeover vulnerabilities in widely deployed enterprise communication software present significant risks for lateral movement and data exfiltration.",
+   "action": "Update Zoom Workplace for Windows, VDI Client, and Meeting SDK to the latest versions.",
    "confidence": "high"
   },
   {
@@ -542,7 +595,7 @@
    "image": null,
    "published": "2026-07-15T14:01:11+00:00",
    "severity": "high",
-   "heat": 53.64,
+   "heat": 46.08,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -555,38 +608,8 @@
      "link": "https://www.bleepingcomputer.com/news/security/we-built-a-vulnerability-vending-machine-ai-tokens-in-zero-days-out/"
     }
    ],
-   "abstract": "Security firm Intruder developed an automated system leveraging large language models and code analysis to identify software vulnerabilities. The tool successfully discovered and exploited a zero-day flaw in a WordPress plugin, demonstrating the potential for AI to accelerate exploit development.",
-   "why": "This highlights the evolving capability of AI to automate complex vulnerability research, potentially lowering the barrier for attackers to find and weaponize flaws.",
-   "action": "",
-   "confidence": "high"
-  },
-  {
-   "id": "55e1fe9fda9a5fb9",
-   "title": "Researcher Drops New Windows Zero-Day PoC Hours After Microsoft Patch Tuesday",
-   "link": "https://thehackernews.com/2026/07/researcher-drops-new-windows-zero-day.html",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvtiVnhkF-YVsPEXyedqj9REY5pN1-KiSsf-rCeXK5yClGbAcsL1Tg7-9UDDA8VQg5RbM0uWkV23rDxqiFFIJ2RkpkY6cn90-5LPbZOC2oktF7_3FjD5La_FGkYdVBEKeXMJGiGRZfPvxmMBXd99tncWdEZ4HxX62hbxmWEnA02eu-LSVwZtmecjuykqDb/s1600/windows-0day.jpg",
-   "published": "2026-07-15T11:07:07+00:00",
-   "severity": "high",
-   "heat": 52.88,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [
-    "Microsoft",
-    "Windows"
-   ],
-   "sources": [
-    {
-     "name": "The Hacker News",
-     "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/07/researcher-drops-new-windows-zero-day.html"
-    }
-   ],
-   "abstract": "A researcher has published a proof-of-concept exploit targeting an elevation of privilege vulnerability in the Windows User Profile Service. The flaw, dubbed LegacyHive, allows unauthorized manipulation of registry hives within the core system component responsible for managing user environments.",
-   "why": "This vulnerability enables local attackers to escalate privileges, potentially gaining system-level access by exploiting the ProfSvc component.",
+   "abstract": "Security firm Intruder has developed an automated system utilizing code slicing and large language models to identify software vulnerabilities. The tool successfully discovered and exploited a zero-day flaw in a WordPress plugin, demonstrating the potential for AI-driven offensive security research.",
+   "why": "This signals a shift toward automated, AI-assisted vulnerability discovery, which will likely increase the volume and sophistication of exploits targeting common software.",
    "action": "",
    "confidence": "high"
   },
@@ -599,7 +622,7 @@
    "image": "https://cdn.arstechnica.net/wp-content/uploads/2022/10/windows-malware-500x500.jpg",
    "published": "2026-07-15T19:59:48+00:00",
    "severity": "high",
-   "heat": 49.25,
+   "heat": 42.31,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -615,10 +638,37 @@
      "link": "https://arstechnica.com/security/2026/07/windows-0-day-drops-the-same-day-microsoft-releases-record-number-of-patches/"
     }
    ],
-   "abstract": "Microsoft issued a massive batch of security updates, but researchers simultaneously identified a new zero-day vulnerability dubbed HiveLegacy. This flaw functions as a potent primitive, potentially enabling attackers to perform unauthorized operations on compromised Windows systems.",
-   "why": "Zero-day exploits targeting core Windows primitives pose significant risks for privilege escalation and persistent system compromise.",
+   "abstract": "Microsoft released a massive batch of security updates, but a new zero-day vulnerability dubbed HiveLegacy surfaced simultaneously. This exploit functions as a potent primitive, potentially enabling attackers to perform unauthorized operations beyond its initial scope.",
+   "why": "Zero-day vulnerabilities bypassing standard patch cycles represent significant risks for privilege escalation and system compromise in Windows environments.",
    "action": "",
    "confidence": "medium"
+  },
+  {
+   "id": "51db287e860725a5",
+   "title": "CISA warns admins to patch actively exploited SharePoint flaws",
+   "link": "https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-patch-actively-exploited-sharepoint-flaws/",
+   "kind": "security",
+   "tier": "security",
+   "image": null,
+   "published": "2026-07-15T09:44:52+00:00",
+   "severity": "high",
+   "heat": 41.2,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "site": "bleepingcomputer.com",
+     "link": "https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-patch-actively-exploited-sharepoint-flaws/"
+    }
+   ],
+   "abstract": "CISA has issued an urgent advisory regarding three vulnerabilities in on-premises SharePoint Server instances. Threat actors are actively targeting these flaws to compromise internet-facing servers, necessitating immediate attention from administrators to secure their infrastructure against ongoing exploitation attempts.",
+   "why": "Active exploitation of internet-facing enterprise software poses a critical risk of unauthorized access, data exfiltration, and potential lateral movement within internal networks.",
+   "action": "Identify and patch all internet-exposed on-premises SharePoint Server instances immediately.",
+   "confidence": "high"
   },
   {
    "id": "9103180de974b6a8",
@@ -629,7 +679,7 @@
    "image": "https://image.theregister.com/?imageId=5271746&width=800",
    "published": "2026-07-15T12:59:39+00:00",
    "severity": "high",
-   "heat": 47.58,
+   "heat": 40.87,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -650,85 +700,147 @@
    "confidence": "medium"
   },
   {
-   "id": "4ba31d9533ddf18f",
-   "title": "11 Old Microsoft-Signed Linux UEFI Shims Could Let Attackers Bypass Secure Boot",
-   "link": "https://thehackernews.com/2026/07/11-old-microsoft-signed-linux-uefi.html",
+   "id": "2c2b2700dd7b44b3",
+   "title": "Microsoft Patches a Record 570 Security Flaws",
+   "link": "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/",
    "kind": "security",
    "tier": "security",
-   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzgVI5ZeWhnWkl-lXmJYMLjAOXmxw21Y3sgxeF9rrOS_JqjQ7k_yyV_2KU_ELhmsm3nA3qNV0farc_31WCAhPPZRq7iIrYm90R_24lvc1f68Gv-yZPsM3bwDiUuCaCBAzq-S8ymLrrD7dx349vEjlR0eID2LXm5SO3Ocq1sG8sWkhAEG9RWX07avTOu3dW/s1600/shim.gif",
-   "published": "2026-07-15T21:19:19+00:00",
+   "image": null,
+   "published": "2026-07-15T16:20:18+00:00",
    "severity": "info",
-   "heat": 46.59,
+   "heat": 39.92,
    "canada": false,
    "cves": [],
    "kev": [],
    "epss": 0.0,
    "vendors": [
-    "Linux",
-    "Microsoft"
+    "Microsoft",
+    "Windows"
    ],
    "sources": [
     {
-     "name": "The Hacker News",
-     "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/07/11-old-microsoft-signed-linux-uefi.html"
+     "name": "Krebs on Security",
+     "site": "krebsonsecurity.com",
+     "link": "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/"
     },
     {
-     "name": "Dark Reading",
-     "site": "darkreading.com",
-     "link": "https://www.darkreading.com/cyber-risk/forgotten-bootloaders-expose-secure-boot-blind-spot"
+     "name": "TechCrunch Security",
+     "site": "techcrunch.com",
+     "link": "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/"
     },
     {
      "name": "Infosecurity Magazine",
      "site": "infosecurity-magazine.com",
-     "link": "https://www.infosecurity-magazine.com/news/uefi-shims-secure-boot-bypass/"
+     "link": "https://www.infosecurity-magazine.com/news/microsoft-570-cves-patch-tuesday/"
     }
    ],
-   "abstract": "Researchers identified eleven legacy UEFI bootloaders signed by Microsoft that remain trusted by modern systems. These vulnerable components allow attackers to bypass Secure Boot protections, facilitating the installation of persistent bootkits and malicious code during the early stages of the system startup process.",
-   "why": "This flaw undermines the hardware-rooted trust chain, allowing attackers to maintain persistence that survives operating system reinstallation and disk encryption.",
-   "action": "Apply the latest UEFI revocation list updates provided by your hardware and operating system vendors.",
+   "abstract": "Microsoft addressed 570 security vulnerabilities in its latest update cycle, a significant increase attributed to the integration of artificial intelligence in identifying software flaws. This surge highlights a shift in how automated tools are accelerating the discovery of bugs across the company's ecosystem.",
+   "why": "The rapid rise in disclosed vulnerabilities suggests that AI-driven discovery will lead to significantly higher patch volumes and increased maintenance burdens for security teams.",
+   "action": "Prioritize testing and deploying the July security updates across all Windows and Microsoft software environments.",
    "confidence": "high"
   },
   {
-   "id": "141e4fef4277c9ab",
-   "title": "Critical Vulnerabilities Patched With Fresh Chrome 150, Firefox 152 Updates",
-   "link": "https://www.securityweek.com/critical-vulnerabilities-patched-with-fresh-chrome-150-firefox-152-updates/",
+   "id": "8b7cf0b275997954",
+   "title": "Russian hackers trojanize WebEx, Zoom apps to push Starland malware",
+   "link": "https://www.bleepingcomputer.com/news/security/russian-hackers-trojanize-webex-zoom-apps-to-push-starland-malware/",
    "kind": "security",
    "tier": "security",
    "image": null,
-   "published": "2026-07-15T07:24:52+00:00",
-   "severity": "high",
-   "heat": 44.49,
+   "published": "2026-07-16T10:19:34+00:00",
+   "severity": "medium",
+   "heat": 39.18,
    "canada": false,
    "cves": [],
    "kev": [],
    "epss": 0.0,
-   "vendors": [
-    "Chrome",
-    "Firefox"
-   ],
+   "vendors": [],
    "sources": [
     {
-     "name": "SecurityWeek",
-     "site": "securityweek.com",
-     "link": "https://www.securityweek.com/critical-vulnerabilities-patched-with-fresh-chrome-150-firefox-152-updates/"
+     "name": "BleepingComputer",
+     "site": "bleepingcomputer.com",
+     "link": "https://www.bleepingcomputer.com/news/security/russian-hackers-trojanize-webex-zoom-apps-to-push-starland-malware/"
     }
    ],
-   "abstract": "Google and Mozilla have released security updates for Chrome and Firefox to address multiple critical vulnerabilities. While proof-of-concept exploit code is currently available for the Firefox flaws, there are no reports of active exploitation in the wild.",
-   "why": "Publicly available exploit code significantly lowers the barrier for attackers to weaponize these browser vulnerabilities against end users.",
-   "action": "Update Chrome and Firefox to the latest versions immediately.",
+   "abstract": "A Russian-linked threat group identified as UAT-11795 is distributing malicious versions of Zoom and WebEx installers. These trojanized applications deploy a custom backdoor named Starland RAT, which is designed to harvest sensitive credentials and cryptocurrency assets from compromised systems.",
+   "why": "This campaign demonstrates how attackers leverage trusted enterprise communication tools to bypass security controls and facilitate financial theft.",
+   "action": "Verify software integrity by downloading installers exclusively from official vendor websites.",
    "confidence": "high"
   },
   {
-   "id": "70abf913f77d1e28",
-   "title": "Notepad++ security advisory (AV26-703)",
-   "link": "https://cyber.gc.ca/en/alerts-advisories/notepad-security-advisory-av26-703",
+   "id": "35eb4b1f5049ffda",
+   "title": "Splunk security advisory (AV26-708)",
+   "link": "https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-708",
    "kind": "security",
    "tier": "advisory",
    "image": null,
-   "published": "2026-07-15T15:30:53+00:00",
+   "published": "2026-07-16T13:05:56+00:00",
    "severity": "medium",
-   "heat": 43.72,
+   "heat": 38.97,
+   "canada": true,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [
+    "Android",
+    "Splunk",
+    "Windows"
+   ],
+   "sources": [
+    {
+     "name": "Cyber Centre",
+     "site": "cyber.gc.ca",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-708"
+    },
+    {
+     "name": "Cyber Centre",
+     "site": "cyber.gc.ca",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-684"
+    }
+   ],
+   "abstract": "Splunk has released security updates for its Enterprise and Cloud Platform products. The patches address several vulnerabilities, including a CSRF-based command safeguard bypass, a path traversal flaw in the app installation endpoint, and various third-party package dependencies.",
+   "why": "These vulnerabilities could allow unauthorized command execution or unauthorized file access, potentially compromising the integrity of the Splunk deployment.",
+   "action": "Update Splunk Enterprise and Cloud Platform to the latest versions.",
+   "confidence": "high"
+  },
+  {
+   "id": "2b76c881a92ffe69",
+   "title": "Zoom security advisory (AV26-707)",
+   "link": "https://cyber.gc.ca/en/alerts-advisories/zoom-security-advisory-av26-707",
+   "kind": "security",
+   "tier": "advisory",
+   "image": null,
+   "published": "2026-07-16T12:40:09+00:00",
+   "severity": "medium",
+   "heat": 38.81,
+   "canada": true,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [
+    "Windows"
+   ],
+   "sources": [
+    {
+     "name": "Cyber Centre",
+     "site": "cyber.gc.ca",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/zoom-security-advisory-av26-707"
+    }
+   ],
+   "abstract": "Zoom has released security updates for several Windows-based products, including the Workplace client, Meeting SDK, and Rooms software. These patches address vulnerabilities involving improper input validation and privilege management that could potentially be exploited by attackers.",
+   "why": "Unpatched conferencing software on Windows endpoints can serve as an entry point for privilege escalation or remote code execution within an organization.",
+   "action": "Update Zoom Workplace, Rooms, and Meeting SDK for Windows to the latest versions.",
+   "confidence": "high"
+  },
+  {
+   "id": "23fbc810f07cb644",
+   "title": "Tenable security advisory (AV26-705)",
+   "link": "https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-705",
+   "kind": "security",
+   "tier": "advisory",
+   "image": null,
+   "published": "2026-07-15T17:06:52+00:00",
+   "severity": "medium",
+   "heat": 38.13,
    "canada": true,
    "cves": [
     "CVE-2026-14902",
@@ -737,9 +849,16 @@
    "kev": [],
    "epss": 0.01,
    "vendors": [
-    "Ivanti"
+    "Firefox",
+    "Ivanti",
+    "Veeam"
    ],
    "sources": [
+    {
+     "name": "Cyber Centre",
+     "site": "cyber.gc.ca",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-705"
+    },
     {
      "name": "Cyber Centre",
      "site": "cyber.gc.ca",
@@ -749,42 +868,75 @@
      "name": "Cyber Centre",
      "site": "cyber.gc.ca",
      "link": "https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-696"
+    },
+    {
+     "name": "Cyber Centre",
+     "site": "cyber.gc.ca",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-694"
+    },
+    {
+     "name": "Cyber Centre",
+     "site": "cyber.gc.ca",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-692"
     }
    ],
-   "abstract": "Notepad++ has released version 8.9.7 to resolve security vulnerabilities affecting all previous iterations. Simultaneously, Ivanti issued patches for Xtraction versions 2026.2 and earlier to address two specific security flaws.",
-   "why": "Unpatched software remains a primary vector for initial access and privilege escalation within enterprise environments.",
-   "action": "Update Notepad++ to 8.9.7 and apply the latest Ivanti Xtraction patches.",
+   "abstract": "Multiple vendors have released security patches. Tenable addressed a path traversal flaw in Nessus Agent, Ivanti fixed vulnerabilities in Xtraction, and Notepad++ updated its software to resolve security issues in versions prior to 9.7.",
+   "why": "These updates address critical vulnerabilities that could allow unauthorized access or system compromise if left unpatched in enterprise environments.",
+   "action": "Update Nessus Agent, Ivanti Xtraction, and Notepad++ to the latest available versions.",
    "confidence": "high"
   },
   {
-   "id": "4981c3a5ac9eb866",
-   "title": "iCagenda and Balbooa Forms Joomla Flaws Reportedly Exploited as Zero-Days",
-   "link": "https://thehackernews.com/2026/07/icagenda-and-balbooa-forms-joomla-flaws.html",
+   "id": "8d7bea2aa83f0115",
+   "title": "Daxin Resurfaces in Taiwan Alongside Stupig Pre-Login SYSTEM Backdoor",
+   "link": "https://thehackernews.com/2026/07/daxin-resurfaces-in-taiwan-alongside.html",
    "kind": "security",
    "tier": "security",
-   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8FM8eXCuapKSUef3nzFlgzqlX4a5mJChM9YqCdHOi6QybQ8AM1xbM9NNTyAjS3iyz7iAX6vC8QVHl5zFlAgNyBIgm5FHgFkEGzOg5l3ZXNXI8ILA2GIGKtvYDuy-qpXmfeMHYxheps3XuPCtgedFa9vcimwad9kBjpbF0SEhhxpZoWsWybn0zcgNtppI/s1600/cisa-joomla.jpg",
-   "published": "2026-07-13T05:36:02+00:00",
-   "severity": "critical",
-   "heat": 42.9,
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoN2-EflBc7bABKWw8GsIF_E9I7A9Ond88d-yFCAc6t850C9RGNxpGFAP3G9NichaP7JHa_BA-4bsMDNze5837hGCFGuAbyEHPVsxmQgMNS9A8e1jFL19Z1MVv9KOq0TX5ShDG46Xrv3MxH-vR3sQtEcDkH5OMxQQo11NXMKWRicC8T1OwTqw3ENoXEdIK/s1600/WINDOWS-malware.jpg",
+   "published": "2026-07-16T11:17:23+00:00",
+   "severity": "medium",
+   "heat": 38.0,
    "canada": false,
-   "cves": [
-    "CVE-2026-48939"
-   ],
-   "kev": [
-    "CVE-2026-48939"
-   ],
-   "epss": 0.015,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
    "vendors": [],
    "sources": [
     {
      "name": "The Hacker News",
      "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/07/icagenda-and-balbooa-forms-joomla-flaws.html"
+     "link": "https://thehackernews.com/2026/07/daxin-resurfaces-in-taiwan-alongside.html"
     }
    ],
-   "abstract": "CISA has added two critical vulnerabilities affecting iCagenda and Balbooa Joomla extensions to its Known Exploited Vulnerabilities catalog. Both flaws carry a maximum CVSS score of 10.0 and are currently being leveraged by attackers in active, real-world campaigns.",
-   "why": "These extensions are being actively exploited as zero-days, posing an immediate risk of full system compromise for affected Joomla installations.",
-   "action": "Update iCagenda and Balbooa extensions to the latest patched versions immediately.",
+   "abstract": "A Chinese-linked threat actor has deployed the Daxin kernel-mode rootkit and a new backdoor, Stupig, against a Taiwanese manufacturing firm. This marks the first observed activity for the sophisticated Daxin malware in over four years.",
+   "why": "Daxin is a highly capable, stealthy rootkit designed for long-term espionage, indicating a high-tier adversary targeting critical industrial infrastructure.",
+   "action": "",
+   "confidence": "high"
+  },
+  {
+   "id": "9c7acbeadb2134dd",
+   "title": "New Spirals ransomware encrypts victim network in under 24 hours",
+   "link": "https://www.bleepingcomputer.com/news/security/new-spirals-ransomware-encrypts-victim-network-in-under-24-hours/",
+   "kind": "security",
+   "tier": "security",
+   "image": null,
+   "published": "2026-07-16T10:00:00+00:00",
+   "severity": "medium",
+   "heat": 36.77,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "site": "bleepingcomputer.com",
+     "link": "https://www.bleepingcomputer.com/news/security/new-spirals-ransomware-encrypts-victim-network-in-under-24-hours/"
+    }
+   ],
+   "abstract": "A newly identified ransomware group known as Spirals is demonstrating high operational speed, successfully compromising corporate networks, exfiltrating sensitive data, and deploying encryption payloads within a single day of initial access.",
+   "why": "The rapid execution window significantly reduces the time available for security teams to detect and contain an active intrusion.",
+   "action": "",
    "confidence": "high"
   },
   {
@@ -794,9 +946,9 @@
    "kind": "security",
    "tier": "security",
    "image": null,
-   "published": "2026-07-15T17:48:01+00:00",
+   "published": "2026-07-15T17:00:34+00:00",
    "severity": "medium",
-   "heat": 42.82,
+   "heat": 36.5,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -809,13 +961,67 @@
      "link": "https://www.404media.co/hack-reveals-suno-ai-music-generator-scraped-youtube-deezer-and-genius/"
     },
     {
-     "name": "The Verge",
-     "site": "theverge.com",
-     "link": "https://www.theverge.com/ai-artificial-intelligence/966072/suno-ai-music-training-scraping-youtube-hack"
+     "name": "TechCrunch Security",
+     "site": "techcrunch.com",
+     "link": "https://techcrunch.com/2026/07/15/hack-suggests-ai-music-generator-suno-scraped-youtube-for-training-data/"
     }
    ],
-   "abstract": "Leaked source code from a recent security breach confirms that AI music generator Suno trained its models by scraping massive volumes of copyrighted audio and lyrics from platforms like YouTube, Deezer, and Genius, contradicting the company's previous lack of transparency regarding its training data.",
-   "why": "This highlights the ongoing legal and ethical risks associated with AI training data provenance and the potential for intellectual property litigation.",
+   "abstract": "A security breach at AI music platform Suno exposed internal source code, revealing that the company utilized unauthorized scraping of extensive audio libraries, including podcasts and music, to train its generative models.",
+   "why": "This highlights the risks of credential theft in AI development and the potential legal and reputational fallout from non-consensual data ingestion practices.",
+   "action": "",
+   "confidence": "high"
+  },
+  {
+   "id": "41c0ea98d8ce8e4e",
+   "title": "Tech support scam caused massive data breach at Australian airline Qantas",
+   "link": "https://www.theregister.com/cyber-crime/2026/07/16/tech-support-scam-caused-massive-data-breach-at-australian-airline-qantas/5272267",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://image.theregister.com/?imageId=238616&width=800",
+   "published": "2026-07-16T06:27:47+00:00",
+   "severity": "medium",
+   "heat": 35.81,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "The Register Security",
+     "site": "theregister.com",
+     "link": "https://www.theregister.com/cyber-crime/2026/07/16/tech-support-scam-caused-massive-data-breach-at-australian-airline-qantas/5272267"
+    }
+   ],
+   "abstract": "A technical support scam targeting Qantas resulted in the exposure of personal information belonging to 5.7 million passengers. The airline maintains that the incident did not violate privacy regulations despite the significant volume of sensitive data compromised.",
+   "why": "Large-scale data exposure via social engineering highlights the critical need for robust identity verification and internal access controls for support staff.",
+   "action": "",
+   "confidence": "medium"
+  },
+  {
+   "id": "4692479099c21427",
+   "title": "23andMe to pay $18 million in new genetics data breach settlement",
+   "link": "https://www.bleepingcomputer.com/news/security/23andme-to-pay-18-million-in-new-genetics-data-breach-settlement/",
+   "kind": "security",
+   "tier": "security",
+   "image": null,
+   "published": "2026-07-16T13:47:23+00:00",
+   "severity": "medium",
+   "heat": 35.76,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "site": "bleepingcomputer.com",
+     "link": "https://www.bleepingcomputer.com/news/security/23andme-to-pay-18-million-in-new-genetics-data-breach-settlement/"
+    }
+   ],
+   "abstract": "23andMe has reached an $18 million settlement with 43 state attorneys general following a massive 2023 data breach. The agreement addresses allegations that the company maintained inadequate security measures, leading to the unauthorized exposure of sensitive genetic and personal information belonging to millions of users.",
+   "why": "This highlights the significant legal and financial consequences for organizations that fail to implement robust security controls for highly sensitive biometric data.",
    "action": "",
    "confidence": "high"
   },
@@ -828,7 +1034,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMjCjGBZhkRcB4m5BQu0Fcn-Qjs1_VPnfOlt3oFxu7CKMZ5Wc1JpvZEvhVSorBJW-AWV1pACLDkg4rFmCCcdH6vDk-pmD5ai0ZewlmPyeWPnfsmTcg-D3UJXdT902oUD32DjSm5CrBsnf2rcVTQPUo5o-LJRKUlsjOwPNfYMpN7kOfmNhnyw552cv-Gtqk/s1600/adobes.jpg",
    "published": "2026-07-15T13:18:53+00:00",
    "severity": "medium",
-   "heat": 39.47,
+   "heat": 33.9,
    "canada": false,
    "cves": [
     "CVE-2026-15718",
@@ -849,8 +1055,8 @@
      "link": "https://thehackernews.com/2026/07/firefox-chrome-adobe-and-vmware-updates.html"
     }
    ],
-   "abstract": "Mozilla patched two critical vulnerabilities in Firefox affecting the WebAssembly and DOM Navigation components. The flaws involve invalid pointer handling and site isolation issues, and the vendor confirmed that proof-of-concept exploit code is currently available in the wild.",
-   "why": "Active exploitation of browser vulnerabilities poses a significant risk for remote code execution and sandbox escapes.",
+   "abstract": "Mozilla patched two critical vulnerabilities in Firefox affecting the WebAssembly and DOM Navigation components. The flaws, tracked as CVE-2026-15718 and CVE-2026-15719, are currently subject to publicly available exploit code, increasing the risk of active exploitation.",
+   "why": "Publicly available exploit code for critical browser vulnerabilities significantly lowers the barrier for attackers to achieve remote code execution or sandbox escapes.",
    "action": "Update Firefox to the latest version immediately.",
    "confidence": "high"
   },
@@ -863,7 +1069,7 @@
    "image": "https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/bltde006b8b5b1c0556/6a57e5114b599fb58be63897/biometric_fingerprint-da-kuk-getty-2258608618.jpg?width=720&quality=80&disable=upscale",
    "published": "2026-07-15T20:16:13+00:00",
    "severity": "medium",
-   "heat": 39.45,
+   "heat": 33.89,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -876,9 +1082,9 @@
      "link": "https://www.darkreading.com/identity-access-management-security/identity-attacks-overtake-exploits-top-ransomware-cause"
     }
    ],
-   "abstract": "Credential-based attacks, primarily via email, have surpassed software exploits as the leading vector for ransomware incidents. Despite widespread implementation of multifactor authentication, attackers are successfully bypassing these defenses to gain unauthorized access to corporate environments.",
-   "why": "This shift highlights that traditional MFA is no longer a sufficient barrier against sophisticated social engineering and session hijacking techniques.",
-   "action": "",
+   "abstract": "Credential-based attacks, primarily via email, have surpassed software exploits as the leading vector for ransomware incidents. Despite widespread implementation of multifactor authentication, attackers are successfully bypassing these defenses to gain unauthorized network access.",
+   "why": "Traditional MFA is no longer a sufficient barrier against sophisticated adversaries who are increasingly adept at session hijacking and social engineering.",
+   "action": "Implement phishing-resistant MFA, such as FIDO2-compliant hardware security keys, and enforce strict conditional access policies.",
    "confidence": "high"
   },
   {
@@ -890,7 +1096,7 @@
    "image": null,
    "published": "2026-07-15T18:33:48+00:00",
    "severity": "medium",
-   "heat": 39.19,
+   "heat": 33.66,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -905,8 +1111,8 @@
      "link": "https://www.bleepingcomputer.com/news/security/google-gemini-cli-abused-as-a-hacking-agent-malware-botnet-operator/"
     }
    ],
-   "abstract": "A threat actor identified as bandcampro is leveraging Google's open-source Gemini CLI tool to automate malicious tasks. The actor utilizes the AI interface to facilitate hacking operations and manage a small botnet, demonstrating how generative AI can be weaponized for cyberattacks.",
-   "why": "This highlights the emerging risk of attackers using legitimate AI development tools to lower the barrier for botnet orchestration and automated exploitation.",
+   "abstract": "A threat actor identified as bandcampro is leveraging Google's open-source Gemini CLI tool to automate malicious tasks. The actor utilizes the AI interface to facilitate hacking operations and manage a botnet, demonstrating how generative AI tools can be repurposed for cyberattacks.",
+   "why": "This highlights the emerging risk of attackers integrating LLM-based CLI tools into their operational workflows to scale malicious activity.",
    "action": "",
    "confidence": "high"
   },
@@ -919,7 +1125,7 @@
    "image": null,
    "published": "2026-07-15T12:00:00+00:00",
    "severity": "medium",
-   "heat": 38.32,
+   "heat": 32.91,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -932,8 +1138,8 @@
      "link": "https://www.cisa.gov/resources-tools/resources/establishing-coordinated-vulnerability-disclosure-program-work-security-researchers"
     }
    ],
-   "abstract": "CISA, the NSA, and international partners released joint guidance for software vendors and service providers on establishing coordinated vulnerability disclosure programs. The document outlines best practices for managing researcher reports, triaging findings, and assigning CVE identifiers to improve security transparency.",
-   "why": "Standardized disclosure processes help organizations identify and remediate security flaws more effectively by fostering collaboration with the external research community.",
+   "abstract": "CISA, the NSA, and international partners released joint guidance for software vendors and service providers on establishing coordinated vulnerability disclosure programs. The document outlines best practices for managing researcher reports, triaging flaws, and assigning CVE identifiers to improve security transparency.",
+   "why": "Standardized disclosure processes reduce friction between researchers and vendors, leading to faster remediation and more reliable vulnerability tracking across the ecosystem.",
    "action": "",
    "confidence": "high"
   },
@@ -946,7 +1152,7 @@
    "image": null,
    "published": "2026-07-15T19:20:48+00:00",
    "severity": "medium",
-   "heat": 38.23,
+   "heat": 32.84,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -961,50 +1167,52 @@
      "link": "https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-706"
     }
    ],
-   "abstract": "Cisco has released security updates for multiple versions of RoomOS, including both On-Premises and Cloud-Aware configurations. These patches address vulnerabilities identified in the July 2026 security hardening cycle for various release branches.",
-   "why": "Unpatched collaboration hardware can serve as an entry point for network lateral movement or unauthorized access to sensitive meeting environments.",
-   "action": "Update Cisco RoomOS devices to the latest specified versions.",
+   "abstract": "Cisco has released security updates for multiple versions of RoomOS, including both On-Premises and Cloud-Aware configurations. These patches address vulnerabilities identified in the July 2026 security hardening cycle affecting various release branches.",
+   "why": "Unpatched conferencing hardware can serve as an entry point for network lateral movement or unauthorized access to sensitive meeting environments.",
+   "action": "Update Cisco RoomOS to the specified patched versions listed in the advisory.",
    "confidence": "high"
   },
   {
-   "id": "23fbc810f07cb644",
-   "title": "Tenable security advisory (AV26-705)",
-   "link": "https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-705",
+   "id": "a7e893960f55f6fb",
+   "title": "ISC Stormcast For Thursday, July 16th, 2026 https://isc.sans.edu/podcastdetail/10010, (Thu, Jul 16th)",
+   "link": "https://isc.sans.edu/diary/rss/33160",
    "kind": "security",
    "tier": "advisory",
    "image": null,
-   "published": "2026-07-15T17:06:52+00:00",
+   "published": "2026-07-16T02:40:10+00:00",
    "severity": "medium",
-   "heat": 37.42,
-   "canada": true,
+   "heat": 31.86,
+   "canada": false,
    "cves": [],
    "kev": [],
    "epss": 0.0,
-   "vendors": [
-    "Firefox",
-    "Veeam"
-   ],
+   "vendors": [],
    "sources": [
     {
-     "name": "Cyber Centre",
-     "site": "cyber.gc.ca",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-705"
+     "name": "SANS ISC",
+     "site": "isc.sans.edu",
+     "link": "https://isc.sans.edu/diary/rss/33160"
     },
     {
-     "name": "Cyber Centre",
-     "site": "cyber.gc.ca",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-694"
+     "name": "SANS ISC",
+     "site": "isc.sans.edu",
+     "link": "https://isc.sans.edu/diary/rss/33158"
     },
     {
-     "name": "Cyber Centre",
-     "site": "cyber.gc.ca",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-692"
+     "name": "SANS ISC",
+     "site": "isc.sans.edu",
+     "link": "https://isc.sans.edu/diary/rss/33152"
+    },
+    {
+     "name": "SANS ISC",
+     "site": "isc.sans.edu",
+     "link": "https://isc.sans.edu/diary/rss/33148"
     }
    ],
-   "abstract": "Recent security advisories highlight critical vulnerabilities across three platforms. Tenable patched a path traversal flaw in Nessus Agent, Veeam addressed a critical issue in its software appliance updater, and Mozilla released a mandatory update for Firefox to resolve critical security defects.",
-   "why": "These vulnerabilities allow for potential system compromise or unauthorized access, necessitating immediate attention to maintain infrastructure integrity.",
-   "action": "Update Nessus Agent to 11.2.1/11.1.4, Veeam Appliance Updater to 12.3.0.65, and Firefox to 152.0.6.",
-   "confidence": "high"
+   "abstract": "The provided source material for the July 16th, 2026, SANS ISC Stormcast podcast is empty. Consequently, there is no information available to summarize regarding current security threats or technical developments.",
+   "why": "",
+   "action": "",
+   "confidence": "low"
   },
   {
    "id": "87d986c7f7292d2b",
@@ -1015,7 +1223,7 @@
    "image": null,
    "published": "2026-07-15T15:46:09+00:00",
    "severity": "medium",
-   "heat": 36.94,
+   "heat": 31.73,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -1030,9 +1238,9 @@
      "link": "https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-704"
     }
    ],
-   "abstract": "F5 has released a comprehensive security advisory covering a wide range of NGINX products, including NGINX Plus, App Protect WAF, and various BIG-IP Next components, addressing multiple vulnerabilities discovered across these platforms.",
-   "why": "These products are critical infrastructure components; unpatched vulnerabilities could lead to unauthorized access, service disruption, or complete system compromise.",
-   "action": "Review the F5 security advisory and update all affected NGINX and BIG-IP components immediately.",
+   "abstract": "F5 has released a comprehensive security advisory covering a wide range of NGINX and BIG-IP products. The update addresses multiple vulnerabilities across various versions of the NGINX Agent, Instance Manager, Plus, App Protect, and Kubernetes-related infrastructure components.",
+   "why": "Unpatched NGINX and BIG-IP instances are high-value targets for exploitation, potentially leading to unauthorized access or service disruption in critical infrastructure.",
+   "action": "Review the F5 advisory and update all affected NGINX and BIG-IP software versions immediately.",
    "confidence": "high"
   },
   {
@@ -1044,7 +1252,7 @@
    "image": null,
    "published": "2026-07-15T15:22:04+00:00",
    "severity": "medium",
-   "heat": 36.81,
+   "heat": 31.62,
    "canada": true,
    "cves": [
     "CVE-2026-53565",
@@ -1063,8 +1271,8 @@
      "link": "https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-702"
     }
    ],
-   "abstract": "Citrix has released patches for the Secure Access Client and Endpoint Analysis Client for Windows to resolve two security vulnerabilities. Users running versions older than 26.6.1.20 or 26.5.1.7 are affected by these flaws.",
-   "why": "Unpatched vulnerabilities in remote access and endpoint analysis software provide attackers with potential vectors for unauthorized system access or privilege escalation.",
+   "abstract": "Citrix has released security updates for the Secure Access Client and Endpoint Analysis Client on Windows to resolve two vulnerabilities, identified as CVE-2026-53565 and CVE-2026-53566. Affected users should upgrade to the latest versions to mitigate potential security risks.",
+   "why": "These vulnerabilities affect critical remote access and endpoint management infrastructure, potentially allowing unauthorized access or system compromise if left unpatched.",
    "action": "Update Citrix Secure Access Client to 26.6.1.20 and Endpoint Analysis Client to 26.5.1.7.",
    "confidence": "high"
   },
@@ -1077,7 +1285,7 @@
    "image": null,
    "published": "2026-07-15T15:12:44+00:00",
    "severity": "medium",
-   "heat": 36.74,
+   "heat": 31.56,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -1095,7 +1303,7 @@
      "link": "https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-701"
     }
    ],
-   "abstract": "Google has released security updates for the Chrome desktop browser across Windows, macOS, and Linux platforms. These patches address vulnerabilities affecting all versions prior to 150.0.7871.124 and 150.0.7871.125.",
+   "abstract": "Google has released security updates for the Chrome desktop browser across Windows, macOS, and Linux. These patches address vulnerabilities affecting all versions prior to 150.0.7871.124 and 150.0.7871.125.",
    "why": "Unpatched browser vulnerabilities are primary vectors for remote code execution and system compromise.",
    "action": "Update Chrome to version 150.0.7871.124 or 150.0.7871.125.",
    "confidence": "high"
@@ -1109,7 +1317,7 @@
    "image": null,
    "published": "2026-07-15T14:56:58+00:00",
    "severity": "medium",
-   "heat": 36.64,
+   "heat": 31.48,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -1127,9 +1335,9 @@
      "link": "https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-691"
     }
    ],
-   "abstract": "HPE released multiple security advisories addressing vulnerabilities across several product lines, including Telco Intelligent Assurance, Unified OSS Console, and Compute Scale-up Server platforms. Administrators should review the bulletins to identify affected versions and implement the recommended security patches.",
-   "why": "These updates address multiple vulnerabilities that could potentially be exploited to compromise critical infrastructure and server management systems.",
-   "action": "Review HPE security bulletins HPESBNW05076, HPESBNW05080, and HPESBHF05079 and apply the specified firmware or software updates.",
+   "abstract": "HPE released critical security updates addressing multiple vulnerabilities across several product lines, including Telco Intelligent Assurance, Unified OSS Console, and Compute Scale-up Server platforms. Administrators should review the specific bulletins for affected versions and implement the provided patches.",
+   "why": "These updates address multiple vulnerabilities in critical infrastructure and server management software that could potentially be exploited by unauthorized actors.",
+   "action": "Review HPE security bulletins HPESBNW05076, HPESBNW05080, and HPESBHF05079 and apply the recommended firmware or software updates.",
    "confidence": "high"
   },
   {
@@ -1141,7 +1349,7 @@
    "image": null,
    "published": "2026-07-15T12:45:00+00:00",
    "severity": "medium",
-   "heat": 36.06,
+   "heat": 30.97,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1154,8 +1362,8 @@
      "link": "https://www.infosecurity-magazine.com/news/compromised-logins-ransomware-entry/"
     }
    ],
-   "abstract": "Identity-based threats, including phishing and brute-force attempts, have overtaken software vulnerabilities as the primary vector for ransomware deployment. Sophos research indicates that attackers are increasingly prioritizing compromised credentials to gain initial access to corporate networks.",
-   "why": "This shift confirms that identity management and authentication security are now more critical than traditional patch management for preventing ransomware.",
+   "abstract": "Identity-based threats, including phishing and credential harvesting, have overtaken software vulnerabilities as the primary vector for ransomware deployments. Attackers are increasingly prioritizing stolen login credentials to gain initial access to corporate networks.",
+   "why": "This shift highlights that identity management and authentication security are now more critical than traditional patch management for preventing ransomware.",
    "action": "",
    "confidence": "high"
   },
@@ -1168,7 +1376,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXEluWW9TuNGlzu9wVHSDBzAeUuoRS9Om8kX9yzH-HwCjggh-N5ycLyuJ82oY3MP4Uvf9yF_PqwKhcZepDBEH_pOb3td4dPRuuGSWi5XndfpeuqiMipzKIq0Vofc-hOBGj4nWxmXbjMS7RvHkZCUSHloOpsS6m7jpwwFX-2KUkYwrQdt-ClrGXpt2C9TxC/s1600/async-npm.jpg",
    "published": "2026-07-15T09:16:13+00:00",
    "severity": "medium",
-   "heat": 35.83,
+   "heat": 30.78,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1181,9 +1389,9 @@
      "link": "https://thehackernews.com/2026/07/compromised-asyncapi-npm-packages.html"
     }
    ],
-   "abstract": "Threat actors hijacked several npm packages within the @asyncapi namespace to distribute a multi-stage botnet loader. The malicious code was embedded in specific versions of generator-helpers, generator-components, generator, and specs packages, potentially impacting downstream supply chains.",
-   "why": "Supply chain attacks via compromised dependencies can lead to remote code execution and persistent botnet infections within development and production environments.",
-   "action": "Audit projects for @asyncapi packages and update to verified, non-compromised versions immediately.",
+   "abstract": "Threat actors hijacked several npm packages within the @asyncapi namespace to distribute a multi-stage botnet loader. The malicious code was injected into specific versions of generator-helpers, generator-components, generator, and specs packages, potentially impacting downstream supply chains.",
+   "why": "Supply chain attacks via compromised dependencies can lead to remote code execution and persistent botnet access within development and production environments.",
+   "action": "Audit projects for @asyncapi dependencies and update to verified, clean versions immediately.",
    "confidence": "high"
   },
   {
@@ -1195,7 +1403,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmKa1OIdUu8LgLPgZkc9qbOTzhARf1dEJa_fzyVt7vvSzidHy3Lrb-2R4hs2ryt9b4Aq3zOnJRtWVuQ8KHKUZ5x9Iv6Q0vGTVMPxNMLTdGaNsquyrL18QXk8TcMP2nEwFHE1snKt2aG6rEmyVMwRp7Fk4G_x_sXjk_4AmYWsH2JCvOe2Adut2PZbLVc4YI/s1600/tuxbot.jpg",
    "published": "2026-07-15T18:43:08+00:00",
    "severity": "info",
-   "heat": 35.52,
+   "heat": 30.51,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1213,10 +1421,91 @@
      "link": "https://unit42.paloaltonetworks.com/tuxbot-v3-evolution-iot-botnet/"
     }
    ],
-   "abstract": "Researchers identified TuxBot v3 Evolution, an IoT botnet framework that appears to incorporate code generated by large language models. The resulting malware contains functional flaws, likely stemming from the developer's inability to properly integrate or sanitize AI-generated output.",
-   "why": "It highlights how threat actors are increasingly leveraging generative AI to lower the barrier for creating complex, cross-compiled malware for IoT devices.",
+   "abstract": "Researchers identified TuxBot v3 Evolution, an IoT botnet framework that appears to incorporate code generated by large language models. The resulting malware contains functional flaws and remnants of AI-generated safety disclaimers, suggesting the author relied on automated assistance to build the malicious infrastructure.",
+   "why": "This highlights the lowering barrier to entry for malware development as threat actors increasingly leverage generative AI to create functional botnet code.",
    "action": "",
    "confidence": "high"
+  },
+  {
+   "id": "712d68ac39579cb1",
+   "title": "20+ Hijacked Government Websites Became an Attack Channel",
+   "link": "https://thehackernews.com/2026/07/20-hijacked-government-websites.html",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgs_Ix6AmdT0f-NuPj2BLNRcSaOhWHf5pPdDuwR0eykvHCnOmoHUhq5Z2axM2GJX9gX5A3FlesfKuynGTsj012HNIJZURuZ8S7uCfa7_cSXIZDWC1donHjiQbkNr3jNLSq8B2PGpUG24fddwOaG2POjEQuvlrVEnp3yPa1F3tV2fpYDVQHEsaIHbnShUuQ/s1600/hacked.jpg",
+   "published": "2026-07-16T11:58:00+00:00",
+   "severity": "info",
+   "heat": 30.47,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "site": "thehackernews.com",
+     "link": "https://thehackernews.com/2026/07/20-hijacked-government-websites.html"
+    }
+   ],
+   "abstract": "Threat actors compromised over 20 Brazilian government domains to distribute malware. Researchers identified this PhantomEnigma campaign as utilizing novel backdoor techniques and complex infrastructure to facilitate malicious payload delivery.",
+   "why": "Government infrastructure is being weaponized to bypass security filters and increase the perceived legitimacy of malicious downloads.",
+   "action": "",
+   "confidence": "high"
+  },
+  {
+   "id": "22b68765e24cad05",
+   "title": "Cyberattack on Japan's largest cold-chain operator disrupts KFC, supermarket supplies",
+   "link": "https://therecord.media/cyberattack-japan-nichirei-logistics-impacts-kfc",
+   "kind": "security",
+   "tier": "security",
+   "image": "http://cms.therecord.media/uploads/KFC_Japan_320e53cb15.png",
+   "published": "2026-07-15T23:00:00+00:00",
+   "severity": "medium",
+   "heat": 30.41,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "The Record",
+     "site": "therecord.media",
+     "link": "https://therecord.media/cyberattack-japan-nichirei-logistics-impacts-kfc"
+    }
+   ],
+   "abstract": "Nichirei Logistics Group, Japan's primary cold-chain provider, suffered a cyberattack that disrupted supply chains for major retailers and restaurant chains, including KFC. The incident has caused significant logistical delays and inventory shortages across the country's food distribution network.",
+   "why": "Supply chain disruptions in critical infrastructure sectors can cause cascading operational failures for downstream enterprise partners and retail clients.",
+   "action": "",
+   "confidence": "high"
+  },
+  {
+   "id": "64e3139996701384",
+   "title": "Cyberattack threatens utterly critical infrastructure in Japan: KFC",
+   "link": "https://www.theregister.com/security/2026/07/16/cyberattack-threatens-utterly-critical-infrastructure-in-japan-kfc/5272220",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://image.theregister.com/?imageId=5272233&width=800",
+   "published": "2026-07-16T02:01:01+00:00",
+   "severity": "medium",
+   "heat": 30.07,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "The Register Security",
+     "site": "theregister.com",
+     "link": "https://www.theregister.com/security/2026/07/16/cyberattack-threatens-utterly-critical-infrastructure-in-japan-kfc/5272220"
+    }
+   ],
+   "abstract": "KFC Japan suspended its online ordering platform and faces potential store closures following a significant system failure at a third-party logistics provider. The disruption has crippled the company's ability to manage supply chain operations and process digital customer requests.",
+   "why": "This incident highlights the systemic risk posed by third-party logistics dependencies, where a single vendor failure can halt nationwide retail operations.",
+   "action": "",
+   "confidence": "medium"
   },
   {
    "id": "de7f891eb7c83571",
@@ -1227,7 +1516,7 @@
    "image": null,
    "published": "2026-07-14T12:00:00+00:00",
    "severity": "medium",
-   "heat": 34.43,
+   "heat": 29.58,
    "canada": false,
    "cves": [
     "CVE-2026-10577"
@@ -1242,96 +1531,35 @@
      "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04"
     }
    ],
-   "abstract": "Rockwell Automation's 1715-AENTR EtherNet/IP Adapter, versions 3.003 and earlier, contains a critical authentication flaw. Exploitation allows unauthorized remote actors to manipulate memory, delete files, halt operations, and alter I/O states, posing severe risks to industrial control environments.",
-   "why": "This vulnerability enables full remote control over critical infrastructure hardware, potentially leading to physical process disruption or safety incidents.",
-   "action": "Update to firmware version 3.004 or later.",
+   "abstract": "Rockwell Automation's 1715-AENTR EtherNet/IP Adapter, versions 3.003 and earlier, contains a critical authentication vulnerability. Exploitation allows unauthorized actors to manipulate memory, delete files, halt operations, and alter I/O states, posing significant risks to industrial control environments.",
+   "why": "This flaw enables remote attackers to gain full control over critical infrastructure hardware, potentially disrupting energy, water, and manufacturing processes.",
+   "action": "Update affected 1715-AENTR adapters to the latest firmware version provided by Rockwell Automation.",
    "confidence": "high"
   },
   {
-   "id": "24a65e7f86390b61",
-   "title": "A hacker accessed Suno source code that reportedly details how the company scraped millions of songs",
-   "link": "https://www.engadget.com/2215772/a-hacker-accessed-suno-source-code-that-reportedly-details-how-the-company-scraped-millions-of-songs/",
-   "kind": "tech",
-   "tier": "tech",
-   "image": "https://www.engadget.com/img/gallery/a-hacker-accessed-suno-source-code-that-reportedly-details-how-the-company-scraped-millions-of-songs/l-intro-1784131934.jpg",
-   "published": "2026-07-15T16:13:15+00:00",
-   "severity": "medium",
-   "heat": 34.38,
+   "id": "0415858632385a1a",
+   "title": "New ClickLock macOS Stealer Kills Apps Every 210ms Until Victims Type Their Password",
+   "link": "https://thehackernews.com/2026/07/new-clicklock-macos-stealer-kills-apps.html",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4iNrh8DJbIsaAsGTCFlS4kGWAwdRNMghQm9-o8MV8X2txyJ4iTH1P4g7v5sdjuhw9dOeozn9Q6GenUi4wxBTw9uyoJ1D2j5WIcwCWuTk5XEVyGqjAg4jmP4kOEMp2qtd0BnPiVwrz2MJnTwaAnQP0jR3yCGvojGLQMOEc9syp00LKXIkbjUZrWqh0_GSe/s1600/macos-stealer.jpg",
+   "published": "2026-07-16T12:33:42+00:00",
+   "severity": "info",
+   "heat": 29.08,
    "canada": false,
    "cves": [],
    "kev": [],
    "epss": 0.0,
    "vendors": [],
-   "sources": [
-    {
-     "name": "Engadget",
-     "site": "engadget.com",
-     "link": "https://www.engadget.com/2215772/a-hacker-accessed-suno-source-code-that-reportedly-details-how-the-company-scraped-millions-of-songs/"
-    }
-   ],
-   "abstract": "Music generation startup Suno confirmed a security breach occurred last November. While the company maintains that no sensitive user data was exposed, unauthorized parties reportedly gained access to internal source code containing details regarding the firm's song-scraping methodologies.",
-   "why": "The exposure of proprietary data-collection techniques could invite further legal scrutiny or targeted exploitation of the company's underlying AI training infrastructure.",
-   "action": "",
-   "confidence": "medium"
-  },
-  {
-   "id": "b4074b0b69119c56",
-   "title": "Cursor Flaw Lets Malicious Cloned Repositories Trigger Windows Code Execution",
-   "link": "https://thehackernews.com/2026/07/cursor-flaw-lets-malicious-cloned.html",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjyFnrtjbcXdDBTEYOhVnUpFO4CSqhCGj5xdvaYlhih4oUCd3phzBQTjjMogZeFDlYqTiO8Xt2jaHevba5peaV76dT417Vq9W-DZFSpu2_cEbAMtGwz-mqKZJcYgAAXmZT_Rnkdc0f3jAW-eANKWd6XZZJvYfYCt6l5Pp-2ZKjlnn4zG7G6gS7ivWruzeU/s1600/git.png",
-   "published": "2026-07-15T14:37:13+00:00",
-   "severity": "info",
-   "heat": 34.15,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [
-    "Windows"
-   ],
    "sources": [
     {
      "name": "The Hacker News",
      "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/07/cursor-flaw-lets-malicious-cloned.html"
-    },
-    {
-     "name": "SecurityWeek",
-     "site": "securityweek.com",
-     "link": "https://www.securityweek.com/unpatched-cursor-vulnerability-exposes-users-to-code-execution/"
+     "link": "https://thehackernews.com/2026/07/new-clicklock-macos-stealer-kills-apps.html"
     }
    ],
-   "abstract": "The Cursor code editor for Windows contains a critical flaw that automatically executes any binary named git.exe found within a project's root directory. This occurs without user interaction, granting the malicious file the same system permissions and access as the active user.",
-   "why": "This vulnerability allows attackers to gain full access to a developer's environment, including sensitive SSH keys, cloud credentials, and proprietary source code.",
-   "action": "Avoid opening untrusted repositories in Cursor until a patch is released.",
-   "confidence": "high"
-  },
-  {
-   "id": "ae74f84c2ec57f44",
-   "title": "23andMe reaches $18 million settlement with states for massive breach",
-   "link": "https://therecord.media/genetic-testing-settlement-data-breach",
-   "kind": "security",
-   "tier": "security",
-   "image": "http://cms.therecord.media/uploads/23andme_Sunnyvale_ec0f4eae94.jpg",
-   "published": "2026-07-15T17:45:00+00:00",
-   "severity": "medium",
-   "heat": 33.65,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "The Record",
-     "site": "therecord.media",
-     "link": "https://therecord.media/genetic-testing-settlement-data-breach"
-    }
-   ],
-   "abstract": "A coalition of 42 state attorneys general finalized an $18 million settlement with 23andMe following a significant data breach. The agreement addresses allegations that the company failed to implement adequate security measures to protect sensitive genetic and personal user information.",
-   "why": "This highlights the increasing legal and financial liability companies face for failing to protect sensitive biometric and personal data from unauthorized access.",
+   "abstract": "A new macOS infostealer dubbed ClickLock employs aggressive persistence tactics. If users decline to provide their system password via a fake prompt, the malware repeatedly terminates essential processes like Finder and the Dock until the victim complies with the credential request.",
+   "why": "This malware demonstrates a shift toward active harassment to bypass user skepticism and force credential disclosure through persistent system disruption.",
    "action": "",
    "confidence": "high"
   },
@@ -1344,7 +1572,7 @@
    "image": null,
    "published": "2026-07-14T19:14:58+00:00",
    "severity": "medium",
-   "heat": 32.91,
+   "heat": 28.27,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1359,9 +1587,9 @@
      "link": "https://isc.sans.edu/diary/rss/33154"
     }
    ],
-   "abstract": "Microsoft's July update addresses 622 vulnerabilities across its ecosystem, alongside 427 Chromium-related flaws impacting Edge. Of these, 62 are critical, with two vulnerabilities already under active exploitation and one publicly disclosed prior to the release.",
-   "why": "The massive volume of patches and active exploitation of zero-days necessitates immediate prioritization of critical infrastructure and browser security updates.",
-   "action": "Apply Microsoft July 2026 security updates immediately.",
+   "abstract": "Microsoft's July update addresses over 600 vulnerabilities, including 62 critical flaws. The release also covers 427 Chromium-related issues affecting Edge. Two of these vulnerabilities are currently being exploited in the wild, and one was publicly disclosed prior to the patch release.",
+   "why": "The massive volume of vulnerabilities and active exploitation of zero-days necessitate immediate prioritization of patching across the enterprise environment.",
+   "action": "Deploy the July Microsoft security updates immediately.",
    "confidence": "high"
   },
   {
@@ -1373,7 +1601,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9rN4ge3zuUmonccBl2yC_AcOKiCQPKQFAV31BzB3DZk3JO7SxAjx1HdJlg1vBOMEj3cq2Mrg06ZU64I1fdkWCDRBsPhqpuyJwTxjbJHJXmzUoXF8KRDkupk6JxznlI9tjMXwU_hJqh4InVEOsiknPoszVZkQsqWSKfcD5Y90qz63Cv_pOHL8zO4CxGOop/s1600/sap-patch.jpg",
    "published": "2026-07-14T18:17:57+00:00",
    "severity": "medium",
-   "heat": 32.9,
+   "heat": 28.26,
    "canada": false,
    "cves": [
     "CVE-2026-44747"
@@ -1390,9 +1618,36 @@
      "link": "https://thehackernews.com/2026/07/sap-patches-cvss-99-netweaver-abap-flaw.html"
     }
    ],
-   "abstract": "SAP released a security update addressing CVE-2026-44747, a critical out-of-bounds write vulnerability in NetWeaver Application Server ABAP. An authenticated attacker could exploit this memory management flaw to corrupt memory, potentially leading to unauthorized data modification or system exposure.",
-   "why": "Critical memory corruption vulnerabilities in core enterprise infrastructure allow attackers to bypass security controls and manipulate sensitive business data.",
-   "action": "Apply the July 2026 SAP security updates immediately.",
+   "abstract": "SAP released a security update addressing CVE-2026-44747, a critical out-of-bounds write vulnerability in NetWeaver Application Server ABAP. An authenticated attacker could exploit this memory management flaw to trigger corruption, potentially leading to unauthorized data modification or exposure.",
+   "why": "The vulnerability carries a near-maximum severity score and allows for memory corruption, which is a common vector for remote code execution.",
+   "action": "Apply the July 2026 SAP security patches to all affected NetWeaver ABAP instances.",
+   "confidence": "high"
+  },
+  {
+   "id": "4d75e13eb858b147",
+   "title": "F5 Patches Multiple NGINX, BIG-IP Vulnerabilities",
+   "link": "https://www.securityweek.com/f5-patches-multiple-nginx-big-ip-vulnerabilities/",
+   "kind": "security",
+   "tier": "security",
+   "image": null,
+   "published": "2026-07-16T09:20:10+00:00",
+   "severity": "info",
+   "heat": 27.81,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "site": "securityweek.com",
+     "link": "https://www.securityweek.com/f5-patches-multiple-nginx-big-ip-vulnerabilities/"
+    }
+   ],
+   "abstract": "F5 has released security updates addressing several vulnerabilities across its NGINX and BIG-IP product lines. These flaws could allow unauthorized actors to manipulate system configurations, trigger process crashes, bypass security controls, expose sensitive memory contents, or achieve remote code execution.",
+   "why": "These vulnerabilities affect critical infrastructure components, potentially granting attackers full control over network traffic management and application delivery services.",
+   "action": "Review F5 security advisories and apply the latest patches to all NGINX and BIG-IP instances.",
    "confidence": "high"
   },
   {
@@ -1404,7 +1659,7 @@
    "image": null,
    "published": "2026-07-15T12:00:00+00:00",
    "severity": "medium",
-   "heat": 32.2,
+   "heat": 27.66,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1417,10 +1672,37 @@
      "link": "https://www.ncsc.gov.uk/blogs/helping-small-businesses-with-free-hands-on-cyber-consultancy"
     }
    ],
-   "abstract": "The NCSC is providing small businesses with complimentary 30-minute advisory sessions. These consultations are designed to assist organizations in establishing foundational cybersecurity practices and improving their overall security posture.",
-   "why": "Small businesses are frequent targets for cyberattacks, and professional guidance helps them implement essential defenses without significant overhead.",
+   "abstract": "The NCSC is providing small businesses with complimentary 30-minute advisory sessions. These consultations aim to assist organizations in establishing foundational cybersecurity practices and improving their overall digital resilience.",
+   "why": "Small businesses are frequent targets for opportunistic cyberattacks; professional guidance helps mitigate common risks without requiring significant upfront investment.",
    "action": "",
    "confidence": "high"
+  },
+  {
+   "id": "9d3d6177d2f8cca9",
+   "title": "New TELEPUZ Malware Spreads via ClickFix to Steal Data and Run Commands",
+   "link": "https://thehackernews.com/2026/07/new-telepuz-malware-spreads-via.html",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhv5Rn7Ccy_az1UqogtcMmy8m09NuHcnSuylWjVMecOfxDKbvUAt4FnqKIJp4uZUcOPUmnYGIywea1nJG-yiSqcQbPC-ULonG5US-gEbUnkEHbGN3cVnQdkqbxKGt0EY4We_j8V9RrH4NVgtbPFEfc5mdMxV9sTOWSx_p3ShB0LWleupJbo74xMVlGHistw/s1600/click-malware.jpg",
+   "published": "2026-07-16T12:50:13+00:00",
+   "severity": "info",
+   "heat": 27.58,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "site": "thehackernews.com",
+     "link": "https://thehackernews.com/2026/07/new-telepuz-malware-spreads-via.html"
+    }
+   ],
+   "abstract": "A modular, lightweight malware strain dubbed TELEPUZ has been identified targeting users through ClickFix social engineering tactics. The threat actor utilizes these deceptive browser prompts to facilitate unauthorized command execution and exfiltrate sensitive data from compromised systems.",
+   "why": "The use of ClickFix lures demonstrates an evolving trend in browser-based social engineering that bypasses traditional endpoint defenses.",
+   "action": "",
+   "confidence": "medium"
   },
   {
    "id": "072ccf64de4718a7",
@@ -1431,7 +1713,7 @@
    "image": null,
    "published": "2026-07-14T18:38:50+00:00",
    "severity": "medium",
-   "heat": 31.96,
+   "heat": 27.45,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -1446,21 +1728,104 @@
      "link": "https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-695"
     }
    ],
-   "abstract": "Fortinet has released security updates for FortiAuthenticator and FortiSandbox products. The patches address critical vulnerabilities, including an out-of-bounds read flaw within the graphical user interface and a security misconfiguration that leaves VNC access exposed without authentication across all network interfaces.",
-   "why": "Unauthenticated VNC access provides an easy entry point for attackers to gain remote control over sensitive security infrastructure.",
+   "abstract": "Fortinet released patches for FortiAuthenticator and FortiSandbox products to resolve critical security flaws. The vulnerabilities include an out-of-bounds read within the graphical interface and an issue involving unauthenticated VNC access enabled across all network interfaces.",
+   "why": "Unauthenticated VNC access allows remote attackers to bypass authentication mechanisms, potentially leading to full system compromise or unauthorized administrative control.",
    "action": "Update FortiAuthenticator and FortiSandbox to the latest patched versions immediately.",
    "confidence": "high"
   },
   {
-   "id": "e6d925617f678737",
-   "title": "Zoom warns of critical account takeover vulnerability",
-   "link": "https://www.bleepingcomputer.com/news/security/zoom-warns-of-critical-account-takeover-vulnerability/",
+   "id": "2e5ae5352e68687d",
+   "title": "‘No company is going to go to jail for you’: Proton’s CTO on balancing privacy, policy, and trust",
+   "link": "https://www.theverge.com/podcast/966074/proton-cto-bart-butler-privacy-encryption-surveillance-age-verification",
+   "kind": "tech",
+   "tier": "tech",
+   "image": null,
+   "published": "2026-07-16T14:00:00+00:00",
+   "severity": "info",
+   "heat": 27.4,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "The Verge",
+     "site": "theverge.com",
+     "link": "https://www.theverge.com/podcast/966074/proton-cto-bart-butler-privacy-encryption-surveillance-age-verification"
+    }
+   ],
+   "abstract": "Proton CTO Bart Butler discussed the operational challenges of maintaining user privacy while navigating legal obligations. The conversation highlights the inherent tension between providing encrypted services and complying with government data requests in various jurisdictions.",
+   "why": "It underscores the legal limitations of privacy-focused providers when faced with binding court orders, impacting threat modeling for sensitive communications.",
+   "action": "",
+   "confidence": "high"
+  },
+  {
+   "id": "3c725c5c79d55ae1",
+   "title": "OpenAI’s GPT-Red Automates Prompt Injection Testing to Harden GPT-5.6 Sol",
+   "link": "https://thehackernews.com/2026/07/openais-gpt-red-automates-prompt.html",
    "kind": "security",
    "tier": "security",
-   "image": null,
-   "published": "2026-07-15T20:16:02+00:00",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSi9EGhWziKlNlaSAnaOE4OjgZ5pyqoajOxDz4zEQl77NDSF_Pf8ME6wfKfrmrTWhLy9jDR1wvmVb7gd5JLhyszunIomhOnyyHKuTfvBCjb8vGypAPXbQzTVG-n5wWUdsTToUXQ5z_uh3XPDX3KKzgZ8vDB9PZ40FOd6xGi2iALOu-wSqSoHpkpYf5eKjk/s1600/openai-gpt-red.jpg",
+   "published": "2026-07-16T08:42:31+00:00",
    "severity": "info",
-   "heat": 31.27,
+   "heat": 27.26,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [
+    "Openai"
+   ],
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "site": "thehackernews.com",
+     "link": "https://thehackernews.com/2026/07/openais-gpt-red-automates-prompt.html"
+    }
+   ],
+   "abstract": "OpenAI has introduced GPT-Red, an automated internal tool designed to perform adversarial red-teaming against its own models. By scaling prompt injection testing, the company aims to identify and remediate security vulnerabilities in AI systems before they reach public release.",
+   "why": "Automated adversarial testing is becoming a critical component in securing LLMs against prompt injection and jailbreaking attempts.",
+   "action": "",
+   "confidence": "high"
+  },
+  {
+   "id": "f6652812c034fd5d",
+   "title": "Police Disrupt a €140M Cyber Fraud Ring in Spain",
+   "link": "https://www.darkreading.com/threat-intelligence/police-disrupt-140m-euro-cyber-fraud-ring-spain",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt996082756cf9a8dd/6a57d2c0e49c54dbbc77c175/Spain-Gwengoat-Getty.jpg?width=720&quality=80&disable=upscale",
+   "published": "2026-07-16T07:00:00+00:00",
+   "severity": "info",
+   "heat": 27.19,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "Dark Reading",
+     "site": "darkreading.com",
+     "link": "https://www.darkreading.com/threat-intelligence/police-disrupt-140m-euro-cyber-fraud-ring-spain"
+    }
+   ],
+   "abstract": "Spanish authorities dismantled a criminal syndicate responsible for orchestrating cyberattacks and laundering approximately €140 million. The group utilized sophisticated financial infrastructure to move illicit proceeds generated through their various digital fraud operations.",
+   "why": "This highlights the scale of organized cybercrime syndicates and the increasing complexity of money laundering techniques used to obfuscate stolen digital assets.",
+   "action": "",
+   "confidence": "medium"
+  },
+  {
+   "id": "f4a54d3cb743fdda",
+   "title": "Sandworm hackers have a CAPTCHA trick for Ukrainians",
+   "link": "https://therecord.media/ukraine-sandworm-hacks-captcha-powershell",
+   "kind": "security",
+   "tier": "security",
+   "image": "http://cms.therecord.media/uploads/cut_paste_planet_volumes_unsplash_47f394375a.jpg",
+   "published": "2026-07-16T13:50:00+00:00",
+   "severity": "info",
+   "heat": 27.15,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1470,14 +1835,77 @@
    ],
    "sources": [
     {
-     "name": "BleepingComputer",
-     "site": "bleepingcomputer.com",
-     "link": "https://www.bleepingcomputer.com/news/security/zoom-warns-of-critical-account-takeover-vulnerability/"
+     "name": "The Record",
+     "site": "therecord.media",
+     "link": "https://therecord.media/ukraine-sandworm-hacks-captcha-powershell"
     }
    ],
-   "abstract": "Zoom disclosed a critical security flaw affecting its Windows desktop client and software development kit. An unauthenticated attacker could leverage this vulnerability to perform unauthorized account takeovers, potentially compromising user sessions and sensitive data.",
-   "why": "Account takeover vulnerabilities in widely used enterprise communication tools present significant risks for lateral movement and data exfiltration within corporate environments.",
-   "action": "Update the Zoom desktop client for Windows to the latest version immediately.",
+   "abstract": "Russian-linked threat actor Sandworm is targeting Ukrainian users with a deceptive CAPTCHA mechanism. Instead of standard verification, the prompt tricks victims into executing a malicious PowerShell command on their Windows systems, which facilitates unauthorized access or malware deployment.",
+   "why": "This social engineering tactic bypasses technical defenses by leveraging user-assisted execution to compromise endpoints.",
+   "action": "Train users to never copy or execute PowerShell commands from suspicious web prompts.",
+   "confidence": "high"
+  },
+  {
+   "id": "72a6f4eb7a4460c3",
+   "title": "The Download: OpenAI unveils GPT-Red and heat pumps rise in the US",
+   "link": "https://www.technologyreview.com/2026/07/16/1140600/the-download-openai-unveils-gpt-red-heat-pumps-rise-us/",
+   "kind": "tech",
+   "tier": "tech",
+   "image": null,
+   "published": "2026-07-16T12:10:00+00:00",
+   "severity": "info",
+   "heat": 27.01,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [
+    "Openai"
+   ],
+   "sources": [
+    {
+     "name": "MIT Technology Review",
+     "site": "technologyreview.com",
+     "link": "https://www.technologyreview.com/2026/07/16/1140600/the-download-openai-unveils-gpt-red-heat-pumps-rise-us/"
+    },
+    {
+     "name": "MIT Technology Review",
+     "site": "technologyreview.com",
+     "link": "https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/"
+    }
+   ],
+   "abstract": "OpenAI has developed an automated red-teaming model, GPT-Red, designed to stress-test its flagship LLMs. By acting as an adversarial sparring partner, the system identifies vulnerabilities and strengthens the defensive capabilities of new models during the training process.",
+   "why": "Automated red-teaming represents a shift toward scalable, continuous security testing for generative AI, potentially reducing the window for exploit discovery.",
+   "action": "",
+   "confidence": "high"
+  },
+  {
+   "id": "a25a1064848d7f8a",
+   "title": "n8n Token Exchange Flaw Could Let Attackers Log In as Users From Another Issuer",
+   "link": "https://thehackernews.com/2026/07/n8n-token-exchange-flaw-could-let.html",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1Pvezsft8WXzYy1Lw3zKDZrkf0TNZfj95rzTnuQgzbJuztRDNDFK35ahO9UfhNJOicjjuzyZGFCtC_idBl8vgNdw4kzfeYFo6LwUur66S5qUTO2Bl3WVLwCDWoDTnw4dlZdj_ZQ1T2JcG1dWfJeoO3WDZs94EVm9z0hZ8VPL36KDpaAmw7fH9hSWSSaw/s1600/n8n-main.jpg",
+   "published": "2026-07-16T13:33:25+00:00",
+   "severity": "info",
+   "heat": 26.98,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [
+    "Exchange"
+   ],
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "site": "thehackernews.com",
+     "link": "https://thehackernews.com/2026/07/n8n-token-exchange-flaw-could-let.html"
+    }
+   ],
+   "abstract": "The n8n workflow automation platform contains a vulnerability in its token validation process. Enterprise instances using multiple external identity providers fail to verify the issuer claim, allowing an attacker with a valid token from one provider to impersonate users belonging to another.",
+   "why": "This flaw enables unauthorized account takeover and privilege escalation by bypassing identity verification logic in multi-tenant or multi-provider authentication environments.",
+   "action": "Update n8n to the latest version immediately.",
    "confidence": "high"
   },
   {
@@ -1489,7 +1917,7 @@
    "image": null,
    "published": "2026-07-15T07:45:50+00:00",
    "severity": "medium",
-   "heat": 31.17,
+   "heat": 26.77,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1502,10 +1930,37 @@
      "link": "https://www.bleepingcomputer.com/news/security/us-charges-alleged-russian-bulletproof-hosting-service-operators/"
     }
    ],
-   "abstract": "Federal prosecutors have indicted three Russian nationals for operating a bulletproof hosting service. The infrastructure allegedly supported various ransomware groups, facilitating cyberattacks that resulted in more than $62 million in losses for victims across the globe.",
+   "abstract": "Federal prosecutors have indicted three Russian nationals for operating a bulletproof hosting service. The infrastructure allegedly supported various ransomware syndicates, facilitating cyberattacks that resulted in more than $62 million in financial losses for victims across the globe.",
    "why": "This takedown disrupts a critical piece of infrastructure used by ransomware actors to maintain anonymity and evade law enforcement detection.",
    "action": "",
    "confidence": "high"
+  },
+  {
+   "id": "44e7dff4a4cf674b",
+   "title": "‘ClickLock Stealer’ Bypasses macOS Security With Social Engineering, Process Killing",
+   "link": "https://www.securityweek.com/clicklock-stealer-bypasses-macos-security-with-social-engineering-process-killing/",
+   "kind": "security",
+   "tier": "security",
+   "image": null,
+   "published": "2026-07-16T12:43:59+00:00",
+   "severity": "info",
+   "heat": 26.38,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "site": "securityweek.com",
+     "link": "https://www.securityweek.com/clicklock-stealer-bypasses-macos-security-with-social-engineering-process-killing/"
+    }
+   ],
+   "abstract": "A new macOS malware strain dubbed ClickLock Stealer is actively targeting users to harvest cryptocurrency assets and stored credentials. The threat actor employs social engineering tactics and terminates security processes to evade detection and compromise victim systems.",
+   "why": "It demonstrates evolving techniques for bypassing macOS security controls to facilitate credential theft and financial fraud.",
+   "action": "",
+   "confidence": "medium"
   },
   {
    "id": "b12a9461c304b0fe",
@@ -1516,7 +1971,7 @@
    "image": null,
    "published": "2026-07-14T20:02:49+00:00",
    "severity": "medium",
-   "heat": 30.54,
+   "heat": 26.23,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -1539,9 +1994,9 @@
      "link": "https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-july-2026-monthly-rollup-av26-690"
     }
    ],
-   "abstract": "Microsoft and SAP have released their July 2026 security updates. Microsoft addressed vulnerabilities across its .NET ecosystem, Azure services, GitHub Copilot, and Microsoft 365. Simultaneously, SAP issued patches for critical flaws affecting NetWeaver, Commerce Cloud, Fiori, and various integration tools.",
+   "abstract": "Microsoft and SAP have released their July 2026 security updates. Microsoft addressed vulnerabilities across its .NET framework, Azure services, GitHub Copilot, and Microsoft 365. Simultaneously, SAP issued patches for various NetWeaver, Fiori, CRM, and Commerce Cloud components.",
    "why": "These updates address critical vulnerabilities across core enterprise infrastructure, cloud services, and development environments, posing significant risks if left unpatched.",
-   "action": "Apply the July 2026 security updates for all affected Microsoft and SAP products immediately.",
+   "action": "Apply the July 2026 security updates for all affected Microsoft and SAP products.",
    "confidence": "high"
   },
   {
@@ -1553,7 +2008,7 @@
    "image": null,
    "published": "2026-07-15T01:38:43+00:00",
    "severity": "medium",
-   "heat": 30.44,
+   "heat": 26.15,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1566,10 +2021,37 @@
      "link": "https://isc.sans.edu/diary/rss/33156"
     }
    ],
-   "abstract": "The DShield SIEM has received an update, moving to ELK stack version 8.19.15. This release includes minor refinements, expanded logging capabilities, and new dashboard visualizations for users.",
-   "why": "Maintaining updated SIEM infrastructure is critical for ensuring log ingestion stability and leveraging the latest detection capabilities.",
+   "abstract": "The DShield SIEM has received an update, marking its first revision since September 2025. This release incorporates the ELK stack version 8.19.15, alongside expanded logging capabilities and new dashboard visualizations for improved monitoring.",
+   "why": "Security teams relying on DShield for threat intelligence and log analysis should review the updated stack for compatibility and new visibility features.",
    "action": "",
    "confidence": "high"
+  },
+  {
+   "id": "b491c7f5c406163d",
+   "title": "Payload Podcast 009 - Steven Flores",
+   "link": "https://www.youtube.com/watch?v=sLmxcGUNxfs",
+   "kind": "tech",
+   "tier": "video",
+   "image": "https://i4.ytimg.com/vi/sLmxcGUNxfs/hqdefault.jpg",
+   "published": "2026-07-16T08:11:10+00:00",
+   "severity": "info",
+   "heat": 26.09,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "John Hammond",
+     "site": "youtube.com",
+     "link": "https://www.youtube.com/watch?v=sLmxcGUNxfs"
+    }
+   ],
+   "abstract": "This content is a promotional podcast episode featuring an interview with Steven Flores. The provided material focuses on cybersecurity training resources, educational platforms, and professional development links rather than reporting on a specific security incident, vulnerability, or actionable threat.",
+   "why": "",
+   "action": "",
+   "confidence": "low"
   },
   {
    "id": "f4c846a4f2874299",
@@ -1580,7 +2062,7 @@
    "image": null,
    "published": "2026-07-14T19:25:40+00:00",
    "severity": "medium",
-   "heat": 30.36,
+   "heat": 26.07,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -1595,526 +2077,33 @@
      "link": "https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-697"
     }
    ],
-   "abstract": "Adobe has released security updates addressing critical vulnerabilities across a wide range of products, including After Effects, Animate, Audition, Bridge, Commerce, and Experience Manager. Users should review the latest advisories to identify affected versions within their environment.",
-   "why": "Critical flaws in widely deployed enterprise and creative software can lead to remote code execution or unauthorized system access.",
-   "action": "Update Adobe products to the latest versions specified in the security advisory.",
+   "abstract": "Adobe has released security updates addressing critical vulnerabilities across a wide range of products, including After Effects, Animate, Audition, Bridge, Commerce, and Experience Manager. Users should review the latest advisories to determine if their specific software versions are affected.",
+   "why": "Critical flaws in widely deployed enterprise and creative software often serve as primary targets for remote code execution and system compromise.",
+   "action": "Update Adobe products to the latest versions specified in the July 2026 security advisories.",
    "confidence": "high"
   },
   {
-   "id": "cf8b1e3bc39ae5f3",
-   "title": "[Control systems] Siemens security advisory (AV26-689)",
-   "link": "https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-689",
-   "kind": "security",
-   "tier": "advisory",
-   "image": null,
-   "published": "2026-07-14T13:33:00+00:00",
-   "severity": "medium",
-   "heat": 29.85,
-   "canada": true,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [
-    "Palo Alto"
-   ],
-   "sources": [
-    {
-     "name": "Cyber Centre",
-     "site": "cyber.gc.ca",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-689"
-    }
-   ],
-   "abstract": "Siemens released security updates addressing multiple vulnerabilities across a broad range of industrial and software products, including Desigo CC, SIMATIC S7-1500 controllers, Mendix Runtime, and Palo Alto Networks PAN-OS modules integrated into RUGGEDCOM hardware.",
-   "why": "Unpatched industrial control systems and runtime environments are high-value targets for lateral movement and operational disruption in critical infrastructure environments.",
-   "action": "Review the Siemens advisory and apply updates for all affected product versions.",
-   "confidence": "high"
-  },
-  {
-   "id": "295bd98aa08b557f",
-   "title": "Improve Router Hygiene to Protect Against Russian State-Sponsored Targeting",
-   "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
-   "kind": "security",
-   "tier": "advisory",
-   "image": "https://www.cisa.gov/sites/default/files/styles/large/public/2026-07/Figure%201%20FSB%20Center%2016%20activity%20and%20recommended%20mitigation%20actions.png?itok=oYxdyna4",
-   "published": "2026-07-13T12:00:00+00:00",
-   "severity": "medium",
-   "heat": 29.63,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "CISA",
-     "site": "cisa.gov",
-     "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a"
-    },
-    {
-     "name": "NCSC UK",
-     "site": "ncsc.gov.uk",
-     "link": "https://www.ncsc.gov.uk/news/uk-and-allies-urge-critical-sectors-to-improve-defences-against-russian-intelligence-targeting"
-    }
-   ],
-   "abstract": "Russian FSB operatives are actively exploiting misconfigured and unpatched networking hardware to infiltrate critical infrastructure globally. These state-sponsored actors leverage weak security postures to gain persistent access to sensitive networks, necessitating a more rigorous approach to device hardening and lifecycle management.",
-   "why": "Compromised routers provide attackers with a strategic foothold for lateral movement, data exfiltration, and long-term surveillance within high-value target environments.",
-   "action": "Audit router configurations, disable unnecessary services, and apply all available security patches immediately.",
-   "confidence": "high"
-  },
-  {
-   "id": "f65b79307e5b3e18",
-   "title": "Nearly 300 GitHub repos pose as legit software to push malware",
-   "link": "https://www.bleepingcomputer.com/news/security/nearly-300-github-repos-pose-as-legit-software-to-push-malware/",
+   "id": "fb34f65774c8776c",
+   "title": "Unpatched Shark Vacuum Flaw Could Let Attackers Control Other Vacuums Region-Wide",
+   "link": "https://thehackernews.com/2026/07/unpatched-shark-vacuum-flaw-could-let.html",
    "kind": "security",
    "tier": "security",
-   "image": null,
-   "published": "2026-07-14T19:15:17+00:00",
-   "severity": "medium",
-   "heat": 29.47,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [
-    "Github"
-   ],
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "site": "bleepingcomputer.com",
-     "link": "https://www.bleepingcomputer.com/news/security/nearly-300-github-repos-pose-as-legit-software-to-push-malware/"
-    }
-   ],
-   "abstract": "Malicious actors have populated GitHub with nearly 300 fraudulent repositories mimicking popular software and security tools. These projects are designed to trick developers into downloading infostealer malware, which harvests sensitive credentials and system data from compromised machines.",
-   "why": "Supply chain attacks targeting developers are increasing, threatening internal corporate environments and source code integrity through compromised local development workstations.",
-   "action": "Audit local development environments and verify the provenance of all cloned GitHub repositories.",
-   "confidence": "high"
-  },
-  {
-   "id": "ba9ae12e6675b65a",
-   "title": "Dutch police bust investment fraud ring stealing over €100 million",
-   "link": "https://www.bleepingcomputer.com/news/security/dutch-police-bust-investment-fraud-ring-stealing-over-100-million/",
-   "kind": "security",
-   "tier": "security",
-   "image": null,
-   "published": "2026-07-15T21:55:50+00:00",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5tbAe6HgEiYpwgRNJ04jo1HJ_PV3INByd4ggz2t4h_dCa4u2zkCBimnzDZt7V-p208q7-BfaHSmR5_aXg6VvnnThfnc9_UX8oP0hnRa6rP1JVgKka-D76BpYUzhEuc3O0nbEGgoVeCQsTY2RBsVTrYnViTmGPqgPJ9e4lNeKWtxZNxKqvUajphbl-ENY/s1600/shark-hack.jpg",
+   "published": "2026-07-16T09:23:19+00:00",
    "severity": "info",
-   "heat": 29.4,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "site": "bleepingcomputer.com",
-     "link": "https://www.bleepingcomputer.com/news/security/dutch-police-bust-investment-fraud-ring-stealing-over-100-million/"
-    },
-    {
-     "name": "BleepingComputer",
-     "site": "bleepingcomputer.com",
-     "link": "https://www.bleepingcomputer.com/news/security/spanish-police-take-down-140-million-cyber-fraud-ring-arrest-four/"
-    }
-   ],
-   "abstract": "Authorities in the Netherlands and Spain dismantled a sophisticated international criminal network responsible for massive investment fraud and business email compromise schemes. The operation, which impacted tens of thousands of victims, resulted in the recovery of over 100 million euros in illicit funds.",
-   "why": "This highlights the ongoing threat of large-scale BEC and investment scams, emphasizing the need for robust verification processes in financial communications.",
-   "action": "",
-   "confidence": "high"
-  },
-  {
-   "id": "45027492839f1ac3",
-   "title": "ABB Advant Master Online Builder",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-01",
-   "kind": "security",
-   "tier": "advisory",
-   "image": null,
-   "published": "2026-07-14T12:00:00+00:00",
-   "severity": "medium",
-   "heat": 29.27,
-   "canada": false,
-   "cves": [
-    "CVE-2025-13162"
-   ],
-   "kev": [],
-   "epss": 0.001,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "CISA",
-     "site": "cisa.gov",
-     "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-01"
-    }
-   ],
-   "abstract": "ABB identified a vulnerability in its Advant Master Online Builder software caused by an uncontrolled search path element. This flaw stems from the inclusion of an incorrect version of the tool within the installation media, potentially allowing unauthorized code execution.",
-   "why": "This vulnerability impacts critical manufacturing infrastructure, posing a risk to industrial control systems that rely on ABB Advant Master configurations.",
-   "action": "Update ABB Advant Master Online Builder to the latest version provided by the vendor.",
-   "confidence": "high"
-  },
-  {
-   "id": "5ca8367967d5b11d",
-   "title": "ISC Stormcast For Wednesday, July 15th, 2026 https://isc.sans.edu/podcastdetail/10008, (Wed, Jul 15th)",
-   "link": "https://isc.sans.edu/diary/rss/33158",
-   "kind": "security",
-   "tier": "advisory",
-   "image": null,
-   "published": "2026-07-15T02:00:02+00:00",
-   "severity": "medium",
-   "heat": 29.24,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "SANS ISC",
-     "site": "isc.sans.edu",
-     "link": "https://isc.sans.edu/diary/rss/33158"
-    },
-    {
-     "name": "SANS ISC",
-     "site": "isc.sans.edu",
-     "link": "https://isc.sans.edu/diary/rss/33152"
-    },
-    {
-     "name": "SANS ISC",
-     "site": "isc.sans.edu",
-     "link": "https://isc.sans.edu/diary/rss/33148"
-    }
-   ],
-   "abstract": "The SANS Internet Storm Center podcast for July 15, 2026, provides a daily summary of current cybersecurity threats, vulnerabilities, and operational security developments relevant to network defenders and security practitioners.",
-   "why": "Staying informed on daily threat intelligence and emerging attack vectors is critical for maintaining situational awareness in enterprise security environments.",
-   "action": "",
-   "confidence": "low"
-  },
-  {
-   "id": "221be052904194fa",
-   "title": "ServiceNow security advisory (AV26-693)",
-   "link": "https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-693",
-   "kind": "security",
-   "tier": "advisory",
-   "image": null,
-   "published": "2026-07-14T14:34:41+00:00",
-   "severity": "medium",
-   "heat": 29.04,
-   "canada": true,
-   "cves": [
-    "CVE-2026-6875"
-   ],
-   "kev": [],
-   "epss": 0.005,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "Cyber Centre",
-     "site": "cyber.gc.ca",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-693"
-    }
-   ],
-   "abstract": "ServiceNow has released patches for a critical sandbox escape vulnerability, identified as CVE-2026-6875, affecting the AI Platform across several release versions including Brazil, Australia, Zurich, and Yokohama. Administrators should verify their current build and apply the recommended updates immediately.",
-   "why": "Sandbox escapes in AI platforms can allow attackers to bypass security boundaries, potentially leading to unauthorized data access or arbitrary code execution.",
-   "action": "Update ServiceNow instances to the latest patched versions for Brazil, Australia, Zurich, or Yokohama.",
-   "confidence": "high"
-  },
-  {
-   "id": "8659834ba75b9807",
-   "title": "OkoBot Malware Framework Injects Seed Phrase Phishing Into Ledger and Trezor Apps",
-   "link": "https://thehackernews.com/2026/07/okobot-malware-framework-injects-seed.html",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwz558IbCLKi1RAJRcX_tLnJrGR3xjXSXfBJHnREqKc0aTs9Ie67rKN6xRHDV4g6JNByEH5Vr-x-14HOK8dSKj_B6HFn303OMiFrpr2wHf9PNUONqlUPn8IdMzr9QoZB9uWq14ElryYTydVAUXNeCARv-cN7KMmmwfb9FpMw_NCDIk8faF6QlSboXey08/s1600/seed.jpg",
-   "published": "2026-07-15T15:30:30+00:00",
-   "severity": "info",
-   "heat": 28.38,
+   "heat": 25.92,
    "canada": false,
    "cves": [],
    "kev": [],
    "epss": 0.0,
    "vendors": [
-    "Windows"
+    "Aws"
    ],
    "sources": [
     {
      "name": "The Hacker News",
      "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/07/okobot-malware-framework-injects-seed.html"
-    }
-   ],
-   "abstract": "The OkoBot malware framework, active on Windows systems since April 2025, targets hardware wallet users. It injects malicious phishing overlays directly into legitimate Ledger and Trezor desktop applications to steal recovery phrases, often triggering the prompt when a device is connected.",
-   "why": "This represents a sophisticated supply-chain-style attack that bypasses traditional phishing detection by compromising the local execution environment of trusted security software.",
-   "action": "Scan Windows systems for OkoBot indicators and ensure hardware wallets are used on clean, isolated machines.",
-   "confidence": "high"
-  },
-  {
-   "id": "36b2bbf599ed87e0",
-   "title": "xAI sues a man for using Grok to generate CSAM &#8216;deepfakes&#8217;",
-   "link": "https://www.theverge.com/ai-artificial-intelligence/966293/xai-grok-user-lawsuit-csam",
-   "kind": "tech",
-   "tier": "tech",
-   "image": null,
-   "published": "2026-07-15T21:33:20+00:00",
-   "severity": "info",
-   "heat": 28.01,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "The Verge",
-     "site": "theverge.com",
-     "link": "https://www.theverge.com/ai-artificial-intelligence/966293/xai-grok-user-lawsuit-csam"
-    }
-   ],
-   "abstract": "xAI has initiated legal action against a South Carolina resident, alleging he deliberately bypassed safety filters within the Grok chatbot to produce and disseminate child sexual abuse material.",
-   "why": "This highlights the ongoing legal and ethical challenges AI providers face regarding the misuse of their generative models for illegal content creation.",
-   "action": "",
-   "confidence": "high"
-  },
-  {
-   "id": "69ba3c3a449d5704",
-   "title": "Claude Flaw Automatically Sends Malicious Prompts to AI Agents",
-   "link": "https://www.darkreading.com/vulnerabilities-threats/claude-flaw-malicious-prompts-ai-agents",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/bltede07faf29a87872/6a577279bf753e837abb9a32/claude_RalfLiebhold_Alamy.jpg?width=720&quality=80&disable=upscale",
-   "published": "2026-07-15T15:27:35+00:00",
-   "severity": "info",
-   "heat": 27.99,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "Dark Reading",
-     "site": "darkreading.com",
-     "link": "https://www.darkreading.com/vulnerabilities-threats/claude-flaw-malicious-prompts-ai-agents"
-    }
-   ],
-   "abstract": "Researchers identified a vulnerability dubbed PromptFiction that allowed attackers to manipulate Claude into automatically generating and executing malicious prompts against other AI agents. This flaw could have facilitated automated, multi-stage attacks on integrated systems.",
-   "why": "It highlights the risks of AI-to-AI communication and the potential for automated prompt injection chains to compromise downstream infrastructure.",
-   "action": "",
-   "confidence": "high"
-  },
-  {
-   "id": "86e034ca1b2af0df",
-   "title": "Microsoft patches bug in video game Age of Empires II",
-   "link": "https://techcrunch.com/2026/07/15/microsoft-patches-bug-in-video-game-age-of-empires-ii/",
-   "kind": "security",
-   "tier": "security",
-   "image": null,
-   "published": "2026-07-15T18:47:01+00:00",
-   "severity": "info",
-   "heat": 27.94,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [
-    "Microsoft"
-   ],
-   "sources": [
-    {
-     "name": "TechCrunch Security",
-     "site": "techcrunch.com",
-     "link": "https://techcrunch.com/2026/07/15/microsoft-patches-bug-in-video-game-age-of-empires-ii/"
-    }
-   ],
-   "abstract": "Microsoft addressed a remote code execution vulnerability within the Age of Empires II multiplayer infrastructure. Attackers could have exploited the flaw by sending a specially crafted game invitation, potentially granting them full control over the recipient's system.",
-   "why": "Exploitation of niche software often bypasses standard security monitoring, providing a stealthy entry point into a target's local network.",
-   "action": "Update Age of Empires II to the latest version via the Microsoft Store or Steam.",
-   "confidence": "high"
-  },
-  {
-   "id": "b0063232775d043d",
-   "title": "U.S. Sanctions First VPN Service and Malware Cryptor Seller Over Ransomware Support",
-   "link": "https://thehackernews.com/2026/07/us-sanctions-first-vpn-service-and.html",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhseKXQcobfKfQC4K6ja7LMDD4ntr9cnmn_88cEPY7jw6wbmiy0p_0xup5NyNrvKHvN4gm2Y1gT4P9kn_FV0ogJEsN6hQ0Dal0xqZgWMNW0mHfrUtnxDkm0FjIN13xxH2_mCkBIVcQeEAK8j2w46HuvE5yv8W6MIsj5VQP37keKQBdHeF2NU-ujhcdaLwdE/s1600/sanctions.jpg",
-   "published": "2026-07-14T08:02:33+00:00",
-   "severity": "medium",
-   "heat": 27.55,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "The Hacker News",
-     "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/07/us-sanctions-first-vpn-service-and.html"
-    }
-   ],
-   "abstract": "The U.S. Treasury has sanctioned a VPN provider known as 1VPNS and two associated individuals. Authorities allege the service specifically catered to ransomware operators and cybercriminals, facilitating their malicious infrastructure and operations against American targets.",
-   "why": "This marks a shift in targeting the infrastructure providers that enable ransomware groups to operate anonymously and evade detection.",
-   "action": "",
-   "confidence": "high"
-  },
-  {
-   "id": "0381e78e34a0e17b",
-   "title": "US charges Russian ‘bulletproof’ web hosts over cyberattacks that netted $62M from cybercrime victims",
-   "link": "https://techcrunch.com/2026/07/15/us-charges-russian-bulletproof-web-hosts-over-cyberattacks-that-netted-62m-from-cybercrime-victims/",
-   "kind": "security",
-   "tier": "security",
-   "image": null,
-   "published": "2026-07-15T14:21:49+00:00",
-   "severity": "info",
-   "heat": 26.78,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "TechCrunch Security",
-     "site": "techcrunch.com",
-     "link": "https://techcrunch.com/2026/07/15/us-charges-russian-bulletproof-web-hosts-over-cyberattacks-that-netted-62m-from-cybercrime-victims/"
-    }
-   ],
-   "abstract": "Federal authorities unsealed an indictment against three Russian nationals and two hosting providers. The defendants allegedly operated bulletproof hosting services that facilitated cybercriminal operations, resulting in approximately $62 million in illicit gains from various victims.",
-   "why": "Bulletproof hosts are critical infrastructure for threat actors, providing the necessary stability for malware distribution, phishing campaigns, and command-and-control operations.",
-   "action": "",
-   "confidence": "high"
-  },
-  {
-   "id": "92c602d914128527",
-   "title": "Trump administration unveils AI-supported clearinghouse for cyber vulnerabilities",
-   "link": "https://therecord.media/gold-eagle-cybersecurity-vulnerabilities-clearinghouse",
-   "kind": "security",
-   "tier": "security",
-   "image": "http://cms.therecord.media/uploads/white_house_margaret_giatras_unsplash_a25324e06e.jpg",
-   "published": "2026-07-15T20:00:00+00:00",
-   "severity": "info",
-   "heat": 26.62,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "The Record",
-     "site": "therecord.media",
-     "link": "https://therecord.media/gold-eagle-cybersecurity-vulnerabilities-clearinghouse"
-    }
-   ],
-   "abstract": "The government has introduced the Gold Eagle initiative, a centralized platform leveraging artificial intelligence to assist critical infrastructure operators and private industry in identifying, ranking, and remediating security flaws more efficiently.",
-   "why": "Automated vulnerability management could significantly reduce exposure windows for critical infrastructure, provided the AI-driven prioritization proves accurate and reliable.",
-   "action": "",
-   "confidence": "medium"
-  },
-  {
-   "id": "10c6f2bd0dfe7f18",
-   "title": "Meet GPT-Red: an LLM super-hacker OpenAI built to make its models safer",
-   "link": "https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/",
-   "kind": "tech",
-   "tier": "tech",
-   "image": null,
-   "published": "2026-07-15T17:09:37+00:00",
-   "severity": "info",
-   "heat": 26.19,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [
-    "Openai"
-   ],
-   "sources": [
-    {
-     "name": "MIT Technology Review",
-     "site": "technologyreview.com",
-     "link": "https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/"
-    }
-   ],
-   "abstract": "OpenAI developed an automated adversarial model, GPT-Red, designed to probe its primary LLMs for vulnerabilities. By utilizing this internal sparring partner during training, the company aims to harden its latest models against potential exploitation and cyberattacks.",
-   "why": "Automated red-teaming of LLMs is becoming a critical standard for identifying and mitigating prompt injection and model-based security flaws before deployment.",
-   "action": "",
-   "confidence": "high"
-  },
-  {
-   "id": "92a7238068becf04",
-   "title": "AsyncAPI npm packages infected with credential-stealing malware",
-   "link": "https://www.bleepingcomputer.com/news/security/-asyncapi-npm-packages-infected-with-credential-stealing-malware/",
-   "kind": "security",
-   "tier": "security",
-   "image": null,
-   "published": "2026-07-15T15:37:27+00:00",
-   "severity": "info",
-   "heat": 26.17,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "site": "bleepingcomputer.com",
-     "link": "https://www.bleepingcomputer.com/news/security/-asyncapi-npm-packages-infected-with-credential-stealing-malware/"
-    }
-   ],
-   "abstract": "Threat actors uploaded five compromised versions of AsyncAPI packages to the npm registry. These malicious files contained a remote access trojan designed to harvest sensitive credentials and exfiltrate data from developer environments.",
-   "why": "Supply chain attacks targeting widely used development tools can lead to widespread credential theft and unauthorized access to internal infrastructure.",
-   "action": "Audit npm dependencies and remove any AsyncAPI packages installed between October 23 and October 24.",
-   "confidence": "high"
-  },
-  {
-   "id": "036cdf354d516784",
-   "title": "ICS Patch Tuesday: Vulnerabilities Fixed by Siemens, Schneider, Rockwell",
-   "link": "https://www.securityweek.com/ics-patch-tuesday-vulnerabilities-fixed-by-siemens-schneider-rockwell/",
-   "kind": "security",
-   "tier": "security",
-   "image": null,
-   "published": "2026-07-15T09:19:58+00:00",
-   "severity": "info",
-   "heat": 25.68,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "SecurityWeek",
-     "site": "securityweek.com",
-     "link": "https://www.securityweek.com/ics-patch-tuesday-vulnerabilities-fixed-by-siemens-schneider-rockwell/"
-    }
-   ],
-   "abstract": "",
-   "why": "",
-   "action": "",
-   "confidence": "low"
-  },
-  {
-   "id": "81ec43082f19cc6b",
-   "title": "Microsoft Patches Record 622 Flaws, Including Two Zero-Days Under Active Attack",
-   "link": "https://thehackernews.com/2026/07/microsoft-patches-record-622-flaws.html",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi34s_9ywUXjSc5OtF7-fDiAqSa3H-UHpJfACXyULY5ziUlM67mCJHWee9tluTiGm7ZRhMy36SLal2CUjqwJHZ8vdHuFstRwJhPGLAXe49as-o3nRE-QAyRs2mx3og8eVdWdnzzr9LwGMXckMix80XOQPsWiE30xqqYGG3PNjjpVTCpLsnW77pCk_3MyKQ/s1600/ms=patch.jpg",
-   "published": "2026-07-14T20:25:47+00:00",
-   "severity": "info",
-   "heat": 25.47,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [
-    "Microsoft"
-   ],
-   "sources": [
-    {
-     "name": "The Hacker News",
-     "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/07/microsoft-patches-record-622-flaws.html"
+     "link": "https://thehackernews.com/2026/07/unpatched-shark-vacuum-flaw-could-let.html"
     }
    ],
    "abstract": "",
