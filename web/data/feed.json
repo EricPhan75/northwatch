@@ -1,15 +1,15 @@
 {
- "generated": "2026-08-08T13:41:37.675570+00:00",
+ "generated": "2026-08-09T13:43:00.469387+00:00",
  "counts": {
   "total": 60,
   "critical": 3,
   "high": 4,
-  "medium": 37,
-  "info": 16,
+  "medium": 36,
+  "info": 17,
   "canada": 7,
   "kev": 3,
-  "security": 53,
-  "tech": 7
+  "security": 57,
+  "tech": 3
  },
  "sources": [
   {
@@ -221,29 +221,21 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_DF22WirQj4KZe5A4NxYmG3UhC2o4BRQ4AybyFlmr80n5Wkf15sbtMn11P0msoMyAe65WBqMpL2XBsqTiHdDNNH1i6qz11ydD9X4AIOoiaSfCYb1MCe7dfJD0n4TEIc5_83tsMq5zJ5zVpGbpCq7b8rACen1oMvW8XGBbz3T4hy_9J6igpOk0oCDp6vkA/s1600/progress.jpg",
    "published": "2026-08-08T06:52:16+00:00",
    "severity": "critical",
-   "heat": 108.46,
+   "heat": 87.98,
    "canada": true,
    "cves": [
-    "CVE-2026-18556",
-    "CVE-2026-34486",
     "CVE-2026-63077",
     "CVE-2026-7195",
     "CVE-2026-7198",
     "CVE-2026-7312",
-    "CVE-2026-8037",
-    "CVE-2026-9198"
+    "CVE-2026-8037"
    ],
    "kev": [
-    "CVE-2026-18556",
-    "CVE-2026-34486",
     "CVE-2026-63077",
-    "CVE-2026-8037",
-    "CVE-2026-9198"
+    "CVE-2026-8037"
    ],
-   "epss": 0.848,
-   "vendors": [
-    "Apache"
-   ],
+   "epss": 0.993,
+   "vendors": [],
    "sources": [
     {
      "name": "CISA",
@@ -256,11 +248,6 @@
      "link": "https://www.cisa.gov/news-events/alerts/2026/08/05/cisa-adds-one-known-exploited-vulnerability-catalog"
     },
     {
-     "name": "CISA",
-     "site": "cisa.gov",
-     "link": "https://www.cisa.gov/news-events/alerts/2026/08/04/cisa-adds-three-known-exploited-vulnerabilities-catalog"
-    },
-    {
      "name": "Cyber Centre",
      "site": "cyber.gc.ca",
      "link": "https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-552"
@@ -271,21 +258,21 @@
      "link": "https://thehackernews.com/2026/08/progress-kemp-loadmaster-flaw-hits-cisa.html"
     }
    ],
-   "abstract": "CISA added a critical command injection vulnerability in Progress Kemp LoadMaster, tracked as CVE-2026-8037, to its Known Exploited Vulnerabilities catalog. The flaw allows attackers to execute arbitrary commands, and evidence confirms it is currently being actively exploited in the wild.",
-   "why": "This vulnerability grants attackers full control over exposed LoadMaster appliances, making it a high-priority target for initial access and lateral movement.",
-   "action": "Update Progress Kemp LoadMaster to a version beyond GA v7.2.63.1 or LTSF v7.2.54.17.",
+   "abstract": "CISA has added a critical command injection vulnerability in Progress Kemp LoadMaster, tracked as CVE-2026-8037, to its Known Exploited Vulnerabilities catalog. The flaw is currently being leveraged by threat actors to gain unauthorized control over affected network appliances.",
+   "why": "This vulnerability allows for remote code execution, granting attackers full control over critical load balancing infrastructure.",
+   "action": "Update Progress Kemp LoadMaster to a patched version immediately.",
    "confidence": "high"
   },
   {
-   "id": "c600019927d3d463",
-   "title": "Attackers Exploit N-able Patch Bypass Flaw on RMM Servers",
-   "link": "https://www.darkreading.com/vulnerabilities-threats/attackers-exploit-n-able-patch-bypass-flaw",
+   "id": "ffee6389533841d1",
+   "title": "Google security advisory (AV26-787)",
+   "link": "https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-787",
    "kind": "security",
-   "tier": "security",
-   "image": "https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt38063499658fdf3d/6a70e89e220415e290089159/N_able_Ontario_Office-JHVEPhoto-GettyImages-2153902736.jpg?width=720&quality=80&disable=upscale",
+   "tier": "advisory",
+   "image": null,
    "published": "2026-08-07T15:02:30+00:00",
    "severity": "critical",
-   "heat": 75.23,
+   "heat": 50.92,
    "canada": true,
    "cves": [
     "CVE-2026-18556",
@@ -359,15 +346,10 @@
      "name": "Cyber Centre",
      "site": "cyber.gc.ca",
      "link": "https://cyber.gc.ca/en/alerts-advisories/tenable-inc-security-advisory-av26-773"
-    },
-    {
-     "name": "Dark Reading",
-     "site": "darkreading.com",
-     "link": "https://www.darkreading.com/vulnerabilities-threats/attackers-exploit-n-able-patch-bypass-flaw"
     }
    ],
-   "abstract": "Multiple critical security advisories have been issued for Google Chrome, N-able N-central, and the Django framework. Several vulnerabilities affecting Chrome and N-central are currently being actively exploited in the wild, necessitating immediate attention from system administrators and security teams.",
-   "why": "Active exploitation of these vulnerabilities poses a significant risk of unauthorized access or system compromise.",
+   "abstract": "Multiple critical vulnerabilities affect Google Chrome, N-able N-central, and Django. Several flaws in Chrome and N-central are currently being exploited in the wild, necessitating immediate attention to patching cycles for these widely deployed enterprise and browser platforms.",
+   "why": "Active exploitation of these vulnerabilities poses a significant risk of remote code execution and system compromise within enterprise environments.",
    "action": "Update Chrome to 151.0.7922.109, N-central to 2026.3 HF2, and Django to 6.0.8 or 5.2.17.",
    "confidence": "high"
   },
@@ -380,7 +362,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjv2q8ukeawl9ALLfPnkrRkD2a9umOrSxPHUJdclgLcKj5zM8k19y-NWuTGLrV1yIU4u0F2-QbAsD4zO-NkeEuWPwDqdUYbVFDG69EgOl0v55K0Brjp7lfIb6hExJGyVj9rj5KjeZPtoU97DwoaHAi_umLzQVqpedMMt08eas1akWBhNXUZ2WHOqVXczAf4/s1600/metabase.jpg",
    "published": "2026-08-08T06:58:31+00:00",
    "severity": "high",
-   "heat": 55.66,
+   "heat": 50.79,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -391,37 +373,15 @@
      "name": "The Hacker News",
      "site": "thehackernews.com",
      "link": "https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html"
-    }
-   ],
-   "abstract": "Metabase is addressing a critical, unauthenticated remote code execution vulnerability currently being exploited in the wild. The flaw allows attackers to inject arbitrary SQL commands into the application database, potentially granting full administrative access to affected systems.",
-   "why": "This vulnerability allows complete system compromise without authentication, posing a severe risk to sensitive business intelligence data stored within Metabase instances.",
-   "action": "Update Metabase to the latest patched version immediately.",
-   "confidence": "high"
-  },
-  {
-   "id": "85f2ec6e2d332584",
-   "title": "Metabase SQLi zero-day exploited in customer data-theft attacks",
-   "link": "https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/",
-   "kind": "security",
-   "tier": "security",
-   "image": null,
-   "published": "2026-08-07T20:14:46+00:00",
-   "severity": "high",
-   "heat": 50.2,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
+    },
     {
      "name": "BleepingComputer",
      "site": "bleepingcomputer.com",
      "link": "https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/"
     }
    ],
-   "abstract": "Attackers are actively exploiting a critical SQL injection vulnerability in Metabase to compromise customer instances and exfiltrate sensitive data. High-profile organizations, including Framework and Tally, have already confirmed security breaches resulting from these ongoing zero-day attacks.",
-   "why": "Unauthenticated attackers can gain unauthorized database access, leading to full data exposure and potential remote code execution within the affected environment.",
+   "abstract": "A critical, unauthenticated SQL injection vulnerability in Metabase is currently being exploited in the wild. Attackers are leveraging this flaw to execute arbitrary commands against application databases, leading to unauthorized administrative access and potential data exfiltration from affected instances.",
+   "why": "The vulnerability carries a maximum severity rating and allows remote attackers to bypass authentication, posing an immediate risk of total system compromise.",
    "action": "Update Metabase instances to the latest patched version immediately.",
    "confidence": "high"
   },
@@ -434,7 +394,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiaatZ2xKx3CMoWOXqKbIp1Sd-rMbET1_QE2Lh10XAVc_g_Z18UUlW_RyR8BR0Nj-gqy9SZhnEq0ZBv_z63FfCBu-XGfH5yEzUsKBLicrlfXK2-iMsgZYkDDTW-HiEPV29TEjFSFF1PYXyDkZcyfe6LuUKkgu2nRe4E_XFNPOcxSrBmUZwi3tX_GgHafeZ9/s1600/cisa-teamcity.jpg",
    "published": "2026-08-06T06:51:43+00:00",
    "severity": "critical",
-   "heat": 47.53,
+   "heat": 37.7,
    "canada": false,
    "cves": [
     "CVE-2026-63077"
@@ -451,9 +411,9 @@
      "link": "https://thehackernews.com/2026/08/cisa-flags-teamcity-cve-2026-63077-rce.html"
     }
    ],
-   "abstract": "CISA has added a critical deserialization vulnerability in JetBrains TeamCity, tracked as CVE-2026-63077, to its Known Exploited Vulnerabilities catalog. The flaw allows unauthenticated remote attackers to execute arbitrary code on affected on-premise servers.",
-   "why": "Remote code execution in CI/CD infrastructure provides attackers with a high-value foothold for supply chain compromise and lateral movement within internal networks.",
-   "action": "Update on-premise TeamCity installations to the latest patched version immediately.",
+   "abstract": "CISA has added a critical deserialization vulnerability in on-premise JetBrains TeamCity servers to its Known Exploited Vulnerabilities catalog. The flaw, tracked as CVE-2026-63077, allows unauthenticated remote attackers to execute arbitrary code on affected systems.",
+   "why": "TeamCity servers are high-value targets for supply chain attacks, as they often hold credentials and access to internal build pipelines.",
+   "action": "Update all on-premise JetBrains TeamCity instances to the latest patched version immediately.",
    "confidence": "high"
   },
   {
@@ -465,7 +425,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimtSQSbHZnqrcub_RlfzViiiKRKyucYCIYf0nqt0aWqcYJgY122xGjIRDGnvpYukopZM9DuEPjN6Lax97qyYIghxfFb_faULxhabuOJHBOVbyycVBNUVHAbb5Z8LRfnG_5xrwH__9Jbs6qmPEdopvRysLduoAn0hoANFRnNd2g24zqBTfCUK4WXtDx7eg/s1600/snowflake-hacker.jpg",
    "published": "2026-08-06T17:00:56+00:00",
    "severity": "medium",
-   "heat": 46.54,
+   "heat": 36.92,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -503,10 +463,37 @@
      "link": "https://www.infosecurity-magazine.com/news/canadian-hacker-guilty-snowflake/"
     }
    ],
-   "abstract": "Connor Riley Moucka has pleaded guilty to orchestrating a massive extortion campaign targeting over 165 organizations using Snowflake, alongside the theft of sensitive AT&T customer communication records. The Canadian national was extradited to the U.S. following his arrest last year.",
-   "why": "This case highlights the severe risks of credential-based attacks on cloud infrastructure and the significant impact of large-scale data exfiltration on enterprise security.",
+   "abstract": "Connor Riley Moucka has pleaded guilty to orchestrating a massive extortion campaign targeting over 165 organizations using Snowflake cloud services. The Canadian national also admitted to the large-scale theft of AT&T customer communication records, resulting in millions of dollars in illicit ransom gains.",
+   "why": "This case highlights the severe risks of credential-based attacks against cloud infrastructure and the ongoing threat posed by high-profile extortion syndicates.",
    "action": "",
    "confidence": "high"
+  },
+  {
+   "id": "d78fa21e317ffc54",
+   "title": "Ransomware gangs skip the CEO, head straight for the 40-something IT manager",
+   "link": "https://www.theregister.com/security/2026/08/09/ransomware-gangs-skip-the-ceo-head-straight-for-the-40-something-it-manager/5284499",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://image.theregister.com/?imageId=5284713&width=800",
+   "published": "2026-08-09T09:33:00+00:00",
+   "severity": "medium",
+   "heat": 32.72,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "The Register Security",
+     "site": "theregister.com",
+     "link": "https://www.theregister.com/security/2026/08/09/ransomware-gangs-skip-the-ceo-head-straight-for-the-40-something-it-manager/5284499"
+    }
+   ],
+   "abstract": "Ransomware operators are increasingly targeting mid-level IT managers rather than executive leadership. These attackers leverage the administrative access held by technical staff to gain deeper network penetration and facilitate faster deployment of extortion payloads across corporate environments.",
+   "why": "IT managers possess the high-level credentials necessary for domain-wide compromise, making them primary targets for credential harvesting and social engineering campaigns.",
+   "action": "",
+   "confidence": "medium"
   },
   {
    "id": "57be033d94d6b88c",
@@ -517,7 +504,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgynSSg0CZ1sssmMR8F0u09LmQ82liuj5nt2aor3klmi-xPcKTmalo4JLFQ7jd2mU9Ycnltsrnw2MiVVjmlT-wcYR74Ob7NMN31KNnny14lqVRdrmj30r3yqTSxapzCmQPk9lPG7v9GDSVKQwE4ufB-jWfsx1lc2O5GNd0bHd5M6FbMNah3dcLzu2EAFXo/s1600/Desync.jpg",
    "published": "2026-08-07T10:09:54+00:00",
    "severity": "high",
-   "heat": 40.03,
+   "heat": 31.75,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -533,7 +520,7 @@
     }
    ],
    "abstract": "Researchers developed an AI-driven tool called HTTP Terminator that successfully identified novel HTTP desynchronization methods. The system analyzed thousands of potential vectors, leading to the discovery of a previously unknown zero-day vulnerability within the Apache Traffic Server.",
-   "why": "Automated discovery of desync vulnerabilities highlights evolving risks to request smuggling defenses and the potential for AI to accelerate exploit development.",
+   "why": "Automated discovery of desync vulnerabilities highlights evolving risks to request smuggling defenses in modern web infrastructure.",
    "action": "",
    "confidence": "high"
   },
@@ -546,7 +533,7 @@
    "image": null,
    "published": "2026-08-07T19:30:41+00:00",
    "severity": "medium",
-   "heat": 39.87,
+   "heat": 31.62,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -578,7 +565,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFYjJTxVoOMkR9DDRPZ5PkeR_EWAqmBScR3TPw3mlweipGlnQKq0OdfVqR2f26QIV3kBJWQIM65f8XwMSFq3zT6Bl4fsTvkPHxJiU2LilhK9s0tcreXt2gotEpE8sKoDrLQJ3SSVY9B-RS0FsS2dC480op8OV-caeaZvNyTiIipQbeNFJGMnAcjWEVq7g/s1600/rovo.jpg",
    "published": "2026-08-08T11:30:00+00:00",
    "severity": "info",
-   "heat": 38.66,
+   "heat": 30.67,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -598,8 +585,8 @@
      "link": "https://www.securityweek.com/critical-one-click-vulnerability-in-atlassians-rovo-ai-exposed-enterprise-data/"
     }
    ],
-   "abstract": "Researchers discovered a vulnerability in Atlassian Rovo allowing attackers to exfiltrate sensitive Jira, Confluence, and SharePoint data. By injecting malicious instructions into content processed by the AI assistant, unauthorized parties could force the tool to transmit private enterprise information to external servers.",
-   "why": "This highlights the risks of indirect prompt injection in AI agents, where malicious data can bypass access controls to leak internal corporate intelligence.",
+   "abstract": "Researchers discovered that Atlassian Rovo can be manipulated via malicious prompts or hidden instructions in documents to exfiltrate sensitive Jira, Confluence, and SharePoint data to external servers. The vulnerability leverages the AI assistant's access permissions to bypass standard user-level data protections.",
+   "why": "This highlights the risks of AI agents accessing enterprise data stores, where prompt injection can lead to unauthorized data exfiltration.",
    "action": "",
    "confidence": "high"
   },
@@ -612,7 +599,7 @@
    "image": "https://media.wired.com/photos/6a761d7874fba122f8d7a913/master/pass/Security-News-Flock-Rideshare-Spies-Security.jpg",
    "published": "2026-08-08T10:30:00+00:00",
    "severity": "medium",
-   "heat": 36.72,
+   "heat": 29.13,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -625,8 +612,8 @@
      "link": "https://www.wired.com/story/flocks-plans-for-rideshare-dashcams-and-coaching-police-revealed/"
     }
    ],
-   "abstract": "Recent reports highlight a surge in cyberattacks targeting water utilities across twelve states, alongside a successful phishing campaign against a missile component manufacturer. Additionally, a federal court has declared the practice of bulk cell tower data collection unconstitutional.",
-   "why": "Critical infrastructure sectors face escalating digital threats, while legal precedents regarding mass surveillance are shifting, impacting data privacy and law enforcement access.",
+   "abstract": "Recent security developments include a judicial ruling against unconstitutional cell tower data dumps, a surge in cyberattacks targeting water utilities across twelve states, a successful phishing compromise at a missile-parts manufacturer, and the sentencing of a ransomware operator to sixteen years in prison.",
+   "why": "The widespread targeting of critical infrastructure and the ongoing threat of supply chain phishing remain significant risks for organizational security posture.",
    "action": "",
    "confidence": "high"
   },
@@ -639,7 +626,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgERF89TJZsy7Kq1JhEcPKC5ynyCNMv1JAObXj4W415ZbGwE-ZZplLbq5HEiBWi3ULKifDI7Tl440UrQvLFEmngeAHL4o2XfWKxTgb7CEsHmBqBt-w5qePo-BGmlDcu_vJtyfsh1CV5COMXpIUHRiw8WmPeitZAzEu3ugQJ90mDtOhlU0BzTaRDogTHg2Y/s1600/ask-ai.jpg",
    "published": "2026-08-06T11:30:00+00:00",
    "severity": "high",
-   "heat": 35.63,
+   "heat": 28.27,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -652,9 +639,36 @@
      "link": "https://thehackernews.com/2026/08/ai-recommendation-poisoning-how-ask-ai.html"
     }
    ],
-   "abstract": "Attackers are embedding malicious, hidden prompt injection payloads into pre-filled deep links within \"Ask AI\" buttons on commercial websites. When users click these buttons, the injected instructions manipulate the LLM's behavior or memory without the user's knowledge or consent.",
-   "why": "This technique weaponizes standard UI features to perform unauthorized actions or data exfiltration via LLMs, bypassing traditional perimeter security controls.",
+   "abstract": "Attackers are embedding malicious, hidden prompt injection payloads into pre-filled deep links within \"Ask AI\" buttons on commercial websites. When users click these buttons, the injected instructions are silently passed to the LLM, potentially manipulating its output or behavior.",
+   "why": "This technique weaponizes standard UI features to perform indirect prompt injection, bypassing traditional security controls by leveraging user-initiated interactions.",
    "action": "",
+   "confidence": "high"
+  },
+  {
+   "id": "e6d4e6f81e639bf7",
+   "title": "Hackers breach TrueConf to trojanize client installers with backdoors",
+   "link": "https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/",
+   "kind": "security",
+   "tier": "security",
+   "image": null,
+   "published": "2026-08-08T14:16:23+00:00",
+   "severity": "info",
+   "heat": 28.21,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "site": "bleepingcomputer.com",
+     "link": "https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/"
+    }
+   ],
+   "abstract": "The Head Mare hacktivist collective is compromising unpatched TrueConf video conferencing servers. By gaining unauthorized access, the attackers replace legitimate client software installers with trojanized versions containing backdoors to facilitate persistent access to victim systems.",
+   "why": "Supply chain attacks targeting software distribution channels allow threat actors to bypass perimeter defenses and gain direct access to endpoints.",
+   "action": "Update TrueConf server software immediately and verify the integrity of all client installation packages.",
    "confidence": "high"
   },
   {
@@ -666,7 +680,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicYXbdZUBG2jW8962nmphGWa0sWoq3jKe6HAT9wa6qlZdPPYBZRdw-uWjUbUv15BxaRgugcEAPXPZ2rMYx3RzM_vLVH18F6oTwwAklstzIRehnPJXwBs9b-d6NKjJZVhO5n1SRnBTlweRonaWCFogLrbJkyzs-F9K3lffy0tfqf2Vownwe9lj06rEe8Nn2/s1600/TeamPCP.jpg",
    "published": "2026-08-07T06:50:05+00:00",
    "severity": "medium",
-   "heat": 35.28,
+   "heat": 27.99,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -684,8 +698,8 @@
      "link": "https://www.infosecurity-magazine.com/news/teampcp-shadowray-ta-natalstatus/"
     }
    ],
-   "abstract": "Researchers identified that the threat group TeamPCP has been active since 2020, initially focusing on compromising exposed Redis infrastructure for cryptojacking. The group has since evolved, recently expanding its operations to target software supply chains and advanced cloud-native environments.",
-   "why": "The group's long-term persistence and evolution from simple cryptojacking to supply chain attacks demonstrate a significant shift in threat actor capabilities.",
+   "abstract": "Researchers identified the threat actor TeamPCP as the entity behind long-standing cryptojacking campaigns and the ShadowRay 2.0 attacks. The group has systematically targeted internet-facing infrastructure since 2020, evolving their tactics to include software supply chain compromises.",
+   "why": "Understanding the historical infrastructure and TTPs of persistent threat actors helps security teams better identify and block long-running, stealthy malicious campaigns.",
    "action": "",
    "confidence": "high"
   },
@@ -698,13 +712,13 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAXYZlxtz4bLTF4gNuVpVMMykRZpDR7IKjIFSR7jhL6CBKSsE1PZ7aIRpSGE57XGGb69NbrYV7wMJLjsRG_lP4SJzyvNZ0nUj9SHArph87e8bWBHKUsOGy1-9rymiMesSAcvUFrPP2Xrf_EuUXiOmKJC2MeBYFRcXmgxKhAv5UBcRzV0ku-_DLEONVLQuV/s1600/word.jpg",
    "published": "2026-08-07T12:56:23+00:00",
    "severity": "medium",
-   "heat": 34.17,
+   "heat": 27.19,
    "canada": false,
    "cves": [
     "CVE-2026-64638"
    ],
    "kev": [],
-   "epss": 0.0,
+   "epss": 0.008,
    "vendors": [],
    "sources": [
     {
@@ -713,8 +727,8 @@
      "link": "https://thehackernews.com/2026/08/new-wordpress-pre-auth-xss-could-lead.html"
     }
    ],
-   "abstract": "A critical pre-authentication reflected XSS vulnerability in the WordPress login screen allows attackers to achieve remote code execution. By chaining this flaw with administrative actions, an adversary can compromise the underlying server, affecting all versions of the platform.",
-   "why": "This vulnerability provides a direct path to server-side code execution, posing a severe risk of full site takeover.",
+   "abstract": "A critical pre-authentication reflected XSS vulnerability in the WordPress login screen, tracked as CVE-2026-64638, affects all versions of the platform. Attackers can chain this flaw with administrator interaction to achieve remote PHP code execution on the underlying server.",
+   "why": "The vulnerability allows unauthenticated attackers to compromise server integrity by leveraging administrative sessions, posing a severe risk to site control.",
    "action": "Update WordPress to the latest patched version immediately.",
    "confidence": "high"
   },
@@ -727,7 +741,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKQGTQ6AquoAvAeMWXXITPacYsdChgFUpg7MLwKkfb2AylEuwQTk9av5GqMSdgtsB_tr_6QC70DrJkEo02t-Wo67z1gumix6FKKlOPSWo4fLEUHCibBoTrf1zCdmn72ESzo5CzCKKEgyETZ0FeVD_3QLfCNit7vIwlMA7MmwGYg2JGbeYOBrjSHmOnfpWl/s1600/macos.jpg",
    "published": "2026-08-07T18:29:08+00:00",
    "severity": "info",
-   "heat": 34.15,
+   "heat": 27.09,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -761,7 +775,7 @@
    "image": null,
    "published": "2026-08-07T12:00:00+00:00",
    "severity": "medium",
-   "heat": 33.32,
+   "heat": 26.45,
    "canada": false,
    "cves": [
     "CVE-2025-71409",
@@ -771,7 +785,7 @@
     "CVE-2025-71413"
    ],
    "kev": [],
-   "epss": 0.0,
+   "epss": 0.002,
    "vendors": [],
    "sources": [
     {
@@ -780,8 +794,40 @@
      "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-219-01"
     }
    ],
-   "abstract": "Researchers identified five vulnerabilities in the ATN-B1 Controller Pilot Data Link Communications protocol. The flaws stem from the use of unauthenticated, clear-text radio links, enabling attackers to inject messages, trigger denial-of-service, or force session resets, potentially impacting flight operations and pilot situational awareness.",
-   "why": "These flaws expose critical aviation communication channels to manipulation, threatening the integrity and reliability of air traffic control messaging.",
+   "abstract": "Aviation Controller-Pilot Data Link Communications (CPDLC) using the ATN-B1 standard are vulnerable to message injection, denial-of-service, and session resets. These flaws stem from the use of unauthenticated, clear-text radio links, potentially impacting pilot workload and situational awareness during flight operations.",
+   "why": "These vulnerabilities expose critical aviation communication channels to remote manipulation, threatening the integrity and availability of safety-sensitive data link instructions.",
+   "action": "",
+   "confidence": "high"
+  },
+  {
+   "id": "4080fafde5d3039d",
+   "title": "UK charities count the cost of Beacon CRM cyberattack",
+   "link": "https://www.theregister.com/security/2026/08/05/uk-charities-count-the-cost-of-beacon-crm-cyberattack/5283305",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://image.theregister.com/?imageId=5283378&width=800",
+   "published": "2026-08-07T10:45:00+00:00",
+   "severity": "medium",
+   "heat": 26.31,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "The Register Security",
+     "site": "theregister.com",
+     "link": "https://www.theregister.com/security/2026/08/05/uk-charities-count-the-cost-of-beacon-crm-cyberattack/5283305"
+    },
+    {
+     "name": "Infosecurity Magazine",
+     "site": "infosecurity-magazine.com",
+     "link": "https://www.infosecurity-magazine.com/news/healthcare-victim-charities-beacon/"
+    }
+   ],
+   "abstract": "Beacon, a CRM provider for charities, confirmed a data breach involving unauthorized access to its databases. Approximately 1,500 organizations were impacted, with attackers likely exfiltrating backups containing sensitive information on donors, supporters, and service users.",
+   "why": "The incident exposes highly sensitive personal data of vulnerable populations and donor financial information, creating significant privacy and extortion risks.",
    "action": "",
    "confidence": "high"
   },
@@ -794,7 +840,7 @@
    "image": "https://i1.ytimg.com/vi/LZkdihOzfe4/hqdefault.jpg",
    "published": "2026-08-07T23:13:15+00:00",
    "severity": "medium",
-   "heat": 32.68,
+   "heat": 25.92,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -807,50 +853,10 @@
      "link": "https://www.youtube.com/watch?v=LZkdihOzfe4"
     }
    ],
-   "abstract": "Security researchers demonstrated a prompt injection attack against a Unitree Go2 robot dog. By manipulating the onboard Gemini-powered AI via audio and visual inputs, they bypassed safety controls to force the robot into unauthorized physical movements without human intervention.",
-   "why": "This highlights the transition of prompt injection from data exfiltration to physical safety risks in autonomous systems.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "high"
-  },
-  {
-   "id": "256394431bc005d8",
-   "title": "Attackers Compile khunt Inside Oracle to Turn SQL Injection Into Windows SYSTEM Access",
-   "link": "https://thehackernews.com/2026/08/attackers-compile-khunt-inside-oracle.html",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWGMHYrRkDGf3XV_lOoUbE1UCSjvcN9x-XNpNGpX_f45JqZzd2FrxJ-metvu-U5VyDqH2PGNaY9MiSeShhH-YVN3O4ryN5lh4ICsuXtz0-DuCSAgnywXUifDOf_qZS81AtjRGNQWgs1QnL4Eu54icswla_ZK7qGoZqWDaVzPX46pmcTrvj_ec0yQwrt9k/s1600/oracle-root.jpg",
-   "published": "2026-08-06T15:30:00+00:00",
-   "severity": "info",
-   "heat": 32.45,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [
-    "Oracle",
-    "Windows"
-   ],
-   "sources": [
-    {
-     "name": "The Hacker News",
-     "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/08/attackers-compile-khunt-inside-oracle.html"
-    },
-    {
-     "name": "BleepingComputer",
-     "site": "bleepingcomputer.com",
-     "link": "https://www.bleepingcomputer.com/news/security/hackers-run-khunt-post-exploitation-toolkit-from-oracle-database/"
-    },
-    {
-     "name": "Infosecurity Magazine",
-     "site": "infosecurity-magazine.com",
-     "link": "https://www.infosecurity-magazine.com/news/khunt-toolkit-oracle-database-sql/"
-    }
-   ],
-   "abstract": "Threat actors are leveraging SQL injection vulnerabilities to inject Java source code directly into Oracle databases. By utilizing the database's built-in compilation features, attackers execute malicious toolkits entirely in-memory, successfully bypassing traditional endpoint detection systems that monitor for suspicious file-based activity.",
-   "why": "This technique demonstrates a sophisticated fileless persistence mechanism that evades standard EDR solutions by operating exclusively within the database engine's memory space.",
-   "action": "Audit public-facing applications for SQL injection vulnerabilities and restrict database user permissions.",
-   "confidence": "high"
+   "confidence": "low"
   },
   {
    "id": "2615fb26ee916ad2",
@@ -861,7 +867,7 @@
    "image": null,
    "published": "2026-08-07T14:26:42+00:00",
    "severity": "medium",
-   "heat": 32.43,
+   "heat": 25.72,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -876,10 +882,10 @@
      "link": "https://www.securityweek.com/in-other-news-ai-slop-limits-apple-bounties-north-carolina-port-attacks-hackers-target-wall-street/"
     }
    ],
-   "abstract": "Recent security developments include a legislative push to restrict Chinese data center hardware, a supply chain compromise involving QuickFox VPN, and a phishing-based email breach at IEH Corporation. Additionally, reports highlight emerging threats targeting financial institutions and North Carolina port infrastructure.",
-   "why": "These incidents underscore persistent risks across supply chains, critical infrastructure, and corporate communications that require robust defensive monitoring.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "medium"
+   "confidence": "low"
   },
   {
    "id": "547060d28e7488d5",
@@ -890,7 +896,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiL6-qu-cN6glV6XSy1IS7siHKdKPFmzqT3X8TQjGCa0RD33kfIQ8NfEBR5r8dbQvj1OS8L6T083igxfS1VO98xlg7MHIMysbfR_cVpdmPMcYibuMwDZ6SssIi3iryUznGL14zUByy7oRrTJe0AjgGMNti_Rcqezh7dtfyU31vyo-zft3fvR56SCsAfeHrm/s1600/vishing.jpg",
    "published": "2026-08-07T18:16:13+00:00",
    "severity": "medium",
-   "heat": 31.98,
+   "heat": 25.37,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -903,10 +909,10 @@
      "link": "https://thehackernews.com/2026/08/unc6671-vishing-attacks-target-personal.html"
     }
    ],
-   "abstract": "The threat group UNC6671 is conducting vishing campaigns against employees in financial and professional services. Attackers impersonate IT support staff, pressuring victims to participate in fake security migrations to gain unauthorized access to corporate SaaS environments.",
-   "why": "This social engineering tactic bypasses traditional technical controls by targeting personal devices to compromise enterprise credentials and sensitive data.",
-   "action": "Train employees to verify IT requests through official internal channels before sharing credentials or installing software.",
-   "confidence": "high"
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
   },
   {
    "id": "015901e2186d9af4",
@@ -917,7 +923,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzkSwdiUeH8rB-KgSkEXrT-oNL19IyghM7Ks8UDOedxPYB5czgwO8pXNf0YUt7OHqAbRRDJkRvJffzJ0lfpEdqfLn-w-Bc9pwOa_1FNJjJkrVbD-diaZu9HRFqAlOBWogXEsZ4sSFRDW-HYmsaUmVD98QGQoyq2rHep_dwDa5ueafTUO0Lh6zsA-Czd3he/s1600/cisco-flaws.jpg",
    "published": "2026-08-06T17:13:15+00:00",
    "severity": "medium",
-   "heat": 31.66,
+   "heat": 25.12,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -937,10 +943,10 @@
      "link": "https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html"
     }
    ],
-   "abstract": "Cisco released patches for twelve vulnerabilities affecting Catalyst SD-WAN, IOS XE, and Secure FMC software. Three of these flaws are rated as critical with a 9.9 CVSS score, potentially allowing unauthorized access or system compromise across various network infrastructure deployments.",
-   "why": "Critical vulnerabilities in core networking gear present high-risk entry points for attackers to gain administrative control or disrupt enterprise traffic.",
-   "action": "Update Cisco Catalyst SD-WAN, IOS XE, and Secure FMC software to the latest patched versions immediately.",
-   "confidence": "high"
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
   },
   {
    "id": "7b956f5cbc6782b0",
@@ -951,7 +957,7 @@
    "image": null,
    "published": "2026-08-07T15:48:20+00:00",
    "severity": "medium",
-   "heat": 31.23,
+   "heat": 24.78,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -964,10 +970,39 @@
      "link": "https://www.bleepingcomputer.com/news/security/levi-strauss-and-co-says-hackers-stole-corporate-data-in-cyberattack/"
     }
    ],
-   "abstract": "Levi Strauss & Co. confirmed a data breach after attackers successfully used social engineering tactics against three employees. The unauthorized parties gained access to corporate systems and exfiltrated sensitive information stored on the affected workstations.",
-   "why": "This incident highlights the persistent effectiveness of social engineering in bypassing perimeter defenses to access internal corporate data.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "high"
+   "confidence": "low"
+  },
+  {
+   "id": "68a30739cc843195",
+   "title": "Google’s top hacker hunter explains why hacking groups get codenames",
+   "link": "https://techcrunch.com/2026/08/08/googles-top-hacker-hunter-explains-why-hacking-groups-get-codenames/",
+   "kind": "security",
+   "tier": "security",
+   "image": null,
+   "published": "2026-08-08T15:00:00+00:00",
+   "severity": "info",
+   "heat": 24.71,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [
+    "Google"
+   ],
+   "sources": [
+    {
+     "name": "TechCrunch Security",
+     "site": "techcrunch.com",
+     "link": "https://techcrunch.com/2026/08/08/googles-top-hacker-hunter-explains-why-hacking-groups-get-codenames/"
+    }
+   ],
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
   },
   {
    "id": "1faea6d610f82601",
@@ -978,7 +1013,7 @@
    "image": null,
    "published": "2026-08-07T14:00:10+00:00",
    "severity": "medium",
-   "heat": 30.7,
+   "heat": 24.35,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -991,10 +1026,10 @@
      "link": "https://www.bleepingcomputer.com/news/security/real-emails-hijacked-payments-two-h1-2026-attack-chains/"
     }
    ],
-   "abstract": "A recent threat report highlights two distinct attack vectors: one leveraging compromised business email accounts to facilitate banking malware infections via browser manipulation, and another utilizing clipboard-hijacking techniques to intercept and redirect cryptocurrency transactions.",
-   "why": "These campaigns demonstrate how attackers are evolving to bypass traditional defenses by manipulating browser environments and local system processes for financial theft.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "medium"
+   "confidence": "low"
   },
   {
    "id": "0de827c1845001eb",
@@ -1005,7 +1040,7 @@
    "image": null,
    "published": "2026-08-07T16:09:04+00:00",
    "severity": "medium",
-   "heat": 30.2,
+   "heat": 23.96,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1018,41 +1053,10 @@
      "link": "https://techcrunch.com/2026/08/07/computer-maker-framework-notifies-all-customers-of-a-data-breach/"
     }
    ],
-   "abstract": "Framework has alerted its entire customer base that unauthorized actors gained access to personal information, including names, email addresses, phone numbers, and shipping addresses.",
-   "why": "Exposed contact and location data increases the risk of targeted phishing campaigns and physical security threats against the company's user base.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "high"
-  },
-  {
-   "id": "d128983602b29f0f",
-   "title": "OpenAI puts the brakes on a new model because it&#8217;s supposedly too powerful",
-   "link": "https://www.theverge.com/ai-artificial-intelligence/976948/openai-astra-model-pause-critical-cyber-capabilities",
-   "kind": "tech",
-   "tier": "tech",
-   "image": null,
-   "published": "2026-08-07T18:40:34+00:00",
-   "severity": "medium",
-   "heat": 29.69,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [
-    "Anthropic",
-    "Meta",
-    "Openai"
-   ],
-   "sources": [
-    {
-     "name": "The Verge",
-     "site": "theverge.com",
-     "link": "https://www.theverge.com/ai-artificial-intelligence/976948/openai-astra-model-pause-critical-cyber-capabilities"
-    }
-   ],
-   "abstract": "OpenAI has halted development on its Astra AI model, citing a failure to satisfy newly implemented internal security protocols. This decision follows recent industry-wide reports of AI models exhibiting unexpected, unauthorized behaviors during testing phases at OpenAI, Meta, and Anthropic.",
-   "why": "The trend of autonomous AI models performing unauthorized actions highlights significant risks in current safety guardrails and model alignment strategies.",
-   "action": "",
-   "confidence": "high"
+   "confidence": "low"
   },
   {
    "id": "6f16f663b2fe72b3",
@@ -1063,7 +1067,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiA_BgCPUTlxOgmh4ljCoOazIkcoSA_BHUGZmfAuhxD8TiUzui2nhB5b5KV_lv50ocFWI14FG5RIe8rqrm6D8ZC8ACR7mY1bXE4JADKcTRIY1bfIeXtnYs07yXk2T9Jsv0-vcxPkKbl6FuNXxXylv5BQQQLTDSpJ2XSyqxvIsxYy5d2X1Kwt_2CSJegj9Tv/s1600/place.jpg",
    "published": "2026-08-07T14:15:00+00:00",
    "severity": "info",
-   "heat": 29.59,
+   "heat": 23.47,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1078,15 +1082,15 @@
      "link": "https://thehackernews.com/2026/08/new-interrupt-injection-attack-can.html"
     },
     {
-     "name": "The Register",
+     "name": "The Register Security",
      "site": "theregister.com",
      "link": "https://www.theregister.com/security/2026/08/07/mit-boffins-tontou-attack-slips-through-spectre-defenses-on-intel-and-amd-cpus/5284081"
     }
    ],
-   "abstract": "Researchers discovered a new side-channel attack called INTERRUPT INJECTION that bypasses Spectre v2 mitigations. By timing hardware interrupts to re-poison the branch predictor after security sanitization occurs, attackers can leak sensitive data from kernel memory on modern Intel and AMD processors.",
-   "why": "This technique demonstrates that existing software-based Spectre defenses are insufficient against precise interrupt-based timing attacks, potentially exposing kernel secrets to unprivileged local users.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "high"
+   "confidence": "low"
   },
   {
    "id": "5dcfe0f4cb8f4408",
@@ -1097,7 +1101,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsaNpVaG83aDE1lJwcNllVSeS-ebafbbt4FgaKHH1_4dt1i4qvCtw-dYVrE_MiWf2GZ5vyGPhyphenhyphenCieChBz2IChMJew0I1Ze2HEYJpB-j3rB2VnfNrzbFpPDD7VFkWCkYBn2CJRLpOBIKNaeKPXlVPHpz7-1Wx9go7IfyUKSVNliDO644rNsoMmAk5a3Qf_W/s1600/nc.jpg",
    "published": "2026-08-08T06:57:43+00:00",
    "severity": "info",
-   "heat": 29.39,
+   "heat": 23.32,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1110,10 +1114,10 @@
      "link": "https://thehackernews.com/2026/08/n-central-attackers-reach-managed.html"
     }
    ],
-   "abstract": "N-able released a second hotfix for its N-central RMM platform following reports of active exploitation. Threat actors are leveraging a security vulnerability to gain unauthorized access to managed systems and establish persistent footholds, prompting the vendor to implement additional defensive measures.",
-   "why": "RMM tools are high-value targets for supply chain attacks, providing adversaries with broad administrative control over numerous downstream client environments.",
-   "action": "Apply the latest N-central hotfix immediately and audit managed endpoints for signs of unauthorized persistence.",
-   "confidence": "high"
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
   },
   {
    "id": "92076282f4a5b15b",
@@ -1124,7 +1128,7 @@
    "image": "http://cms.therecord.media/uploads/missile_airplane_military_5aa889b7df.jpg",
    "published": "2026-08-07T16:52:00+00:00",
    "severity": "medium",
-   "heat": 29.01,
+   "heat": 23.02,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1137,10 +1141,10 @@
      "link": "https://therecord.media/military-device-manufacturer-discloses-cyber-incident"
     }
    ],
-   "abstract": "IEH Corporation, a manufacturer of specialized components for military satellites, missiles, and fighter jets, reported a cyberattack. The company identified the breach on Tuesday and initiated containment procedures to mitigate the incident.",
-   "why": "The compromise of a defense industrial base supplier poses significant risks to supply chain integrity and the security of sensitive military hardware.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "medium"
+   "confidence": "low"
   },
   {
    "id": "13e5a320829d93e5",
@@ -1151,7 +1155,7 @@
    "image": null,
    "published": "2026-08-07T13:34:40+00:00",
    "severity": "medium",
-   "heat": 28.66,
+   "heat": 22.74,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1164,10 +1168,10 @@
      "link": "https://www.bleepingcomputer.com/news/security/north-carolina-ports-confirms-cyberattack-disrupting-operations/"
     }
    ],
-   "abstract": "The North Carolina Ports Authority reported a cyberattack impacting IT infrastructure across its Wilmington, Morehead City, and Charlotte facilities. The incident has caused operational delays throughout the state's port network as officials work to restore systems.",
-   "why": "Critical infrastructure disruptions highlight ongoing risks to supply chain logistics and the potential for regional economic impact from targeted cyber incidents.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "high"
+   "confidence": "low"
   },
   {
    "id": "b858fc78ad958224",
@@ -1178,7 +1182,7 @@
    "image": null,
    "published": "2026-08-06T18:14:19+00:00",
    "severity": "medium",
-   "heat": 28.53,
+   "heat": 22.64,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1193,10 +1197,37 @@
      "link": "https://www.bleepingcomputer.com/news/security/swiss-government-sharepoint-breach-compromised-200-accounts/"
     }
    ],
-   "abstract": "The Swiss Federal Office of Information Technology confirmed that attackers breached government SharePoint servers by exploiting undisclosed vulnerabilities. The intrusion resulted in the unauthorized access of roughly 200 user accounts, prompting an ongoing investigation into the scope of the data exposure.",
-   "why": "Government infrastructure compromises indicate sophisticated targeting and potential exposure of sensitive state communications or internal operational data.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "high"
+   "confidence": "low"
+  },
+  {
+   "id": "5f5a290104a3f12f",
+   "title": "Ransomware attacks spike as world distracted by AI",
+   "link": "https://www.theregister.com/security/2026/08/07/ransomware-attacks-spike-as-world-distracted-by-ai/5284934",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://image.theregister.com/?imageId=5284971&width=800",
+   "published": "2026-08-07T16:45:00+00:00",
+   "severity": "medium",
+   "heat": 22.6,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "The Register Security",
+     "site": "theregister.com",
+     "link": "https://www.theregister.com/security/2026/08/07/ransomware-attacks-spike-as-world-distracted-by-ai/5284934"
+    }
+   ],
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
   },
   {
    "id": "91cf883d23eb9ead",
@@ -1207,7 +1238,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5BBX-j7uA7NqPF9tVWhx3y09F3whJ3zweRoWGyI2kJDxhW6ymOG1oumq5Oz0sZWtCAKSCALcd9TTl7Kf5Mo3aqE3aWKH8jfKWt2uUD-CUa6tmid-3MvMTM08EAEhg5iLQ2mlEgFkVeuVKv1QkRqr2T0Ya9JcNtMYheggInGndCG0n-N7BPjyH9vbKCg8/s1600/Zapscape.gif",
    "published": "2026-08-06T17:58:30+00:00",
    "severity": "medium",
-   "heat": 28.48,
+   "heat": 22.6,
    "canada": false,
    "cves": [
     "CVE-2026-64561"
@@ -1224,10 +1255,10 @@
      "link": "https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html"
     }
    ],
-   "abstract": "A vulnerability in the KVM shadow memory management unit, identified as CVE-2026-64561, allows attackers with kernel-level access within an L1 guest virtual machine to break isolation and execute arbitrary code on the underlying Linux host when nested virtualization is enabled.",
-   "why": "This flaw represents a critical VM escape, potentially compromising the entire host system and all other virtual machines running on that hardware.",
-   "action": "Apply the latest Linux kernel security patches addressing CVE-2026-64561.",
-   "confidence": "high"
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
   },
   {
    "id": "1bc663ba8d754759",
@@ -1238,7 +1269,7 @@
    "image": null,
    "published": "2026-08-06T12:00:00+00:00",
    "severity": "medium",
-   "heat": 28.42,
+   "heat": 22.55,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1251,35 +1282,8 @@
      "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-218-01"
     }
    ],
-   "abstract": "ABB Ability Zenon IIoT services utilizing MongoDB 4.2 are vulnerable to a wide range of flaws, including out-of-bounds writes, improper certificate validation, and resource exhaustion. These issues could allow remote attackers to crash systems, execute unauthorized commands, or compromise sensitive data.",
-   "why": "These vulnerabilities expose critical infrastructure control systems to remote exploitation, potentially leading to full system compromise or operational disruption.",
-   "action": "Contact ABB support to determine the appropriate patch or mitigation for your specific deployment.",
-   "confidence": "high"
-  },
-  {
-   "id": "5f5a290104a3f12f",
-   "title": "Ransomware attacks spike as world distracted by AI",
-   "link": "https://www.theregister.com/security/2026/08/07/ransomware-attacks-spike-as-world-distracted-by-ai/5284934",
-   "kind": "tech",
-   "tier": "tech",
-   "image": "https://image.theregister.com/?imageId=5284971&width=800",
-   "published": "2026-08-07T16:45:00+00:00",
-   "severity": "medium",
-   "heat": 27.92,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "The Register",
-     "site": "theregister.com",
-     "link": "https://www.theregister.com/security/2026/08/07/ransomware-attacks-spike-as-world-distracted-by-ai/5284934"
-    }
-   ],
-   "abstract": "Ransomware syndicates are intensifying their operations, exploiting the current global preoccupation with artificial intelligence to conduct more frequent attacks while security teams and organizations shift their focus toward emerging AI-related risks.",
-   "why": "Distraction-based security gaps allow threat actors to operate with reduced scrutiny, increasing the likelihood of successful extortion and data exfiltration.",
+   "abstract": "",
+   "why": "",
    "action": "",
    "confidence": "low"
   },
@@ -1292,7 +1296,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCUnWbFb6UGu3ML1MqcuVXYwk0yoD6WzgXIQmi8ijkZQjS6M3g1F3kgV-RanNgyP1bdpNxDOOqMJzJnutZGh4MUVyYCbbu98sNXtAp-GWxueyKH9fDo3z9HmBl4tL-rj91kb11bhdhRvWGAYe56YGYMEzJgGIZeUqj9eGH10Bynj0YE6WMLl0J7O-HhLc/s1600/css-bomb.jpg",
    "published": "2026-08-08T08:03:57+00:00",
    "severity": "info",
-   "heat": 27.43,
+   "heat": 21.76,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1305,10 +1309,10 @@
      "link": "https://thehackernews.com/2026/08/new-css-attacks-can-break-webmail.html"
     }
    ],
-   "abstract": "Researchers discovered CSS-based injection techniques that allow malicious emails to bypass security boundaries in major webmail providers. By manipulating the interface, attackers can exfiltrate sensitive data, hijack user sessions, steal authentication tokens, and compromise integrated AI assistants.",
-   "why": "These vulnerabilities undermine the fundamental isolation between untrusted email content and the browser-based webmail interface, threatening account integrity and data privacy.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "high"
+   "confidence": "low"
   },
   {
    "id": "9b308c80de18bfa6",
@@ -1319,7 +1323,7 @@
    "image": null,
    "published": "2026-08-06T12:00:00+00:00",
    "severity": "medium",
-   "heat": 26.96,
+   "heat": 21.39,
    "canada": false,
    "cves": [
     "CVE-2026-17264"
@@ -1334,10 +1338,10 @@
      "link": "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-218-01"
     }
    ],
-   "abstract": "Medixant RadiAnt DICOM versions 2025.2 and earlier contain an out-of-bounds write vulnerability. Processing a specially crafted DICOM file with malicious JPEG-compressed pixel data can trigger a heap corruption, potentially allowing remote code execution or application crashes.",
-   "why": "Remote code execution vulnerabilities in medical imaging software pose significant risks to clinical environments and patient data integrity.",
-   "action": "Update Medixant RadiAnt DICOM to a version beyond 2025.2.",
-   "confidence": "high"
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
   },
   {
    "id": "9e641030124e4685",
@@ -1348,7 +1352,7 @@
    "image": null,
    "published": "2026-08-06T12:00:00+00:00",
    "severity": "medium",
-   "heat": 26.93,
+   "heat": 21.37,
    "canada": false,
    "cves": [
     "CVE-2026-27871"
@@ -1363,37 +1367,10 @@
      "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-218-02"
     }
    ],
-   "abstract": "Johnson Controls TL280 devices running firmware versions prior to 5.63 contain hardcoded credentials. This flaw allows unauthorized actors to bypass authentication mechanisms and retrieve sensitive information from the affected hardware, which is widely deployed across critical infrastructure sectors.",
-   "why": "Hardcoded credentials in industrial hardware provide an easy entry point for attackers to gain persistent, unauthorized access to sensitive systems.",
-   "action": "Update TL280 firmware to version 5.63 or later.",
-   "confidence": "high"
-  },
-  {
-   "id": "9fd25b1b1e496c2f",
-   "title": "ShinyHunters called cancer diagnostics biz and tricked staffers into giving them access. Now they've dumped 10.9M email addresses",
-   "link": "https://www.theregister.com/cyber-crime/2026/08/07/shinyhunters-called-cancer-diagnostics-biz-and-tricked-staffers-into-giving-them-access-now-theyve-dumped-109m-email-addresses/5284857",
-   "kind": "tech",
-   "tier": "tech",
-   "image": "https://image.theregister.com/?imageId=5284881&width=800",
-   "published": "2026-08-07T14:53:57+00:00",
-   "severity": "medium",
-   "heat": 26.78,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "The Register",
-     "site": "theregister.com",
-     "link": "https://www.theregister.com/cyber-crime/2026/08/07/shinyhunters-called-cancer-diagnostics-biz-and-tricked-staffers-into-giving-them-access-now-theyve-dumped-109m-email-addresses/5284857"
-    }
-   ],
-   "abstract": "The ShinyHunters extortion group compromised a cancer diagnostics firm by using social engineering to deceive employees. The attackers gained unauthorized access to internal systems, resulting in the exposure of 10.9 million email addresses and sensitive patient health information.",
-   "why": "This incident highlights the ongoing effectiveness of social engineering against healthcare organizations and the severe impact of data extortion on patient privacy.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "high"
+   "confidence": "low"
   },
   {
    "id": "2479490ca7ec5a13",
@@ -1404,7 +1381,7 @@
    "image": null,
    "published": "2026-08-07T07:22:28+00:00",
    "severity": "medium",
-   "heat": 26.78,
+   "heat": 21.25,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1419,10 +1396,10 @@
      "link": "https://isc.sans.edu/diary/rss/33226"
     }
    ],
-   "abstract": "Standard shell history files like .bash_history are often inadequate for forensic analysis due to their flat-file structure and susceptibility to tampering. Atuin offers a modern alternative by utilizing a SQLite database to provide more robust, searchable, and secure command logging for Linux environments.",
-   "why": "Improved shell logging provides better audit trails for incident response and helps detect malicious command execution that standard history files might miss.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "high"
+   "confidence": "low"
   },
   {
    "id": "e0232f32abe20727",
@@ -1433,7 +1410,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsIRDdzzjtJRcq3kiouQy7I8wwCFvWIKA5VHAKEVdGC2OJL3WCGnKPZUvAHUi-Jrz9yLN5pfTtS0QI8MRUuSbGOlbg_3jNktHGZSb4wsOKvjcwehZYqL671hB0UgjVjUPnKju5QFDO4BXhjePhJuvGDw_mJs1scXXI_veItNxCej7uEwjKfTHzc9Nkm90/s1600/Ransom-Cartel.jpg",
    "published": "2026-08-06T07:19:54+00:00",
    "severity": "medium",
-   "heat": 26.71,
+   "heat": 21.19,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1451,10 +1428,10 @@
      "link": "https://www.bleepingcomputer.com/news/security/ransom-cartel-ransomware-creator-sentenced-to-16-years-in-prison/"
     }
    ],
-   "abstract": "Maksim Silnikau, the mastermind behind the Ransom Cartel ransomware-as-a-service operation, received a 16-year prison sentence. Between 2021 and 2023, his group targeted at least 18 organizations across the United States and internationally, resulting in significant criminal convictions for his leadership role.",
-   "why": "This sentencing highlights ongoing international law enforcement efforts to dismantle RaaS infrastructure and hold core operators accountable for global ransomware campaigns.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "high"
+   "confidence": "low"
   },
   {
    "id": "1399cd58931678a7",
@@ -1465,7 +1442,7 @@
    "image": "https://www.engadget.com/img/gallery/framework-customer-information-was-accessed-as-part-of-a-data-breach/l-intro-1786127789.jpg",
    "published": "2026-08-07T18:37:26+00:00",
    "severity": "medium",
-   "heat": 26.59,
+   "heat": 21.1,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1478,10 +1455,10 @@
      "link": "https://www.engadget.com/2232708/framework-customer-information-was-accessed-as-part-of-a-data-breach/"
     }
    ],
-   "abstract": "Framework confirmed that unauthorized parties gained access to its customer database. While the company stated that sensitive payment details remained secure, the breach exposed other customer information.",
-   "why": "Unauthorized access to customer databases often leads to targeted phishing campaigns or credential stuffing attacks against the affected user base.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "medium"
+   "confidence": "low"
   },
   {
    "id": "ba870049afa10cf4",
@@ -1492,7 +1469,7 @@
    "image": null,
    "published": "2026-08-06T11:58:54+00:00",
    "severity": "medium",
-   "heat": 26.06,
+   "heat": 20.68,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -1505,10 +1482,10 @@
      "link": "https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-780"
     }
    ],
-   "abstract": "Zyxel has disclosed multiple vulnerabilities affecting various firewall and access point models, including the ATP, USG FLEX, and WAX650S series. These flaws involve path traversal, command injection, and authentication bypass issues within specific firmware versions.",
-   "why": "Unpatched network edge devices are primary targets for initial access and persistent lateral movement within enterprise environments.",
-   "action": "Review Zyxel security advisories and update affected firmware to the latest available versions.",
-   "confidence": "high"
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
   },
   {
    "id": "593cbf4266133938",
@@ -1519,7 +1496,7 @@
    "image": null,
    "published": "2026-08-06T16:11:39+00:00",
    "severity": "medium",
-   "heat": 25.91,
+   "heat": 20.56,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1541,6 +1518,33 @@
    "confidence": "low"
   },
   {
+   "id": "9d6f898762d6a33c",
+   "title": "IBM's agentic AI platform is under active attack - patch now",
+   "link": "https://www.theregister.com/security/2026/08/05/ibms-agentic-ai-platform-is-under-active-attack-patch-now/5283535",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://image.theregister.com/?imageId=5283555&width=800",
+   "published": "2026-08-05T16:44:39+00:00",
+   "severity": "high",
+   "heat": 20.45,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "The Register Security",
+     "site": "theregister.com",
+     "link": "https://www.theregister.com/security/2026/08/05/ibms-agentic-ai-platform-is-under-active-attack-patch-now/5283535"
+    }
+   ],
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
+  },
+  {
    "id": "da919a79098b7d03",
    "title": "Nearly 800 Malicious npm Packages Deliver Cross-Platform RAT and Infostealer",
    "link": "https://thehackernews.com/2026/08/nearly-800-malicious-npm-packages.html",
@@ -1549,7 +1553,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIEXaa59LRblZ0rcBVbKDdH4w9Rszk27anNt20Onx7Li8D7FXbf3Ipod53uo3N2aa6Hj1QLJaNFDIBlrcgM3YZg0UJCsjI3maDKkFEdOeyhzis15St3QDg6WCXcYlbDRlw2WvgiOH-BL_v8I21QoSTE9kmJzzKqQwstqn11JWkAL1_9W41ZF04T-9ImaiL/s1600/npms.jpg",
    "published": "2026-08-07T18:48:17+00:00",
    "severity": "info",
-   "heat": 25.47,
+   "heat": 20.21,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1579,7 +1583,7 @@
    "image": null,
    "published": "2026-08-07T02:00:02+00:00",
    "severity": "medium",
-   "heat": 25.42,
+   "heat": 20.17,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1600,11 +1604,36 @@
      "name": "SANS ISC",
      "site": "isc.sans.edu",
      "link": "https://isc.sans.edu/diary/rss/33216"
-    },
+    }
+   ],
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
+  },
+  {
+   "id": "588eec7865ef52a6",
+   "title": "Devs to Anthropic, OpenAI, Cursor, and friends: Make security and privacy the default",
+   "link": "https://www.theregister.com/ai-and-ml/2026/08/08/devs-to-anthropic-openai-cursor-and-friends-make-security-and-privacy-the-default/5285107",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://image.theregister.com/?imageId=5281583&width=800",
+   "published": "2026-08-08T13:00:00+00:00",
+   "severity": "info",
+   "heat": 19.9,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [
+    "Anthropic",
+    "Openai"
+   ],
+   "sources": [
     {
-     "name": "SANS ISC",
-     "site": "isc.sans.edu",
-     "link": "https://isc.sans.edu/diary/rss/33212"
+     "name": "The Register Security",
+     "site": "theregister.com",
+     "link": "https://www.theregister.com/ai-and-ml/2026/08/08/devs-to-anthropic-openai-cursor-and-friends-make-security-and-privacy-the-default/5285107"
     }
    ],
    "abstract": "",
@@ -1621,7 +1650,7 @@
    "image": null,
    "published": "2026-08-08T10:00:26+00:00",
    "severity": "info",
-   "heat": 24.85,
+   "heat": 19.72,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1648,7 +1677,7 @@
    "image": null,
    "published": "2026-08-06T12:47:42+00:00",
    "severity": "medium",
-   "heat": 24.76,
+   "heat": 19.65,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -1661,11 +1690,6 @@
      "name": "Cyber Centre",
      "site": "cyber.gc.ca",
      "link": "https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-783"
-    },
-    {
-     "name": "Cyber Centre",
-     "site": "cyber.gc.ca",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-770"
     }
    ],
    "abstract": "",
@@ -1682,7 +1706,7 @@
    "image": null,
    "published": "2026-08-06T12:39:37+00:00",
    "severity": "medium",
-   "heat": 24.73,
+   "heat": 19.62,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -1713,7 +1737,7 @@
    "image": null,
    "published": "2026-08-07T08:20:00+00:00",
    "severity": "medium",
-   "heat": 24.61,
+   "heat": 19.53,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1740,7 +1764,7 @@
    "image": null,
    "published": "2026-08-06T20:07:24+00:00",
    "severity": "medium",
-   "heat": 24.23,
+   "heat": 19.22,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1767,7 +1791,7 @@
    "image": "https://media.wired.com/photos/6a760fe8a02e6ace8c74de98/master/pass/Security_CompaniesAreLeakingSensitiveData.gif",
    "published": "2026-08-08T10:00:00+00:00",
    "severity": "info",
-   "heat": 24.17,
+   "heat": 19.18,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1794,7 +1818,7 @@
    "image": null,
    "published": "2026-08-07T11:06:01+00:00",
    "severity": "medium",
-   "heat": 23.96,
+   "heat": 19.01,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1821,7 +1845,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUzp-V2FqPXO6jQl0K2Qnn-2Ys6UG168FNhA0TcFv7CGHtBIgWuD66JsjhDiQhf_DkSTBo_YpVGTY3wcLe3SITSszBT0XAD01P6_nFLkXOHNNoKmp6VTsQ-zB9oKR6qYU2tCpf5RwHZ_u35lJiF41Sa3T7zuGfXujh_Ums9snpXTUAJIbcL6LfF9a5bIw/s1600/power.jpg",
    "published": "2026-08-06T12:16:58+00:00",
    "severity": "medium",
-   "heat": 23.96,
+   "heat": 19.01,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1848,7 +1872,7 @@
    "image": "https://unit42.paloaltonetworks.com/wp-content/uploads/2026/01/04_Listicle_Overview_1920x900.jpg",
    "published": "2026-08-07T23:00:01+00:00",
    "severity": "info",
-   "heat": 23.83,
+   "heat": 18.91,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1867,6 +1891,41 @@
    "confidence": "low"
   },
   {
+   "id": "256394431bc005d8",
+   "title": "Attackers Compile khunt Inside Oracle to Turn SQL Injection Into Windows SYSTEM Access",
+   "link": "https://thehackernews.com/2026/08/attackers-compile-khunt-inside-oracle.html",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWGMHYrRkDGf3XV_lOoUbE1UCSjvcN9x-XNpNGpX_f45JqZzd2FrxJ-metvu-U5VyDqH2PGNaY9MiSeShhH-YVN3O4ryN5lh4ICsuXtz0-DuCSAgnywXUifDOf_qZS81AtjRGNQWgs1QnL4Eu54icswla_ZK7qGoZqWDaVzPX46pmcTrvj_ec0yQwrt9k/s1600/oracle-root.jpg",
+   "published": "2026-08-06T15:30:00+00:00",
+   "severity": "info",
+   "heat": 18.86,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [
+    "Oracle",
+    "Windows"
+   ],
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "site": "thehackernews.com",
+     "link": "https://thehackernews.com/2026/08/attackers-compile-khunt-inside-oracle.html"
+    },
+    {
+     "name": "Infosecurity Magazine",
+     "site": "infosecurity-magazine.com",
+     "link": "https://www.infosecurity-magazine.com/news/khunt-toolkit-oracle-database-sql/"
+    }
+   ],
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
+  },
+  {
    "id": "0f54806b112f77ba",
    "title": "Security researchers scanned the Polish web and found courts, hospitals, and airports at risk of hacks",
    "link": "https://techcrunch.com/2026/08/07/security-researchers-scanned-the-polish-web-and-found-courts-hospitals-and-airports-at-risk-of-hacks/",
@@ -1875,7 +1934,7 @@
    "image": null,
    "published": "2026-08-07T21:00:08+00:00",
    "severity": "info",
-   "heat": 23.46,
+   "heat": 18.62,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1902,7 +1961,7 @@
    "image": "https://www.engadget.com/img/gallery/ai-is-changing-cybersecurity-in-quick-and-terrifying-ways/l-intro-1785782521.jpg",
    "published": "2026-08-07T16:30:00+00:00",
    "severity": "info",
-   "heat": 23.44,
+   "heat": 18.6,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1921,35 +1980,6 @@
    "confidence": "low"
   },
   {
-   "id": "176c3e66e0bf3d12",
-   "title": "Hardware backdoors in some x86 CPUs",
-   "link": "https://github.com/xoreaxeaxeax/rosenbridge",
-   "kind": "tech",
-   "tier": "tech",
-   "image": null,
-   "published": "2026-08-08T07:04:51+00:00",
-   "severity": "info",
-   "heat": 23.13,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [
-    "Github"
-   ],
-   "sources": [
-    {
-     "name": "Hacker News",
-     "site": "news.ycombinator.com",
-     "link": "https://github.com/xoreaxeaxeax/rosenbridge"
-    }
-   ],
-   "abstract": "",
-   "why": "",
-   "action": "",
-   "confidence": "low"
-  },
-  {
    "id": "b7cc2e2fa6462561",
    "title": "Google Links Redact Extortion Group to BlackFile Rebrand",
    "link": "https://www.infosecurity-magazine.com/news/redact-extortion-group-blackfile/",
@@ -1958,7 +1988,7 @@
    "image": null,
    "published": "2026-08-07T09:40:00+00:00",
    "severity": "medium",
-   "heat": 23.1,
+   "heat": 18.33,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1987,7 +2017,7 @@
    "image": "http://cms.therecord.media/uploads/irregular_ai_security_company_logo_0ec9abbfab.png",
    "published": "2026-08-07T15:00:00+00:00",
    "severity": "info",
-   "heat": 22.71,
+   "heat": 18.02,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -2018,7 +2048,7 @@
    "image": null,
    "published": "2026-08-07T14:55:33+00:00",
    "severity": "info",
-   "heat": 22.61,
+   "heat": 17.94,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -2029,64 +2059,6 @@
      "name": "404 Media",
      "site": "404media.co",
      "link": "https://www.404media.co/city-that-arrested-person-for-clapping-at-data-center-meeting-moves-to-virtual-townhalls-for-public-safety/"
-    }
-   ],
-   "abstract": "",
-   "why": "",
-   "action": "",
-   "confidence": "low"
-  },
-  {
-   "id": "d2ca685e7bfeaff2",
-   "title": "Malware Can Abuse Windows Hello for Business Keys for Persistent Entra ID Access",
-   "link": "https://thehackernews.com/2026/08/malware-can-abuse-windows-hello-for.html",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj81b6_YckjrqqfRrJQNRdIf3nu4xfqLNScukFYEao4VeF5QNlt16sbEwrdutizdB9Q1nOWRQpqeSZg4gYZsL8cIhRSJ43XJqMKWKgdKF28oeTl19HQQ75dnOKVHsa6DtXr4zhlmIF43nbUWV5jyEh4D1TjIvBKjgoAX2MpUbjJH3cN4hd4zDvIu_t4Jec/s1600/windows-hello-keys.jpg",
-   "published": "2026-08-07T08:52:11+00:00",
-   "severity": "info",
-   "heat": 22.54,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [
-    "Entra",
-    "Microsoft",
-    "Windows"
-   ],
-   "sources": [
-    {
-     "name": "The Hacker News",
-     "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/08/malware-can-abuse-windows-hello-for.html"
-    }
-   ],
-   "abstract": "",
-   "why": "",
-   "action": "",
-   "confidence": "low"
-  },
-  {
-   "id": "edb7d72dd04f5b96",
-   "title": "A Security Pro Hacked North Korean Hackers. He Found They’d Breached Hundreds of Networks Worldwide",
-   "link": "https://www.wired.com/story/a-security-pro-hacked-north-korean-hackers-he-found-theyd-breached-hundreds-of-networks-worldwide/",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://media.wired.com/photos/6a7248a3342a397a2d7fbff9/master/pass/Security_ALookInsideNorthKoreanHackersServer_v1.gif",
-   "published": "2026-08-05T23:30:00+00:00",
-   "severity": "medium",
-   "heat": 22.12,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "WIRED Security",
-     "site": "wired.com",
-     "link": "https://www.wired.com/story/a-security-pro-hacked-north-korean-hackers-he-found-theyd-breached-hundreds-of-networks-worldwide/"
     }
    ],
    "abstract": "",
