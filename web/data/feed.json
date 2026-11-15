@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-14T18:39:34.445370+00:00",
+ "generated": "2026-11-15T19:14:35.492774+00:00",
  "counts": {
   "total": 60,
-  "critical": 8,
-  "high": 9,
-  "medium": 33,
+  "critical": 9,
+  "high": 6,
+  "medium": 35,
   "info": 10,
-  "canada": 16,
-  "kev": 8,
+  "canada": 17,
+  "kev": 9,
   "security": 59,
   "tech": 1
  },
@@ -221,34 +221,18 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuvSsWcsJ9736KXp_0s-6__-CiI5PD71VReembVHAB4cfnv3Qti8td9WR54UnRH96bz30dvbTQxwG3WbxDkWRq_eFJPYLgxbAzRD5k3MJSISbW2VDI-Fr7nlX4j8NyJkXqLHylMZMXpynEHVV8ovZ2YPC-WGCFCcrOZOeGc5Wsy-jRjjbcyYTzojI9Nudw/s1600/cisaa.jpg",
    "published": "2026-11-14T12:38:35+00:00",
    "severity": "critical",
-   "heat": 90.79,
+   "heat": 70.48,
    "canada": false,
    "cves": [
-    "CVE-2026-111560",
-    "CVE-2026-111793",
     "CVE-2026-114713",
-    "CVE-2026-116606",
-    "CVE-2026-123039",
-    "CVE-2026-124194",
-    "CVE-2026-125350",
-    "CVE-2026-20320"
+    "CVE-2026-123039"
    ],
    "kev": [
-    "CVE-2026-111560",
-    "CVE-2026-111793",
     "CVE-2026-114713",
-    "CVE-2026-116606",
-    "CVE-2026-123039",
-    "CVE-2026-124194",
-    "CVE-2026-125350",
-    "CVE-2026-20320"
+    "CVE-2026-123039"
    ],
-   "epss": 0.109,
-   "vendors": [
-    "Cisco",
-    "Google",
-    "Microsoft"
-   ],
+   "epss": 0.022,
+   "vendors": [],
    "sources": [
     {
      "name": "CISA",
@@ -256,19 +240,48 @@
      "link": "https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog"
     },
     {
-     "name": "CISA",
-     "site": "cisa.gov",
-     "link": "https://www.cisa.gov/news-events/alerts/2026/11/10/cisa-adds-six-known-exploited-vulnerabilities-catalog"
-    },
-    {
      "name": "The Hacker News",
      "site": "thehackernews.com",
      "link": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html"
     }
    ],
-   "abstract": "CISA has added eight vulnerabilities to its Known Exploited Vulnerabilities catalog, including a critical command injection flaw in UnrealIRCd and various issues affecting Cisco, Microsoft, Google, and Barracuda products, all of which are currently being leveraged by threat actors in the wild.",
-   "why": "These vulnerabilities are actively exploited in the wild, posing a significant risk of unauthorized access, remote code execution, or system compromise.",
-   "action": "Review CISA KEV catalog and apply all available security patches for the listed affected software immediately.",
+   "abstract": "CISA has added two critical vulnerabilities to its Known Exploited Vulnerabilities catalog: a command injection flaw in UnrealIRCd and a permission assignment issue affecting various Check Point products. Both are currently being leveraged by threat actors in active cyberattacks.",
+   "why": "These vulnerabilities are confirmed to be under active exploitation, posing a high risk of unauthorized access or system compromise.",
+   "action": "Update UnrealIRCd and affected Check Point products to the latest patched versions immediately.",
+   "confidence": "high"
+  },
+  {
+   "id": "f0f23fdb08d7bf54",
+   "title": "FBI flash alert says Artex tool automating cyberattacks at ‘machine speed’",
+   "link": "https://therecord.media/artex-ai-tool-fbi-flash-alert",
+   "kind": "security",
+   "tier": "security",
+   "image": "http://cms.therecord.media/uploads/fbi_1_c4c06390db.jpg",
+   "published": "2026-11-15T18:29:53+00:00",
+   "severity": "medium",
+   "heat": 51.93,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [
+    "Microsoft"
+   ],
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "site": "bleepingcomputer.com",
+     "link": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/"
+    },
+    {
+     "name": "The Record",
+     "site": "therecord.media",
+     "link": "https://therecord.media/artex-ai-tool-fbi-flash-alert"
+    }
+   ],
+   "abstract": "The FBI reports that threat actors are leveraging ARTEX, an AI-driven penetration testing framework, to accelerate cyberattacks. The tool automates the chaining of exploits, enabling attackers to move from initial reconnaissance to administrative access in less than three hours.",
+   "why": "This framework lowers the barrier to entry for complex attacks, allowing adversaries to rapidly compromise cloud environments like Microsoft 365.",
+   "action": "",
    "confidence": "high"
   },
   {
@@ -280,7 +293,7 @@
    "image": null,
    "published": "2026-11-13T18:59:00+00:00",
    "severity": "critical",
-   "heat": 62.65,
+   "heat": 49.45,
    "canada": true,
    "cves": [
     "CVE-2026-107484",
@@ -298,9 +311,9 @@
      "link": "https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-1154"
     }
    ],
-   "abstract": "Check Point has disclosed two vulnerabilities affecting its firewalls, management servers, and orchestration platforms. One of these flaws, CVE-2026-123039, is currently being actively exploited in the wild and has been added to CISA's Known Exploited Vulnerabilities catalog.",
+   "abstract": "Check Point has disclosed two vulnerabilities affecting various products, including Force Firewalls and Management Servers. One of these flaws, CVE-2026-123039, is currently under active exploitation and has been added to CISA's Known Exploited Vulnerabilities catalog.",
    "why": "Active exploitation of perimeter security infrastructure poses a critical risk to network integrity and administrative access control.",
-   "action": "Review Check Point advisory AV26-1154 and apply all available security patches immediately.",
+   "action": "Review Check Point security advisories and apply available patches immediately.",
    "confidence": "high"
   },
   {
@@ -312,7 +325,7 @@
    "image": null,
    "published": "2026-11-12T12:00:00+00:00",
    "severity": "critical",
-   "heat": 61.04,
+   "heat": 48.17,
    "canada": false,
    "cves": [
     "CVE-2026-109618",
@@ -338,9 +351,9 @@
      "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-01"
     }
    ],
-   "abstract": "Siemens RUGGEDCOM APE1808 devices are vulnerable to critical remote code execution flaws, collectively dubbed php2shell, stemming from the underlying PHP runtime. These vulnerabilities allow unauthenticated attackers to potentially execute arbitrary code on affected industrial hardware.",
-   "why": "These flaws carry a 9.8 CVSS score and are actively exploited, posing a severe risk to critical infrastructure and industrial control systems.",
-   "action": "Restrict network access to affected devices and implement vendor-recommended security configurations immediately.",
+   "abstract": "Siemens RUGGEDCOM APE1808 devices are vulnerable to critical remote code execution flaws, collectively dubbed php2shell, stemming from the underlying PHP runtime. These vulnerabilities allow unauthenticated attackers to compromise affected hardware, which is widely deployed across critical manufacturing sectors.",
+   "why": "These critical RCE vulnerabilities carry a CVSS score of 9.8 and are actively exploited, posing a severe risk to industrial control systems.",
+   "action": "Restrict network access to affected devices and implement vendor-provided security configurations immediately.",
    "confidence": "high"
   },
   {
@@ -352,7 +365,7 @@
    "image": null,
    "published": "2026-11-12T12:00:00+00:00",
    "severity": "critical",
-   "heat": 59.19,
+   "heat": 46.71,
    "canada": false,
    "cves": [
     "CVE-2026-111497"
@@ -382,8 +395,8 @@
      "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-03"
     }
    ],
-   "abstract": "A critical out-of-bounds write vulnerability, dubbed Node2Shell, affects the Brotli decoder in various Siemens industrial products, including Desigo, Gridscale, and RUGGEDCOM. Exploitation could allow remote attackers to corrupt memory or execute arbitrary code on vulnerable systems.",
-   "why": "This flaw carries a 9.8 CVSS score and impacts critical infrastructure, posing a significant risk of remote code execution in industrial environments.",
+   "abstract": "A critical out-of-bounds write vulnerability, dubbed Node2Shell, affects the Brotli decoder in various Siemens industrial products, including Desigo, Gridscale, and RUGGEDCOM. Exploitation could allow remote attackers to corrupt memory and execute arbitrary code.",
+   "why": "This high-severity flaw impacts critical infrastructure and industrial control systems, posing significant risks for remote code execution in operational technology environments.",
    "action": "Update Siemens Desigo, Gridscale, and RUGGEDCOM software to the latest patched versions immediately.",
    "confidence": "high"
   },
@@ -396,22 +409,15 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4aXykaOroazGO_7IuXugse9ynGpt1PkKJDM8lKL4by93ixX28cs23KAZZRF2dCN2cogu1ti8q5kmqfqSBLmOXWkVi7ZGWmwYMkeCOUXsOXwLoF07FbzmVnlr9DoeqtCboI_9LKWgohgWi2jIB1TzGO6uEkp5lsMnq5fSVqrN-NZGJjAQE2kIUyHsdkw6J/s1600/cisa-cisco.jpg",
    "published": "2026-11-12T14:25:44+00:00",
    "severity": "critical",
-   "heat": 57.33,
+   "heat": 44.39,
    "canada": true,
    "cves": [
-    "CVE-2026-111560",
-    "CVE-2026-116606",
-    "CVE-2026-11724",
-    "CVE-2026-123218",
     "CVE-2026-20320"
    ],
    "kev": [
-    "CVE-2026-111560",
-    "CVE-2026-116606",
-    "CVE-2026-123218",
     "CVE-2026-20320"
    ],
-   "epss": 0.109,
+   "epss": 0.01,
    "vendors": [
     "Cisco"
    ],
@@ -422,24 +428,14 @@
      "link": "https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-834"
     },
     {
-     "name": "Cyber Centre",
-     "site": "cyber.gc.ca",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/barracuda-networks-security-advisory-av26-1112"
-    },
-    {
-     "name": "Cyber Centre",
-     "site": "cyber.gc.ca",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1135"
-    },
-    {
      "name": "The Hacker News",
      "site": "thehackernews.com",
      "link": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html"
     }
    ],
-   "abstract": "CISA has added multiple vulnerabilities affecting Cisco BroadWorks, Cisco Crosswork, and various Barracuda products to its Known Exploited Vulnerabilities catalog. These flaws are currently being leveraged in active cyberattacks, necessitating immediate attention from administrators managing these enterprise infrastructure components.",
-   "why": "These vulnerabilities are confirmed to be under active exploitation, significantly increasing the risk of unauthorized access or system compromise.",
-   "action": "Update Cisco and Barracuda products to the latest patched versions immediately.",
+   "abstract": "CISA has added CVE-2026-20320, an XML external entity vulnerability affecting Cisco BroadWorks and other products, to its Known Exploited Vulnerabilities catalog. The flaw is currently being actively exploited in the wild, necessitating immediate attention for affected infrastructure.",
+   "why": "Active exploitation of this vulnerability in critical Cisco infrastructure poses a significant risk of unauthorized data access or system compromise.",
+   "action": "Update Cisco BroadWorks and Crosswork components to the versions specified in the Cisco security advisory.",
    "confidence": "high"
   },
   {
@@ -451,7 +447,7 @@
    "image": null,
    "published": "2026-11-12T20:39:53+00:00",
    "severity": "critical",
-   "heat": 53.99,
+   "heat": 42.61,
    "canada": true,
    "cves": [
     "CVE-2026-125350"
@@ -479,7 +475,7 @@
     }
    ],
    "abstract": "Google has released security updates for Chrome to address a critical vulnerability, CVE-2026-125350, which is currently being exploited in the wild. The flaw affects Windows, Mac, and Linux versions of the browser.",
-   "why": "This vulnerability is actively exploited by threat actors, making it a high-priority risk for all enterprise and personal browser environments.",
+   "why": "This vulnerability is confirmed to be under active exploitation and has been added to CISA's Known Exploited Vulnerabilities catalog.",
    "action": "Update Chrome to version 157.0.8103.78 or later immediately.",
    "confidence": "high"
   },
@@ -492,7 +488,7 @@
    "image": null,
    "published": "2026-11-12T11:56:24+00:00",
    "severity": "critical",
-   "heat": 48.77,
+   "heat": 38.49,
    "canada": false,
    "cves": [
     "CVE-2026-102895"
@@ -509,9 +505,42 @@
      "link": "https://isc.sans.edu/diary/rss/33514"
     }
    ],
-   "abstract": "A critical authentication bypass vulnerability in GPUStack, tracked as CVE-2026-102895, allows unauthorized access to GPU cluster management systems. The flaw affects all versions released before 2.2.0 and is currently seeing active exploitation attempts in the wild.",
-   "why": "GPUStack manages high-value AI infrastructure; unauthorized access grants attackers control over expensive compute resources and sensitive machine learning workloads.",
+   "abstract": "A critical authentication bypass vulnerability, tracked as CVE-2026-102895, affects GPUStack versions prior to 2.2.0. The flaw allows unauthorized access to systems managing GPU clusters, which are frequently utilized for high-value AI infrastructure and model training workloads.",
+   "why": "GPUStack manages high-compute resources; unauthorized access could lead to cryptojacking, data exfiltration, or the compromise of sensitive AI model weights.",
    "action": "Update GPUStack to version 2.2.0 or later immediately.",
+   "confidence": "high"
+  },
+  {
+   "id": "90cab7698084e639",
+   "title": "Barracuda Networks security advisory (AV26-1112) – Update 2",
+   "link": "https://cyber.gc.ca/en/alerts-advisories/barracuda-networks-security-advisory-av26-1112",
+   "kind": "security",
+   "tier": "advisory",
+   "image": null,
+   "published": "2026-11-12T14:22:59+00:00",
+   "severity": "critical",
+   "heat": 38.29,
+   "canada": true,
+   "cves": [
+    "CVE-2026-111560",
+    "CVE-2026-116606"
+   ],
+   "kev": [
+    "CVE-2026-111560",
+    "CVE-2026-116606"
+   ],
+   "epss": 0.109,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "Cyber Centre",
+     "site": "cyber.gc.ca",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/barracuda-networks-security-advisory-av26-1112"
+    }
+   ],
+   "abstract": "CISA has added two critical vulnerabilities affecting multiple Barracuda products, including Email Security Gateway and Web Application Firewall, to its Known Exploited Vulnerabilities catalog. Evidence suggests that at least one of these flaws is currently being leveraged in active cyberattacks.",
+   "why": "These vulnerabilities are confirmed to be under active exploitation, posing a significant risk of unauthorized access or compromise to Barracuda infrastructure.",
+   "action": "Update Barracuda appliances to the latest firmware versions specified in the security advisory immediately.",
    "confidence": "high"
   },
   {
@@ -523,7 +552,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4r5n0I6Rd7yb3jS6hfXTyM5foZU5uEiCD1I2Kgth1qgf_pzohrD9jPeDesEopB6Gjo0VaQZF2XesdqU6W32eFADzI3_xhBF4026h6uGqn6eExdfS_A29SvYA3cdIJkhWmPG-k15_DdsGGcqFfWS-E3cgyKkdEQ3Sxa9gayFkkMXggVJpkeH7DoLNLZxm9/s1600/screen.jpg",
    "published": "2026-11-12T13:08:28+00:00",
    "severity": "critical",
-   "heat": 48.15,
+   "heat": 38.0,
    "canada": false,
    "cves": [
     "CVE-2026-84869"
@@ -541,20 +570,20 @@
     }
    ],
    "abstract": "Attackers are leveraging a critical vulnerability in ConnectWise ScreenConnect to deploy the SCKit malware. This campaign targets remote access sessions, allowing unauthorized actors to establish persistent control over managed service provider environments through previously identified security gaps.",
-   "why": "Exploitation of remote management tools provides adversaries with high-privilege access to downstream client networks, facilitating widespread supply chain compromise.",
+   "why": "Exploitation of remote management tools provides adversaries with high-level access to downstream client networks, facilitating widespread supply chain compromise.",
    "action": "Ensure all ScreenConnect instances are updated to the latest patched version.",
    "confidence": "high"
   },
   {
-   "id": "d3b13942bbdb32a4",
-   "title": "Uber drivers' information stolen in a third-party hack",
-   "link": "https://www.engadget.com/2316881/uber-drivers-information-stolen-in-a-third-party-hack/",
+   "id": "bbb8a67270856461",
+   "title": "TSMC employee data breach linked to cloud provider",
+   "link": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/",
    "kind": "security",
-   "tier": "tech",
-   "image": "https://www.engadget.com/img/gallery/uber-drivers-information-stolen-in-a-third-party-hack/l-intro-1794674539.jpg",
-   "published": "2026-11-14T16:47:44+00:00",
+   "tier": "security",
+   "image": null,
+   "published": "2026-11-15T15:23:48+00:00",
    "severity": "medium",
-   "heat": 45.27,
+   "heat": 36.39,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -562,19 +591,75 @@
    "vendors": [],
    "sources": [
     {
-     "name": "TechCrunch Security",
-     "site": "techcrunch.com",
-     "link": "https://techcrunch.com/2026/11/13/uber-confirms-hackers-stole-thousands-of-drivers-license-information-in-data-breach/"
-    },
-    {
-     "name": "Engadget",
-     "site": "engadget.com",
-     "link": "https://www.engadget.com/2316881/uber-drivers-information-stolen-in-a-third-party-hack/"
+     "name": "BleepingComputer",
+     "site": "bleepingcomputer.com",
+     "link": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/"
     }
    ],
-   "abstract": "Uber notified drivers that their personal information, including driver's license details, was compromised following a security breach at Fireworks AI, a third-party cloud provider used by the ridesharing company.",
-   "why": "Third-party vendor breaches remain a significant supply chain risk, exposing sensitive employee and contractor data even when internal systems remain secure.",
+   "abstract": "TSMC confirmed a data breach involving employee information after a threat actor attempted to auction nearly 7GB of stolen files. The company identified a third-party cloud service provider as the entry point for the unauthorized access.",
+   "why": "Supply chain vulnerabilities remain a critical vector for large enterprises, demonstrating that third-party access can bypass internal security controls.",
    "action": "",
+   "confidence": "high"
+  },
+  {
+   "id": "960f41318ea903dd",
+   "title": "Cursor Says Stolen Fireworks AI Key Led to Trojanized Claude Code Extension Incident",
+   "link": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg16ACawbG7rP_kT-8Boo4xdTje3BeTWyFSnNXwHhr5cvy2-1X3Ljhrc1IuZlseWd55tN8E1yjQ9ldhTnjWTU-GJBpX_Zen36YiLQGsRSRAoteqHyxx7mn_w0QgLfMKDLItA4p_jpHajucbglLnCR_zWBY_t82YvFkLa9dQFBfjP1BrTlrNdYufsGMSZiGn/s1600/cursor.jpg",
+   "published": "2026-11-15T08:22:04+00:00",
+   "severity": "info",
+   "heat": 36.28,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "site": "thehackernews.com",
+     "link": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html"
+    },
+    {
+     "name": "BleepingComputer",
+     "site": "bleepingcomputer.com",
+     "link": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/"
+    }
+   ],
+   "abstract": "Cursor confirmed that attackers compromised its marketplace to distribute a malicious Claude Code extension. The breach originated from stolen credentials belonging to Fireworks AI, which allowed unauthorized access to Cursor's systems.",
+   "why": "Supply chain attacks targeting developer tools and AI infrastructure can lead to widespread code injection and credential theft within development environments.",
+   "action": "",
+   "confidence": "high"
+  },
+  {
+   "id": "989c0561410e90b3",
+   "title": "YARA-X 1.23.0 Release, (Sun, Nov 15th)",
+   "link": "https://isc.sans.edu/diary/rss/33496",
+   "kind": "security",
+   "tier": "advisory",
+   "image": null,
+   "published": "2026-11-15T18:17:27+00:00",
+   "severity": "medium",
+   "heat": 35.53,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "SANS ISC",
+     "site": "isc.sans.edu",
+     "link": "https://isc.sans.edu/diary/rss/33496"
+    }
+   ],
+   "abstract": "The YARA-X project has released version 1.23.0, which introduces four functional enhancements and addresses sixteen identified bugs to improve overall stability and performance.",
+   "why": "Security teams relying on YARA-X for malware detection and threat hunting should update to ensure consistent rule evaluation and avoid potential processing errors.",
+   "action": "Update to YARA-X version 1.23.0.",
    "confidence": "high"
   },
   {
@@ -586,7 +671,7 @@
    "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/GettyImages-1237693734-500x500-1783631088.jpg",
    "published": "2026-11-13T16:26:32+00:00",
    "severity": "high",
-   "heat": 43.18,
+   "heat": 34.07,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -601,8 +686,43 @@
      "link": "https://arstechnica.com/security/2026/11/windows-0-day-dropped-by-disgruntled-researcher-hands-hackers-system-rights/"
     }
    ],
-   "abstract": "A researcher released a proof-of-concept exploit dubbed SignDrop that allows local users to escalate privileges to System-level access on Windows systems. The vulnerability stems from how the operating system handles signature verification, potentially enabling unauthorized administrative control.",
-   "why": "Local privilege escalation flaws are critical for attackers who have already gained a foothold on a machine and need to bypass security boundaries.",
+   "abstract": "A researcher released a proof-of-concept exploit dubbed SignDrop that allows local users to escalate privileges to SYSTEM level on Windows systems. The vulnerability stems from how the operating system handles signature verification, potentially enabling unauthorized administrative control.",
+   "why": "Local privilege escalation flaws allow attackers who have already gained a foothold to achieve full system compromise and bypass security boundaries.",
+   "action": "",
+   "confidence": "medium"
+  },
+  {
+   "id": "04c1c102f5a737e8",
+   "title": "Italy Fines Meta €805 Million Over Facebook's Android Gallery Access Without Explicit Consent",
+   "link": "https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdTCjpbsG3Dp62JM1KZqfSvZpuBnxwaCxXsplW3dAt2b4Ym0KAWPfxkHf4DT-02VK3jJESLmgasdE6D36qGegWu7dk9YSLN4DZxRVsgrM9lIEXXHUvQ0VzaZ1_gFqpjtA4cP3rlt82g5WnK2sXNZHJd5F_rEk4VSTGnMKOuXziSM1R85Vqhway3lajwTA/s1600/facebook-fine.jpg",
+   "published": "2026-11-15T11:27:31+00:00",
+   "severity": "info",
+   "heat": 33.66,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [
+    "Android",
+    "Meta"
+   ],
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "site": "thehackernews.com",
+     "link": "https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html"
+    },
+    {
+     "name": "SecurityWeek",
+     "site": "securityweek.com",
+     "link": "https://www.securityweek.com/meta-fined-887-million-in-italy-over-android-gallery-photos-and-videos-on-facebook/"
+    }
+   ],
+   "abstract": "Italian regulators fined Meta 805 million euros for violating privacy laws within its Android Facebook application. The platform automatically accessed user photo galleries and metadata to suggest content without obtaining the necessary informed consent required by local data protection authorities.",
+   "why": "This highlights the legal risks of aggressive data collection practices and the importance of explicit user authorization for accessing sensitive device storage.",
    "action": "",
    "confidence": "high"
   },
@@ -615,7 +735,7 @@
    "image": null,
    "published": "2026-11-13T10:44:22+00:00",
    "severity": "high",
-   "heat": 41.9,
+   "heat": 33.06,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -628,8 +748,8 @@
      "link": "https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/"
     }
    ],
-   "abstract": "Check Point has issued emergency patches for a critical vulnerability affecting its Security Gateway products. Attackers have been actively exploiting this flaw since late October to escalate privileges to root level and maintain persistent access within compromised network environments.",
-   "why": "The vulnerability allows unauthenticated attackers to gain full control over security appliances, facilitating lateral movement and long-term network espionage.",
+   "abstract": "Check Point has issued emergency patches for a critical vulnerability affecting its Security Gateway products. Attackers have been actively exploiting this flaw since late October to obtain root-level access and maintain persistent control over compromised network appliances.",
+   "why": "The vulnerability allows unauthenticated attackers to gain full administrative control, posing a severe risk to perimeter security and internal network integrity.",
    "action": "Apply the emergency hotfixes provided by Check Point immediately.",
    "confidence": "high"
   },
@@ -642,7 +762,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjP3B9ZQG1BXlSPUWzwVJ5qgwh899Ngm9u2GAbWiX5HDqhhT6q6gsmva9-TR2upR0fepas2i0k53VUxh1CH21LeUUv1Ipczl9huExytcqNdlqIoHP64CRYJuGyHe-OgLoov-JR6GziUT4JDJ92Ne83CshfWn9pr9Bt2HPKkv4phQJ2esJHcV6eZqzRretVu/s1600/php.jpg",
    "published": "2026-11-13T16:21:43+00:00",
    "severity": "medium",
-   "heat": 40.6,
+   "heat": 32.03,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -662,9 +782,9 @@
      "link": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html"
     }
    ],
-   "abstract": "Threat actors are exploiting unpatched Check Point Security Gateways to gain initial access via PHP2Shell vulnerabilities. Attackers then leverage a local privilege escalation flaw in the Gaia OS to install a backdoor and deploy data-wiping malware targeting VMware ESXi environments.",
-   "why": "This campaign demonstrates a sophisticated pivot from network edge appliances to hypervisor-level destruction, posing a severe risk to virtualized infrastructure and data integrity.",
-   "action": "Patch Check Point Security Gateways immediately and audit Gaia OS configurations for unauthorized access.",
+   "abstract": "Threat actors are exploiting unpatched Check Point Security Gateways to gain initial access via PHP2Shell vulnerabilities. Attackers subsequently leveraged a local privilege escalation flaw in the Gaia OS to install a backdoor and deploy data-wiping malware targeting VMware ESXi environments.",
+   "why": "The campaign demonstrates a sophisticated pivot from network edge devices to hypervisor-level destruction, posing a severe risk to virtualized infrastructure integrity.",
+   "action": "Apply the latest security patches provided by Check Point for Gaia OS and gateway appliances.",
    "confidence": "high"
   },
   {
@@ -676,7 +796,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjskRPNlV_kYE1N2eF2J_J0fBvF_nQxnvtaS78Grj04KqkEauvr-R5jO-ynD9nm51SgF2XtCCAsWUbJrHU0wGRnXC9yHmblhNCF8Jt9NdVahMju3voR2z9xb2uqoSi7Nc085UqDBelqg4XDRdjJ2lsF7EeN28rjq7oBc_NpBUWRqLWXiOh9FBRIH28teHM/s1600/telecom-hack.jpg",
    "published": "2026-11-13T12:20:28+00:00",
    "severity": "medium",
-   "heat": 39.6,
+   "heat": 31.25,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -699,9 +819,54 @@
      "link": "https://www.infosecurity-magazine.com/news/silentair-liminal-panda-telco/"
     }
    ],
-   "abstract": "A state-sponsored threat actor dubbed SilentAir has compromised telecommunications infrastructure across six Asian nations. By infiltrating mobile network nodes, the group successfully intercepted SMS messages and voice calls, specifically targeting individuals within Taiwan.",
-   "why": "This highlights critical vulnerabilities in telecom supply chains and the ability of sophisticated actors to bypass standard encryption by compromising core network equipment.",
+   "abstract": "A state-sponsored threat actor dubbed SilentAir has compromised telecommunications infrastructure across Asia. By infiltrating network nodes, the group intercepted SMS and voice traffic, specifically targeting individuals in Taiwan. The campaign shares operational similarities with the previously identified Liminal Panda group.",
+   "why": "This highlights critical vulnerabilities in mobile network infrastructure and the persistent threat of state-level actors compromising telecom providers for targeted surveillance.",
    "action": "",
+   "confidence": "high"
+  },
+  {
+   "id": "c398aa3e92265ca6",
+   "title": "Citrix Patches 12 NetScaler and Secure Access Client Flaws, Including Authentication Bypass",
+   "link": "https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDDv_B4B-cVtvwKyLiGQsL804yGC7_xHF7y3yD5_C284fRXBVRAn5Ashy2apgJr-jaoBHRa3ujgXv1jskM53EvP_pFt41CTazYqFT-tQdcukNBeOTzVIpZXVDsdgtup4MJOEdNNZP9SP0FAdIpG1Cnfgo0YgBXzmI_boLV4qSAsVrmYn5wA3GxnPuj21JO/s1600/citrix.jpg",
+   "published": "2026-11-12T18:37:14+00:00",
+   "severity": "medium",
+   "heat": 30.91,
+   "canada": true,
+   "cves": [
+    "CVE-2026-118269",
+    "CVE-2026-120868",
+    "CVE-2026-120869"
+   ],
+   "kev": [],
+   "epss": 0.005,
+   "vendors": [
+    "Citrix",
+    "Linux",
+    "Windows"
+   ],
+   "sources": [
+    {
+     "name": "Cyber Centre",
+     "site": "cyber.gc.ca",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-1150"
+    },
+    {
+     "name": "CERT-EU",
+     "site": "cert.europa.eu",
+     "link": "https://cert.europa.eu/publications/security-advisories/2026-020/"
+    },
+    {
+     "name": "The Hacker News",
+     "site": "thehackernews.com",
+     "link": "https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html"
+    }
+   ],
+   "abstract": "Citrix released patches addressing 28 vulnerabilities across NetScaler ADC, Gateway, and Console, including a critical memory overflow flaw (CVE-2026-120868) that could trigger denial-of-service conditions. Secure Access clients for Linux and Windows also received updates to resolve related security issues.",
+   "why": "Critical memory flaws in edge infrastructure like NetScaler can lead to service outages or potential authentication bypasses if exploited.",
+   "action": "Update NetScaler ADC, Gateway, Console, and Secure Access clients to the latest versions immediately.",
    "confidence": "high"
   },
   {
@@ -713,7 +878,7 @@
    "image": null,
    "published": "2026-11-12T15:54:21+00:00",
    "severity": "high",
-   "heat": 38.78,
+   "heat": 30.6,
    "canada": true,
    "cves": [
     "CVE-2026-123488"
@@ -742,7 +907,7 @@
    "image": null,
    "published": "2026-11-12T14:56:51+00:00",
    "severity": "high",
-   "heat": 38.32,
+   "heat": 30.24,
    "canada": true,
    "cves": [
     "CVE-2026-125883"
@@ -757,9 +922,9 @@
      "link": "https://cyber.gc.ca/en/alerts-advisories/n-able-security-advisory-av26-1143"
     }
    ],
-   "abstract": "N-able has addressed a critical vulnerability, CVE-2026-125883, affecting its N-central platform. Reports indicate this security flaw is currently being exploited in the wild. Administrators must ensure their environments are running version 2026.4.1.26 or later to mitigate potential unauthorized access.",
-   "why": "Active exploitation of remote management software poses a significant risk for supply chain attacks and lateral movement within managed networks.",
-   "action": "Update N-central to version 2026.4.1.26 or higher immediately.",
+   "abstract": "N-able has released a security update for its N-central platform to address CVE-2026-125883. Reports indicate that this vulnerability is currently being exploited in the wild. Administrators must ensure their installations are running version 2026.4.1.26 or later to mitigate the risk.",
+   "why": "The vulnerability is confirmed to be under active exploitation, posing a significant risk to organizations utilizing N-central for remote management.",
+   "action": "Update N-central to version 2026.4.1.26 or newer immediately.",
    "confidence": "high"
   },
   {
@@ -771,7 +936,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDmjJA-t4vvigohRIfUR6JExYEPR0Dohh29eooVagQOvRyRDgdisxAy3wSWni5iFHjf2Dk8X2BavSeGO8hJ-wCTbDuffsdtamOuqj1PVTb75EWNF5vNe3tCsS6pyS_pSzNhEELOVU0DxHdmGx4Kt8KNqwz8YheAM9kEoVmpnHeVV1qsofLCBYDEt0E2IqX/s1600/flash.jpg",
    "published": "2026-11-14T15:15:49+00:00",
    "severity": "info",
-   "heat": 38.21,
+   "heat": 30.15,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -795,101 +960,6 @@
    "confidence": "high"
   },
   {
-   "id": "c398aa3e92265ca6",
-   "title": "Citrix Patches 12 NetScaler and Secure Access Client Flaws, Including Authentication Bypass",
-   "link": "https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDDv_B4B-cVtvwKyLiGQsL804yGC7_xHF7y3yD5_C284fRXBVRAn5Ashy2apgJr-jaoBHRa3ujgXv1jskM53EvP_pFt41CTazYqFT-tQdcukNBeOTzVIpZXVDsdgtup4MJOEdNNZP9SP0FAdIpG1Cnfgo0YgBXzmI_boLV4qSAsVrmYn5wA3GxnPuj21JO/s1600/citrix.jpg",
-   "published": "2026-11-13T09:36:56+00:00",
-   "severity": "medium",
-   "heat": 38.08,
-   "canada": false,
-   "cves": [
-    "CVE-2026-120868"
-   ],
-   "kev": [],
-   "epss": 0.003,
-   "vendors": [
-    "Citrix"
-   ],
-   "sources": [
-    {
-     "name": "The Hacker News",
-     "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html"
-    },
-    {
-     "name": "SecurityWeek",
-     "site": "securityweek.com",
-     "link": "https://www.securityweek.com/citrix-patches-10-critical-netscaler-vulnerabilities/"
-    }
-   ],
-   "abstract": "Citrix has released security updates addressing ten critical vulnerabilities across NetScaler ADC, Gateway, and Console products. These flaws include a high-severity memory overflow issue and other bugs that could allow remote attackers to trigger denial-of-service conditions or bypass authentication mechanisms.",
-   "why": "NetScaler appliances are high-value targets for initial access; unpatched vulnerabilities in these edge devices frequently lead to full network compromise.",
-   "action": "Update NetScaler ADC, Gateway, and Console to the latest patched versions immediately.",
-   "confidence": "high"
-  },
-  {
-   "id": "5e7c3d53ea737937",
-   "title": "New N-able \"4EverAble2Shell\" zero-day exploited hours after PoC released",
-   "link": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
-   "kind": "security",
-   "tier": "security",
-   "image": null,
-   "published": "2026-11-12T19:51:16+00:00",
-   "severity": "high",
-   "heat": 37.83,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "site": "bleepingcomputer.com",
-     "link": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
-    }
-   ],
-   "abstract": "Threat actors are actively exploiting a zero-day vulnerability in N-able N-central, identified as 4EverAble2Shell. The flaw allows unauthorized server compromise and has been leveraged to install cryptocurrency miners on at least 21 systems, including those already running the most recent security patches.",
-   "why": "This highlights the rapid weaponization of proof-of-concept code and the failure of existing patches to mitigate the specific attack vector.",
-   "action": "",
-   "confidence": "high"
-  },
-  {
-   "id": "5df4bf07aed5b496",
-   "title": "Operation Endgame Takes Down Gootloader, CastleRAT and StealC Servers, Seizes 6.4M Stolen Logins",
-   "link": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsu6ZFyYFr1dxp2XHIaG_pyTwkoH58ICgyXLuTthkuYSJVcqAwX_O_bEJYfheyxpYmI7nnok1xrj97q7s-9l8JHFt1ogBAOJAEUqM8_vf6H3a8eYPKzB34d6XrvnkRu8zGaoKMgSJqWsE6u2zYXLdJKTtcDvk3beN6_o40ygJ4MVSMomS3Q1aEFV_jSq8/s1600/gootloader.jpg",
-   "published": "2026-11-13T10:55:03+00:00",
-   "severity": "medium",
-   "heat": 36.16,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "The Hacker News",
-     "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html"
-    },
-    {
-     "name": "SecurityWeek",
-     "site": "securityweek.com",
-     "link": "https://www.securityweek.com/law-enforcement-disrupts-gootloader-castlerat-and-stealc-infrastructure/"
-    }
-   ],
-   "abstract": "International law enforcement agencies executed Operation Endgame, dismantling infrastructure supporting Gootloader, CastleRAT, and StealC malware. The operation seized over 230 servers and 250 domains, while recovering more than 6.4 million stolen credentials linked to widespread ransomware and data theft campaigns.",
-   "why": "This disruption significantly degrades the operational capacity of major malware-as-a-service providers frequently used for initial access and credential harvesting.",
-   "action": "",
-   "confidence": "high"
-  },
-  {
    "id": "339bacdcefcfe9be",
    "title": "n8n security advisory (AV26-1160)",
    "link": "https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1160",
@@ -898,7 +968,7 @@
    "image": null,
    "published": "2026-11-13T14:28:49+00:00",
    "severity": "medium",
-   "heat": 35.75,
+   "heat": 28.21,
    "canada": true,
    "cves": [
     "CVE-2026-57907"
@@ -946,9 +1016,9 @@
      "link": "https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-1147"
     }
    ],
-   "abstract": "The Canadian Cyber Centre issued advisories for three distinct products: n8n workflow automation software, Apache HTTP Server, and Johnson Controls EasyIO firmware. Each platform contains security vulnerabilities requiring administrative attention to mitigate potential exploitation risks.",
-   "why": "These updates address critical flaws, including an OAuth account hijacking vulnerability in n8n and potential remote code execution vectors in Apache.",
-   "action": "Update n8n to 3.0.1+, Apache HTTP Server to 2.4.71, and patch Johnson Controls EasyIO firmware.",
+   "abstract": "The Canadian Cyber Centre has issued advisories for three distinct products: n8n workflow automation software, Apache HTTP Server, and Johnson Controls EasyIO firmware. Each platform contains security vulnerabilities requiring administrative attention to mitigate potential exploitation risks.",
+   "why": "These updates address critical flaws, including an OAuth account hijacking vulnerability in n8n and potential remote code execution risks in Apache HTTP Server.",
+   "action": "Update n8n to 3.0.1 or later, Apache HTTP Server to 2.4.71, and patch EasyIO firmware.",
    "confidence": "high"
   },
   {
@@ -960,7 +1030,7 @@
    "image": null,
    "published": "2026-11-14T08:40:22+00:00",
    "severity": "medium",
-   "heat": 35.39,
+   "heat": 27.93,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -978,49 +1048,9 @@
      "link": "https://www.securityweek.com/faa-ground-stop-issued-due-to-extraordinary-circumstances/"
     }
    ],
-   "abstract": "Federal authorities have found no evidence of a cyberattack following a nationwide FAA ground stop. Preliminary investigations suggest the disruption was likely triggered by a faulty software update rather than malicious activity.",
-   "why": "Systemic failures in critical infrastructure often trigger security concerns, necessitating verification that outages are operational rather than the result of unauthorized access.",
+   "abstract": "Federal authorities have found no evidence of a cyberattack regarding the recent nationwide FAA ground stop. Preliminary investigations suggest the operational disruption likely stemmed from a faulty software update rather than malicious external interference.",
+   "why": "Systemic failures in critical infrastructure often trigger security concerns; confirming a non-malicious root cause helps distinguish operational risk from targeted cyber threats.",
    "action": "",
-   "confidence": "high"
-  },
-  {
-   "id": "5ff135d39a0d9123",
-   "title": "Citrix security advisory (AV26-1150)",
-   "link": "https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-1150",
-   "kind": "security",
-   "tier": "advisory",
-   "image": null,
-   "published": "2026-11-12T18:37:14+00:00",
-   "severity": "medium",
-   "heat": 35.18,
-   "canada": true,
-   "cves": [
-    "CVE-2026-118269",
-    "CVE-2026-120868",
-    "CVE-2026-120869"
-   ],
-   "kev": [],
-   "epss": 0.005,
-   "vendors": [
-    "Citrix",
-    "Linux",
-    "Windows"
-   ],
-   "sources": [
-    {
-     "name": "Cyber Centre",
-     "site": "cyber.gc.ca",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-1150"
-    },
-    {
-     "name": "CERT-EU",
-     "site": "cert.europa.eu",
-     "link": "https://cert.europa.eu/publications/security-advisories/2026-020/"
-    }
-   ],
-   "abstract": "Citrix released security updates addressing 28 memory-related vulnerabilities across NetScaler ADC, Gateway, and Console products, as well as Secure Access Clients for Linux and Windows. One flaw, CVE-2026-120868, impacts all deployments and can cause denial of service or unpredictable system behavior.",
-   "why": "Unpatched NetScaler appliances are frequent targets for exploitation; these memory flaws could lead to service disruption or potential remote code execution.",
-   "action": "Update NetScaler ADC, Gateway, Console, and Secure Access clients to the latest vendor-specified versions immediately.",
    "confidence": "high"
   },
   {
@@ -1032,7 +1062,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-9BW-gpid0fJ4GJSsWoqjYl5qF_EdYchTcxeNjFfMV-MCcvSRTs-rAmiHKNX3M2dr66bJcfUelNR5CR9g-JLKPkMrROsqrM6hf563hIMklj5v08uYDtEp7pdYPcs5Y5TEGxgTWTHDG_Q-L8Tbq12yo57xp0GOlYk8g05nU3peuA_kedIXtggnakiiCGM/s1600/signdrop.jpg",
    "published": "2026-11-12T17:50:27+00:00",
    "severity": "high",
-   "heat": 35.1,
+   "heat": 27.7,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1047,10 +1077,10 @@
      "link": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html"
     }
    ],
-   "abstract": "A new proof-of-concept exploit dubbed SignDrop targets the Windows Common Log File System driver. By manipulating path redirection during log-authentication processes, local attackers can escalate privileges to SYSTEM level, bypassing security controls introduced in recent driver updates.",
-   "why": "This vulnerability allows local privilege escalation, enabling attackers to gain full administrative control over compromised Windows systems.",
+   "abstract": "A new proof-of-concept exploit dubbed SignDrop targets the Windows Common Log File System driver. By manipulating path redirection during log-authentication processes, local attackers can escalate privileges to SYSTEM level, bypassing security features introduced in the driver last year.",
+   "why": "Local privilege escalation vulnerabilities in core Windows drivers provide attackers with full system control, facilitating persistence and lateral movement within compromised environments.",
    "action": "",
-   "confidence": "high"
+   "confidence": "medium"
   },
   {
    "id": "e05f7a78ce38d83c",
@@ -1061,7 +1091,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhj8XOS7IKEt2ZhrwwdlDSpQ5hAyI46wHZpPkTQ3_hA6yUtMQpzaM50fm2v9x0O7NCt5z9vdrTsYM3iPOmu9fmmMTQDViu-rQjCfSxfCQhwZQazr4ZYayvEn5MQfUdTBVODtAay6RIaTqJGUj-HVzbtMqNPdNFiQHExhO9sitJX0GrvTx_EhWmslA-87ds/s1600/postgresql.jpg",
    "published": "2026-11-13T16:53:08+00:00",
    "severity": "medium",
-   "heat": 33.91,
+   "heat": 26.76,
    "canada": false,
    "cves": [
     "CVE-2026-6460"
@@ -1076,10 +1106,37 @@
      "link": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html"
     }
    ],
-   "abstract": "PostgreSQL released updates addressing 52 vulnerabilities, most notably a critical type confusion flaw, CVE-2026-6460. This 22-year-old bug allows authenticated users with object-creation privileges to execute arbitrary code on the underlying server with the database process's system-level permissions.",
-   "why": "Authenticated attackers can achieve full remote code execution, bypassing standard database restrictions to compromise the host operating system.",
+   "abstract": "PostgreSQL released updates addressing 52 vulnerabilities, most notably a high-severity type confusion bug, CVE-2026-6460. This flaw allows authenticated users with object-creation privileges to execute arbitrary code on the underlying server with the database process's system permissions.",
+   "why": "Authenticated remote code execution vulnerabilities in database infrastructure pose a critical risk for lateral movement and full system compromise.",
    "action": "Update PostgreSQL and rebuild all installed C-language extensions.",
    "confidence": "high"
+  },
+  {
+   "id": "be3c86b2a424a441",
+   "title": "This Comic Kills Technofascists",
+   "link": "https://www.404media.co/this-comic-kills-technofascists/",
+   "kind": "security",
+   "tier": "security",
+   "image": null,
+   "published": "2026-11-15T13:00:00+00:00",
+   "severity": "info",
+   "heat": 26.51,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "404 Media",
+     "site": "404media.co",
+     "link": "https://www.404media.co/this-comic-kills-technofascists/"
+    }
+   ],
+   "abstract": "A new action thriller titled Exploit has been released, focusing on the ongoing conflict between independent journalism and major technology corporations.",
+   "why": "",
+   "action": "",
+   "confidence": "low"
   },
   {
    "id": "82ab3d6d079489a7",
@@ -1090,7 +1147,7 @@
    "image": "https://media.wired.com/photos/6af88e4339637940f3ecc20a/master/pass/image%20(76).png",
    "published": "2026-11-14T13:00:00+00:00",
    "severity": "medium",
-   "heat": 33.57,
+   "heat": 26.5,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1103,53 +1160,10 @@
      "link": "https://www.wired.com/story/beware-the-new-ai-fueled-ransomware-boom/"
     }
    ],
-   "abstract": "While fully autonomous ransomware remains theoretical, threat actors are increasingly leveraging generative AI to lower the barrier to entry. These tools allow less skilled individuals to execute more effective attacks, increasing the overall volume and sophistication of malicious campaigns.",
-   "why": "AI lowers the technical threshold for cybercriminals, potentially leading to a surge in ransomware frequency and more convincing social engineering tactics.",
+   "abstract": "While fully autonomous ransomware remains theoretical, low-skill threat actors are increasingly leveraging generative AI to enhance their operations. These tools lower the barrier to entry, allowing less experienced criminals to execute more effective and frequent attacks.",
+   "why": "AI lowers the technical threshold for cyberattacks, potentially increasing the volume and sophistication of ransomware campaigns targeting enterprise environments.",
    "action": "",
    "confidence": "medium"
-  },
-  {
-   "id": "988b46d175c69a81",
-   "title": "PTC Patches Critical Windchill and FlexPLM Flaw That Could Enable Remote Code Execution",
-   "link": "https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi01pvi78xYUtyxbtWQ4L5ddMr1yT2-WBSbAnp3wKXa-bpagXqtyQdxPqA43I1NxJGNLk4He30PS-GYUcd1sOaErtMAtNWL-qQUGfD0Y7wSxAzeYJXRf2lA5yFuznu8m2zRgf2llXMiR3w1H6YOOte5qs_DvRxcv0aPeOxWeIDybl1n58VlpuZPUJ0icWDL/s1600/ptc-flaw.jpg",
-   "published": "2026-11-12T19:12:55+00:00",
-   "severity": "medium",
-   "heat": 33.26,
-   "canada": false,
-   "cves": [
-    "CVE-2026-119618",
-    "CVE-2026-126325"
-   ],
-   "kev": [],
-   "epss": 0.013,
-   "vendors": [
-    "Apache",
-    "Linux"
-   ],
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "site": "bleepingcomputer.com",
-     "link": "https://www.bleepingcomputer.com/news/security/apache-http-server-patches-critical-http-2-remote-code-execution-flaw/"
-    },
-    {
-     "name": "The Hacker News",
-     "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html"
-    },
-    {
-     "name": "The Hacker News",
-     "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html"
-    }
-   ],
-   "abstract": "Apache has released version 2.4.71 to address a critical remote code execution vulnerability in the mod_http2 module. The flaw, CVE-2026-119618, impacts servers running versions 2.4.55 through 2.4.70 that have HTTP/2 enabled, allowing unauthenticated attackers to execute arbitrary code.",
-   "why": "Remote code execution in a widely deployed web server poses a severe risk of full system compromise and lateral movement.",
-   "action": "Update Apache HTTP Server to version 2.4.71 immediately.",
-   "confidence": "high"
   },
   {
    "id": "417b99b8248b9848",
@@ -1160,7 +1174,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1-4OiOkGLcK3fAr2HdhALOfc_BqR21440TsjUIuCNzv4YL0lWRC3lvUjE1vu2RdVfjunxi80gMQyGpjvUdWzMRtthW8_-hFOJ79YhFzJrNGgoKDPYXm2OaWOsN8kgBELqOPs5s9QKL4qzQzu_3NEEqHygpfQzKYxDRIQeFgMHj24oyPyaslUemke-loU/s1600/github.jpg",
    "published": "2026-11-12T22:25:30+00:00",
    "severity": "medium",
-   "heat": 33.1,
+   "heat": 26.12,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1180,9 +1194,9 @@
      "link": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html"
     }
    ],
-   "abstract": "Threat actors hijacked nearly 5,000 GitHub accounts to inject malicious code into thousands of repositories. The campaign, known as wfx-loot, uses automated pull requests to deploy credential-stealing malware designed to harvest sensitive cloud environment secrets and CI/CD workflow tokens.",
-   "why": "Compromised CI/CD pipelines provide attackers with direct access to production cloud infrastructure and sensitive environment variables.",
-   "action": "Audit repository pull requests and rotate all secrets or API keys exposed within CI/CD workflows.",
+   "abstract": "Threat actors hijacked nearly 5,000 GitHub accounts to inject malicious code into thousands of repositories. The campaign, known as wfx-loot, uses automated pull requests to deploy secret-stealing malware designed to harvest cloud credentials and sensitive environment variables from CI/CD workflows.",
+   "why": "Compromised CI/CD pipelines provide attackers with direct access to production cloud environments and sensitive infrastructure secrets.",
+   "action": "Audit CI/CD logs for unauthorized pull requests and rotate all secrets exposed in affected repositories.",
    "confidence": "high"
   },
   {
@@ -1194,7 +1208,7 @@
    "image": null,
    "published": "2026-11-13T15:20:00+00:00",
    "severity": "medium",
-   "heat": 30.56,
+   "heat": 24.12,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1210,37 +1224,10 @@
      "link": "https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/"
     }
    ],
-   "abstract": "Microsoft researchers identified potential security risks involving backdoored AI model weights, while OpenAI faces scrutiny regarding vulnerabilities in its Codex model. Meanwhile, Siemens has updated its security advisory protocols, and recent reports highlight emerging threats to connected vehicles and significant corporate data breaches.",
-   "why": "AI supply chain integrity and model poisoning represent emerging attack vectors that could compromise downstream applications relying on third-party machine learning components.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "medium"
-  },
-  {
-   "id": "403e4bdfaeb6831b",
-   "title": "Cursor confirms security breach led to malicious Claude Code extension",
-   "link": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
-   "kind": "security",
-   "tier": "security",
-   "image": null,
-   "published": "2026-11-14T17:27:25+00:00",
-   "severity": "info",
-   "heat": 30.2,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "site": "bleepingcomputer.com",
-     "link": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/"
-    }
-   ],
-   "abstract": "The AI code editor Cursor experienced a security breach after attackers compromised Fireworks AI credentials. This unauthorized access allowed threat actors to inject a malicious Claude Code extension into the Cursor marketplace, potentially exposing users who installed the compromised plugin.",
-   "why": "Supply chain attacks targeting developer tools can lead to widespread source code theft or the injection of backdoors into production environments.",
-   "action": "Review and remove any suspicious or recently installed extensions from your Cursor environment.",
-   "confidence": "high"
+   "confidence": "low"
   },
   {
    "id": "1876ce8bb4f47670",
@@ -1251,7 +1238,7 @@
    "image": "https://media.wired.com/photos/6af75c7bac6958eb8481a5e6/master/pass/Security_MicrosoftBackOnline_v1.jpg",
    "published": "2026-11-13T19:08:57+00:00",
    "severity": "medium",
-   "heat": 30.19,
+   "heat": 23.82,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1266,21 +1253,21 @@
      "link": "https://www.wired.com/story/microsoft-365-crawls-back-to-life-after-a-24-hour-outage/"
     }
    ],
-   "abstract": "Microsoft 365 services experienced a global outage lasting approximately 24 hours. The company confirmed the disruption stemmed from a faulty software update rather than malicious activity or artificial intelligence interference.",
-   "why": "Service reliability failures highlight the risks of automated deployment pipelines and the potential for widespread operational downtime caused by internal configuration errors.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "high"
+   "confidence": "low"
   },
   {
-   "id": "4c8fe02bd04ce44e",
-   "title": "University of Texas at Arlington warns personal information stolen during cyberattack",
-   "link": "https://therecord.media/university-of-texas-arlington-warns-data-breach",
+   "id": "5df4bf07aed5b496",
+   "title": "Operation Endgame Takes Down Gootloader, CastleRAT and StealC Servers, Seizes 6.4M Stolen Logins",
+   "link": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html",
    "kind": "security",
    "tier": "security",
-   "image": "http://cms.therecord.media/uploads/University_of_Texas_at_Arlington_March_2021_103_Gateway_Tower_1_1b860ea19f.jpg",
-   "published": "2026-11-13T17:26:00+00:00",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsu6ZFyYFr1dxp2XHIaG_pyTwkoH58ICgyXLuTthkuYSJVcqAwX_O_bEJYfheyxpYmI7nnok1xrj97q7s-9l8JHFt1ogBAOJAEUqM8_vf6H3a8eYPKzB34d6XrvnkRu8zGaoKMgSJqWsE6u2zYXLdJKTtcDvk3beN6_o40ygJ4MVSMomS3Q1aEFV_jSq8/s1600/gootloader.jpg",
+   "published": "2026-11-13T10:55:03+00:00",
    "severity": "medium",
-   "heat": 28.44,
+   "heat": 23.34,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1288,15 +1275,69 @@
    "vendors": [],
    "sources": [
     {
-     "name": "The Record",
-     "site": "therecord.media",
-     "link": "https://therecord.media/university-of-texas-arlington-warns-data-breach"
+     "name": "The Hacker News",
+     "site": "thehackernews.com",
+     "link": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html"
     }
    ],
-   "abstract": "The University of Texas at Arlington confirmed that unauthorized actors accessed and exfiltrated personal data during a recent cyberattack. The institution has not disclosed the specific types of information compromised or the scale of the breach.",
-   "why": "Data breaches at academic institutions often expose sensitive PII, creating long-term identity theft risks for students, faculty, and staff.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "medium"
+   "confidence": "low"
+  },
+  {
+   "id": "88c72ddc559ac01c",
+   "title": "Some places have already banned AI glasses, and the list just keeps growing",
+   "link": "https://www.engadget.com/2313707/ai-glasses-banned-places-list-keeps-growing/",
+   "kind": "tech",
+   "tier": "tech",
+   "image": "https://www.engadget.com/img/gallery/some-places-have-already-banned-ai-glasses-and-the-list-just-keeps-growing/l-intro-1794240877.jpg",
+   "published": "2026-11-15T16:00:00+00:00",
+   "severity": "info",
+   "heat": 23.21,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "Engadget",
+     "site": "engadget.com",
+     "link": "https://www.engadget.com/2313707/ai-glasses-banned-places-list-keeps-growing/"
+    }
+   ],
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
+  },
+  {
+   "id": "a351355edf69d9b0",
+   "title": "Uber confirms hackers stole thousands of drivers’ license information in data breach",
+   "link": "https://techcrunch.com/2026/11/13/uber-confirms-hackers-stole-thousands-of-drivers-license-information-in-data-breach/",
+   "kind": "security",
+   "tier": "security",
+   "image": null,
+   "published": "2026-11-13T14:57:55+00:00",
+   "severity": "medium",
+   "heat": 22.46,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "TechCrunch Security",
+     "site": "techcrunch.com",
+     "link": "https://techcrunch.com/2026/11/13/uber-confirms-hackers-stole-thousands-of-drivers-license-information-in-data-breach/"
+    }
+   ],
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
   },
   {
    "id": "810ecd44c3ac2c42",
@@ -1307,7 +1348,7 @@
    "image": "http://cms.therecord.media/uploads/Osaka_City_Hall_2026_19ba5dd07a.jpg",
    "published": "2026-11-13T19:43:00+00:00",
    "severity": "medium",
-   "heat": 28.43,
+   "heat": 22.43,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1320,10 +1361,37 @@
      "link": "https://therecord.media/city-of-osaka-japan-email-data-breach"
     }
    ],
-   "abstract": "Osaka officials have alerted residents to potential phishing campaigns following a significant data breach. The city is warning its population to exercise caution regarding unsolicited emails that appear to originate from municipal authorities.",
-   "why": "Large-scale municipal data leaks often facilitate highly targeted social engineering and identity theft campaigns against residents.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "medium"
+   "confidence": "low"
+  },
+  {
+   "id": "4c8fe02bd04ce44e",
+   "title": "University of Texas at Arlington warns personal information stolen during cyberattack",
+   "link": "https://therecord.media/university-of-texas-arlington-warns-data-breach",
+   "kind": "security",
+   "tier": "security",
+   "image": "http://cms.therecord.media/uploads/University_of_Texas_at_Arlington_March_2021_103_Gateway_Tower_1_1b860ea19f.jpg",
+   "published": "2026-11-13T17:26:00+00:00",
+   "severity": "medium",
+   "heat": 22.44,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "The Record",
+     "site": "therecord.media",
+     "link": "https://therecord.media/university-of-texas-arlington-warns-data-breach"
+    }
+   ],
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
   },
   {
    "id": "f6f4a6d64aa85b9c",
@@ -1334,7 +1402,7 @@
    "image": null,
    "published": "2026-11-13T17:31:56+00:00",
    "severity": "medium",
-   "heat": 28.38,
+   "heat": 22.4,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1347,10 +1415,10 @@
      "link": "https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/"
     }
    ],
-   "abstract": "Quantum Systems, a German defense contractor, recently identified a cyberattack targeting its infrastructure. The company confirmed that hostile actors initiated the breach in late October, prompting an investigation into the scope of the intrusion and potential impact on drone operations.",
-   "why": "Compromised defense supply chains pose significant risks to national security and the integrity of sensitive military hardware.",
+   "abstract": "",
+   "why": "",
    "action": "",
-   "confidence": "high"
+   "confidence": "low"
   },
   {
    "id": "79815295aaa35652",
@@ -1361,7 +1429,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivDE4uIn_bV4GUrsw0LjzqBnnNaQM_0lzJhrSy89nrShmwNlFcsVucCFpzzZ2LMkkSMF-XMb8rp0e7_Maemyj5sypkVIf4s2Wx5pbJXkOwf0vMkG9ThBQAHhvJ_mKWHq78f_iJYhAM2l1Hp_Zk3VtB_bVvYFmZTX4WakIpC_Zib0rlFnDG-H674JSP5Mg/s1600/implant.jpg",
    "published": "2026-11-13T19:38:36+00:00",
    "severity": "info",
-   "heat": 27.78,
+   "heat": 21.92,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1379,10 +1447,37 @@
      "link": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html"
     }
    ],
-   "abstract": "Trezor discovered malicious hardware implants in three Safe 5 wallets sold by a Southeast Asian reseller. These unauthorized circuit boards capture recovery phrases displayed on the screen and transmit the data to attackers via cellular networks.",
-   "why": "Supply chain compromises of hardware wallets bypass standard security features, rendering physical device integrity untrustworthy if sourced from unauthorized third-party vendors.",
-   "action": "Purchase hardware wallets exclusively from the manufacturer or verified official partners.",
-   "confidence": "high"
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
+  },
+  {
+   "id": "c8b26857299e57fb",
+   "title": "Pentagon Renames CDAO ‘Super Intelligence Office’",
+   "link": "https://www.securityweek.com/pentagon-renames-cdao-super-intelligence-office/",
+   "kind": "security",
+   "tier": "security",
+   "image": null,
+   "published": "2026-11-15T12:51:33+00:00",
+   "severity": "info",
+   "heat": 21.58,
+   "canada": false,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "site": "securityweek.com",
+     "link": "https://www.securityweek.com/pentagon-renames-cdao-super-intelligence-office/"
+    }
+   ],
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
   },
   {
    "id": "6b2047aad824de08",
@@ -1393,7 +1488,7 @@
    "image": null,
    "published": "2026-11-13T03:41:41+00:00",
    "severity": "medium",
-   "heat": 26.29,
+   "heat": 20.75,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1404,43 +1499,6 @@
      "name": "SANS ISC",
      "site": "isc.sans.edu",
      "link": "https://isc.sans.edu/diary/rss/33518"
-    }
-   ],
-   "abstract": "The Macfinger ClickFix campaign is actively distributing the DownTheDRAIN infostealer targeting macOS users. This malicious operation utilizes deceptive prompts to trick victims into executing harmful payloads, potentially compromising sensitive system and user data.",
-   "why": "This campaign demonstrates evolving social engineering tactics specifically designed to bypass macOS security controls and exfiltrate credentials or private information.",
-   "action": "",
-   "confidence": "low"
-  },
-  {
-   "id": "d31c8888b13f2710",
-   "title": "Microsoft security advisory – November 2026 monthly rollup (AV26-1142) – Update 1",
-   "link": "https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-november-2026-monthly-rollup-av26-1142",
-   "kind": "security",
-   "tier": "advisory",
-   "image": null,
-   "published": "2026-11-12T20:42:34+00:00",
-   "severity": "medium",
-   "heat": 25.99,
-   "canada": true,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [
-    "Azure",
-    "Entra",
-    "Github",
-    "Microsoft"
-   ],
-   "sources": [
-    {
-     "name": "Cyber Centre",
-     "site": "cyber.gc.ca",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-november-2026-monthly-rollup-av26-1142"
-    },
-    {
-     "name": "Cyber Centre",
-     "site": "cyber.gc.ca",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2026-monthly-rollup-av26-1137"
     }
    ],
    "abstract": "",
@@ -1457,7 +1515,7 @@
    "image": null,
    "published": "2026-11-12T10:00:00+00:00",
    "severity": "medium",
-   "heat": 25.95,
+   "heat": 20.48,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1481,6 +1539,67 @@
    "confidence": "low"
   },
   {
+   "id": "988b46d175c69a81",
+   "title": "PTC Patches Critical Windchill and FlexPLM Flaw That Could Enable Remote Code Execution",
+   "link": "https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi01pvi78xYUtyxbtWQ4L5ddMr1yT2-WBSbAnp3wKXa-bpagXqtyQdxPqA43I1NxJGNLk4He30PS-GYUcd1sOaErtMAtNWL-qQUGfD0Y7wSxAzeYJXRf2lA5yFuznu8m2zRgf2llXMiR3w1H6YOOte5qs_DvRxcv0aPeOxWeIDybl1n58VlpuZPUJ0icWDL/s1600/ptc-flaw.jpg",
+   "published": "2026-11-12T11:33:15+00:00",
+   "severity": "medium",
+   "heat": 20.17,
+   "canada": false,
+   "cves": [
+    "CVE-2026-126325"
+   ],
+   "kev": [],
+   "epss": 0.005,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "site": "thehackernews.com",
+     "link": "https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html"
+    }
+   ],
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
+  },
+  {
+   "id": "d31c8888b13f2710",
+   "title": "Microsoft security advisory – November 2026 monthly rollup (AV26-1142) – Update 1",
+   "link": "https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-november-2026-monthly-rollup-av26-1142",
+   "kind": "security",
+   "tier": "advisory",
+   "image": null,
+   "published": "2026-11-12T20:42:34+00:00",
+   "severity": "medium",
+   "heat": 20.11,
+   "canada": true,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [
+    "Azure",
+    "Entra",
+    "Github",
+    "Microsoft"
+   ],
+   "sources": [
+    {
+     "name": "Cyber Centre",
+     "site": "cyber.gc.ca",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-november-2026-monthly-rollup-av26-1142"
+    }
+   ],
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
+  },
+  {
    "id": "ab1dc203a99d3622",
    "title": "AMD security advisory (AV26-1155)",
    "link": "https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-1155",
@@ -1489,7 +1608,7 @@
    "image": null,
    "published": "2026-11-12T20:24:57+00:00",
    "severity": "medium",
-   "heat": 25.4,
+   "heat": 20.05,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -1508,36 +1627,6 @@
    "confidence": "low"
   },
   {
-   "id": "c2535c5b8772684f",
-   "title": "Microsoft's massive M365 outage stretches past 27 hours as its fixes keep failing",
-   "link": "https://www.theregister.com/saas/2026/11/13/microsofts-massive-m365-outage-stretches-past-27-hours-as-its-fixes-keep-failing/5309609",
-   "kind": "tech",
-   "tier": "tech",
-   "image": "https://image.theregister.com/?imageId=5309709&width=800",
-   "published": "2026-11-13T06:40:06+00:00",
-   "severity": "medium",
-   "heat": 25.28,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [
-    "Exchange",
-    "Microsoft"
-   ],
-   "sources": [
-    {
-     "name": "The Register",
-     "site": "theregister.com",
-     "link": "https://www.theregister.com/saas/2026/11/13/microsofts-massive-m365-outage-stretches-past-27-hours-as-its-fixes-keep-failing/5309609"
-    }
-   ],
-   "abstract": "",
-   "why": "",
-   "action": "",
-   "confidence": "low"
-  },
-  {
    "id": "4d5ce3e56f7e60aa",
    "title": "Fortinet security advisory (AV26-1145)",
    "link": "https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1145",
@@ -1546,7 +1635,7 @@
    "image": null,
    "published": "2026-11-12T15:26:42+00:00",
    "severity": "medium",
-   "heat": 25.19,
+   "heat": 19.88,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -1568,6 +1657,33 @@
    "confidence": "low"
   },
   {
+   "id": "5d64f2e13867109d",
+   "title": "Docker security advisory (AV26-1153)",
+   "link": "https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-1153",
+   "kind": "security",
+   "tier": "advisory",
+   "image": null,
+   "published": "2026-11-12T18:58:56+00:00",
+   "severity": "medium",
+   "heat": 19.77,
+   "canada": true,
+   "cves": [],
+   "kev": [],
+   "epss": 0.0,
+   "vendors": [],
+   "sources": [
+    {
+     "name": "Cyber Centre",
+     "site": "cyber.gc.ca",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-1153"
+    }
+   ],
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
+  },
+  {
    "id": "26d811aac83d6968",
    "title": "Critical Pre-Auth MongoDB Flaw (CVE-2026-118383) Can Crash Lagging Servers on Failover",
    "link": "https://thehackernews.com/2026/11/critical-pre-auth-mongodb-flaw-cve-2026.html",
@@ -1576,7 +1692,7 @@
    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6RJLDSM13MwenwxG4xnZ-Td2_zmnya-Y39FLHlNk-7P3hZ5w1qGjG3XFqT-4gaeZIxSepWWNM53bKTIkZBNA-X_tVKsrgWbw8u81mjLzL6dXvTtvKfKeT-FkwSz4CsdMoHNza2NRFy0PJzzmaMROCr3D7e6AKT5UR3Lh4zFb_1w9HMmXXKKvATVWHU-E/s1600/mongo-poc.gif",
    "published": "2026-11-12T09:25:00+00:00",
    "severity": "medium",
-   "heat": 25.06,
+   "heat": 19.78,
    "canada": false,
    "cves": [
     "CVE-2026-118383"
@@ -1597,33 +1713,6 @@
    "confidence": "low"
   },
   {
-   "id": "5d64f2e13867109d",
-   "title": "Docker security advisory (AV26-1153)",
-   "link": "https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-1153",
-   "kind": "security",
-   "tier": "advisory",
-   "image": null,
-   "published": "2026-11-12T18:58:56+00:00",
-   "severity": "medium",
-   "heat": 25.06,
-   "canada": true,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "Cyber Centre",
-     "site": "cyber.gc.ca",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-1153"
-    }
-   ],
-   "abstract": "",
-   "why": "",
-   "action": "",
-   "confidence": "low"
-  },
-  {
    "id": "4084f96e5a59e128",
    "title": "Apify Confirms Customer Data Accessed in Cyberattack",
    "link": "https://www.securityweek.com/apify-confirms-customer-data-accessed-in-cyberattack/",
@@ -1632,7 +1721,7 @@
    "image": null,
    "published": "2026-11-13T12:41:01+00:00",
    "severity": "medium",
-   "heat": 24.99,
+   "heat": 19.72,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1659,7 +1748,7 @@
    "image": null,
    "published": "2026-11-12T18:35:43+00:00",
    "severity": "medium",
-   "heat": 24.96,
+   "heat": 19.7,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -1688,7 +1777,7 @@
    "image": null,
    "published": "2026-11-12T17:01:14+00:00",
    "severity": "medium",
-   "heat": 24.64,
+   "heat": 19.45,
    "canada": true,
    "cves": [
     "CVE-2026-106137",
@@ -1720,7 +1809,7 @@
    "image": null,
    "published": "2026-11-14T13:00:00+00:00",
    "severity": "info",
-   "heat": 24.38,
+   "heat": 19.25,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1739,33 +1828,6 @@
    "confidence": "low"
   },
   {
-   "id": "f0f23fdb08d7bf54",
-   "title": "FBI flash alert says Artex tool automating cyberattacks at ‘machine speed’",
-   "link": "https://therecord.media/artex-ai-tool-fbi-flash-alert",
-   "kind": "security",
-   "tier": "security",
-   "image": "http://cms.therecord.media/uploads/fbi_1_c4c06390db.jpg",
-   "published": "2026-11-13T21:32:00+00:00",
-   "severity": "info",
-   "heat": 24.36,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "The Record",
-     "site": "therecord.media",
-     "link": "https://therecord.media/artex-ai-tool-fbi-flash-alert"
-    }
-   ],
-   "abstract": "",
-   "why": "",
-   "action": "",
-   "confidence": "low"
-  },
-  {
    "id": "f1db2b213c7d2418",
    "title": "Adobe security advisory (AV26-1146)",
    "link": "https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-1146",
@@ -1774,7 +1836,7 @@
    "image": null,
    "published": "2026-11-12T15:45:47+00:00",
    "severity": "medium",
-   "heat": 24.29,
+   "heat": 19.17,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -1803,7 +1865,7 @@
    "image": null,
    "published": "2026-11-13T02:00:03+00:00",
    "severity": "medium",
-   "heat": 24.24,
+   "heat": 19.13,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1824,11 +1886,38 @@
      "name": "SANS ISC",
      "site": "isc.sans.edu",
      "link": "https://isc.sans.edu/diary/rss/33510"
-    },
+    }
+   ],
+   "abstract": "",
+   "why": "",
+   "action": "",
+   "confidence": "low"
+  },
+  {
+   "id": "8b748363b7cc622c",
+   "title": "Critical Apache HTTP/2 Flaw Could Let Unauthenticated Attackers Execute Code Remotely",
+   "link": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html",
+   "kind": "security",
+   "tier": "security",
+   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLpi_uN6PmG2Gn1agNMsOrsCp324eH-utKkDl_SPe32ggjcWFPjxZSyeA1KvAtvI9SQ4VAN_zssvdJLJ59IXE8_-MatPOyFXY-FcwtL7HtfKyW3MtsKwglIe2X62WBOcUkPMv-klM1h8T2EBMWFOWyPG89bfbAHS5byyfXATXN_lUUJWmUGWChekyWxTQ/s1600/apache-http.jpg",
+   "published": "2026-11-12T05:12:26+00:00",
+   "severity": "medium",
+   "heat": 19.06,
+   "canada": false,
+   "cves": [
+    "CVE-2026-119618"
+   ],
+   "kev": [],
+   "epss": 0.015,
+   "vendors": [
+    "Apache",
+    "Linux"
+   ],
+   "sources": [
     {
-     "name": "SANS ISC",
-     "site": "isc.sans.edu",
-     "link": "https://isc.sans.edu/diary/rss/33504"
+     "name": "The Hacker News",
+     "site": "thehackernews.com",
+     "link": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html"
     }
    ],
    "abstract": "",
@@ -1845,7 +1934,7 @@
    "image": null,
    "published": "2026-11-14T17:45:04+00:00",
    "severity": "info",
-   "heat": 24.14,
+   "heat": 19.05,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1872,7 +1961,7 @@
    "image": null,
    "published": "2026-11-12T15:04:28+00:00",
    "severity": "medium",
-   "heat": 24.13,
+   "heat": 19.04,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -1899,7 +1988,7 @@
    "image": null,
    "published": "2026-11-12T15:02:28+00:00",
    "severity": "medium",
-   "heat": 24.06,
+   "heat": 18.99,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1926,7 +2015,7 @@
    "image": null,
    "published": "2026-11-10T21:55:03+00:00",
    "severity": "high",
-   "heat": 23.89,
+   "heat": 18.86,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1958,7 +2047,7 @@
    "image": null,
    "published": "2026-11-13T09:15:00+00:00",
    "severity": "medium",
-   "heat": 23.67,
+   "heat": 18.68,
    "canada": false,
    "cves": [],
    "kev": [],
@@ -1977,33 +2066,6 @@
    "confidence": "low"
   },
   {
-   "id": "9398616ade4dc7e1",
-   "title": "Hackers Exploit Critical Xen Orchestra Auth Bypass Flaw to Gain Admin Access",
-   "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMH_u7t-U3KIejAItsfC_js20xJgxT2ITYLsR0DAxzfcwDvPrzBHkpZlDuALWPnACOoknX2IALwHIUxIzfhbA24M7e8cGWTZpBMWqpX-wn6xqe8_U3fAtnR-9RsRdFHMCjvNnBsMXrEUKhVYS5bbTGL3B50UMO0aydtHIomY89s2iDAQMq0jXJJ3vh4Nvi/s1600/XEN-attack.jpg",
-   "published": "2026-11-10T18:12:21+00:00",
-   "severity": "high",
-   "heat": 23.13,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "The Hacker News",
-     "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html"
-    }
-   ],
-   "abstract": "",
-   "why": "",
-   "action": "",
-   "confidence": "low"
-  },
-  {
    "id": "10621b32b80dd191",
    "title": "Upcoming Speaking Engagements",
    "link": "https://www.schneier.com/blog/archives/2026/11/upcoming-speaking-engagements-62.html",
@@ -2012,7 +2074,7 @@
    "image": null,
    "published": "2026-11-14T17:02:39+00:00",
    "severity": "info",
-   "heat": 22.6,
+   "heat": 17.83,
    "canada": true,
    "cves": [],
    "kev": [],
@@ -2023,123 +2085,6 @@
      "name": "Schneier on Security",
      "site": "schneier.com",
      "link": "https://www.schneier.com/blog/archives/2026/11/upcoming-speaking-engagements-62.html"
-    }
-   ],
-   "abstract": "",
-   "why": "",
-   "action": "",
-   "confidence": "low"
-  },
-  {
-   "id": "1838248a60d90440",
-   "title": "Policy and Disclosure: 2026 Edition",
-   "link": "https://projectzero.google/2026/11/disclosure-policy.html",
-   "kind": "security",
-   "tier": "research",
-   "image": null,
-   "published": "2026-11-13T08:00:00+00:00",
-   "severity": "info",
-   "heat": 22.53,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "Project Zero",
-     "site": "googleprojectzero.blogspot.com",
-     "link": "https://projectzero.google/2026/11/disclosure-policy.html"
-    }
-   ],
-   "abstract": "",
-   "why": "",
-   "action": "",
-   "confidence": "low"
-  },
-  {
-   "id": "9e0cc84d062dbe41",
-   "title": "Hackers Exploit N-central Flaws to Infect 21 Servers, Including 19 Running Hotfix 2",
-   "link": "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA4jxlXpPBPhD5o3IHy80Fn7fSHUtcqH3iXQlU-jDUL5C3zJcf1_Zb-GAYxuW6P6q647p9JAT_opImlj-v-USDNhZ_z83mYC3ISKtN72pe_3XLwf5EyMRuK4OdXCFnYxGMhOAvN_i4UFqk5vJLriRnkbRRwILuT5JUpExx9Tm74sXSCQ0g7jjsOzWV1cqk/s1600/nable-hacks.jpg",
-   "published": "2026-11-13T05:43:28+00:00",
-   "severity": "info",
-   "heat": 22.53,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "The Hacker News",
-     "site": "thehackernews.com",
-     "link": "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html"
-    }
-   ],
-   "abstract": "",
-   "why": "",
-   "action": "",
-   "confidence": "low"
-  },
-  {
-   "id": "30fb76b04d226242",
-   "title": "Lego marketplace BrickLink in pieces after 'unusual activity' takes it offline for almost a week",
-   "link": "https://www.theregister.com/security/2026/11/12/lego-marketplace-bricklink-in-pieces-after-unusual-activity-takes-it-offline-for-almost-a-week/5309425",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://image.theregister.com/?imageId=252955&width=800",
-   "published": "2026-11-12T20:08:08+00:00",
-   "severity": "info",
-   "heat": 22.34,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [],
-   "sources": [
-    {
-     "name": "The Register Security",
-     "site": "theregister.com",
-     "link": "https://www.theregister.com/security/2026/11/12/lego-marketplace-bricklink-in-pieces-after-unusual-activity-takes-it-offline-for-almost-a-week/5309425"
-    },
-    {
-     "name": "Infosecurity Magazine",
-     "site": "infosecurity-magazine.com",
-     "link": "https://www.infosecurity-magazine.com/news/lego-takes-bricklink-marketplace/"
-    }
-   ],
-   "abstract": "",
-   "why": "",
-   "action": "",
-   "confidence": "low"
-  },
-  {
-   "id": "95f883361cdc02d1",
-   "title": "November Patch Tuesday: An Overflowing Cornucopia of CVEs",
-   "link": "https://www.darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves",
-   "kind": "security",
-   "tier": "security",
-   "image": "https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt033b67685e64cff8/6af3980e4e01486fb09958c1/thanksgiving-Gurol_Tuna-GettyImages-2248720649.jpg?width=720&quality=80&disable=upscale",
-   "published": "2026-11-10T22:26:51+00:00",
-   "severity": "high",
-   "heat": 22.29,
-   "canada": false,
-   "cves": [],
-   "kev": [],
-   "epss": 0.0,
-   "vendors": [
-    "Exchange",
-    "Microsoft",
-    "Windows"
-   ],
-   "sources": [
-    {
-     "name": "Dark Reading",
-     "site": "darkreading.com",
-     "link": "https://www.darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves"
     }
    ],
    "abstract": "",
